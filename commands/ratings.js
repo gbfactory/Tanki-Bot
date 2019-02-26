@@ -1,6 +1,5 @@
-const snekfetch = require("snekfetch");
 const Discord = require("discord.js");
-// const api = "https://ratings.tankionline.com/get_stat/profile/?user=";
+const snekfetch = require("snekfetch");
 const api = "https://ratings.tankionline.com/api/eu/profile/?user=";
 
 module.exports.run = async(client, message, args, tools) => {
@@ -131,58 +130,6 @@ module.exports.run = async(client, message, args, tools) => {
 					rankdef = rank;
 				}
 
-				// EQUIPAGGIAMENTO ATTUALE
-				var armor = r.body.response.mounted.armor;
-				// var coloring = r.body.response.mounted.coloring;
-				var weapon = r.body.response.mounted.weapon;
-
-				console.log(armor);
-				console.log(weapon);
-
-				if ((armor) == "https://s.eu.tankionline.com/0/114/135/6/25071062666425/") {
-					scafo = "Wasp";
-				} else if ((armor) == "") {
-					scafo = "Hornet";
-				} else if ((armor) == "") {
-					scafo = "Viking";
-				} else if ((armor) == "") {
-					scafo = "Hunter";
-				} else if ((armor) == "") {
-					scafo = "Dictator";
-				} else if ((armor) == "") {
-					scafo = "Titan";
-				} else if ((armor) == "") {
-					scafo = "Mammoth";
-				}
-
-				if ((weapon) == "") {
-					torretta = "Firebird";
-				} else if ((weapon) == "") {
-					torretta = "Freeze";
-				} else if ((weapon) == "") {
-					torretta = "Isida";
-				} else if ((weapon) == "") {
-					torretta = "Hammer";
-				} else if ((weapon) == "") {
-					torretta = "Twins";
-				} else if ((weapon) == "") {
-					torretta = "Ricochet";
-				} else if ((weapon) == "") {
-					torretta = "Smoky";
-				} else if ((weapon) == "") {
-					torretta = "Striker";
-				} else if ((weapon) == "") {
-					torretta = "Vulcan";
-				} else if ((weapon) == "") {
-					torretta = "Thunder";
-				} else if ((weapon) == "") {
-					torretta = "Railgun";
-				} else if ((weapon) == "") {
-					torretta = "Magnum";
-				} else if ((weapon) == "") {
-					torretta = "Shaft";
-				}
-
 				// ORE DI GIOCO
 				var puno = r.body.response.modesPlayed[0].timePlayed; //dm
 				var pdue = r.body.response.modesPlayed[1].timePlayed; //tdm
@@ -193,7 +140,7 @@ module.exports.run = async(client, message, args, tools) => {
 				var pset = r.body.response.modesPlayed[6].timePlayed; //jgr
 
 				var oreSomma = puno + pdue + ptre + pqua + pcin + psei + pset;
-        var oreConve = (oreSomma / (1000 * 60 * 60)).toFixed(1);
+        			var oreConve = (oreSomma / (1000 * 60 * 60)).toFixed(0);
 				var oreForma = (oreConve).toLocaleString('en');
 
 
@@ -243,12 +190,8 @@ module.exports.run = async(client, message, args, tools) => {
 					.addField("**Stats**", "<:expstar:532190290308759552> Esperienza " + score + "/" + scorenext + " (-" + scoreleftfix + ") \n<:crystals:480373293594050562> Cristalli Ottenuti: " + cristalli + "\n<:goldbox:480376775784792071> Gold Box Prese: " + goldbox + "\n<:potenziamenti:481242124176588811> Potenziamenti Usati: " + pott + "\n🕐 Ore di gioco: " + oreForma)
 					.addField("**Info**", "<:kd:531920598801055764> K/D: " + dlfix + "\n<:kills:531920598671163401> Kills: " + kill + "\n<:deaths:531920623836856320> Morti: " + morti, true)
 					.addField("**GearScore**", "<:bonus:481240753197285377>" + gs + "\n**Efficiency**" + "\n<:sconti:481240708955635743> " + effval + "(#" + effpos + ")", true)
-				// .addField("**Torretta**", torretta, true)
-				// .addField("**Scafo**", scafo, true);
 
-				message.channel.send({
-					embed: embed
-				});
+				message.channel.send({embed: embed});
 			}
 		});
 	}
