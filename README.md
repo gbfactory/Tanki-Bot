@@ -71,3 +71,12 @@ Displat the 10 ten players of the week in the chosen category.
 ```
 
 Display the status of the players online in the game, total numbers or the numbers on the single servers.
+
+### Vlog
+
+```
+>vlog
+```
+
+Get the latest v-log uploaded in the Tanki Online International channel
+(Google api key is needed)
