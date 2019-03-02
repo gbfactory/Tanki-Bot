@@ -6,13 +6,21 @@ module.exports.run = async(client, message, args, tools) => {
 
 	nome = args[0];
 
+	let nonUsNome = new Discord.RichEmbed()
+		.setAuthor("You didn't put a nickname.")
+		.setColor("#87d704");
+
+	let nonEsiste = new Discord.RichEmbed()
+		.setAuthor("This user doesn't exist.")
+		.setColor("#87d704");
+
 	if (!nome) {
-		message.channel.send("Inserisci un nickname");
+		message.channel.send({embed: nonUsNome});
 	} else {
 		snekfetch.get(api + args[0]).then(r => {
 
 			if (!r.body.response) {
-				message.channel.send("Questo utente non esiste");
+				message.channel.send({embed: nonEsiste});
 			} else {
 
 				var nome = r.body.response.name;
@@ -140,7 +148,7 @@ module.exports.run = async(client, message, args, tools) => {
 				var pset = r.body.response.modesPlayed[6].timePlayed; //jgr
 
 				var oreSomma = puno + pdue + ptre + pqua + pcin + psei + pset;
-        			var oreConve = (oreSomma / (1000 * 60 * 60)).toFixed(0);
+				var oreConve = (oreSomma / (1000 * 60 * 60)).toFixed(1);
 				var oreForma = (oreConve).toLocaleString('en');
 
 
@@ -181,13 +189,13 @@ module.exports.run = async(client, message, args, tools) => {
 				let embed = new Discord.RichEmbed()
 					.setTitle("Tanki Online Ratings - Profile " + nome)
 					.setURL("https://ratings.tankionline.com/en/user/" + nome)
-					.setFooter("Bot sviluppato da GB Factory")
-					.setColor("ffdd00")
+					.setFooter("Bot made by gb_factory#5365")
+					.setColor("#87d704")
 					.setThumbnail(rankimgdef)
 					.setTimestamp()
-					.addField("**Nome**", "<:elmetto:531923776015695883>" + nome, true)
+					.addField("**Name**", "<:elmetto:531923776015695883>" + nome, true)
 					.addField("**Rank**", rankdef, true)
-					.addField("**Stats**", "<:expstar:532190290308759552> Esperienza " + score + "/" + scorenext + " (-" + scoreleftfix + ") \n<:crystals:480373293594050562> Cristalli Ottenuti: " + cristalli + "\n<:goldbox:480376775784792071> Gold Box Prese: " + goldbox + "\n<:potenziamenti:481242124176588811> Potenziamenti Usati: " + pott + "\n🕐 Ore di gioco: " + oreForma)
+					.addField("**Stats**", "<:expstar:532190290308759552> Exprerience " + score + "/" + scorenext + " (-" + scoreleftfix + ") \n<:crystals:480373293594050562> Crystals earned: " + cristalli + "\n<:goldbox:480376775784792071> Gold Boxes caught: " + goldbox + "\n<:potenziamenti:481242124176588811> Supplies used: " + pott + "\n🕐 Hours in game: " + oreForma)
 					.addField("**Info**", "<:kd:531920598801055764> K/D: " + dlfix + "\n<:kills:531920598671163401> Kills: " + kill + "\n<:deaths:531920623836856320> Morti: " + morti, true)
 					.addField("**GearScore**", "<:bonus:481240753197285377>" + gs + "\n**Efficiency**" + "\n<:sconti:481240708955635743> " + effval + "(#" + effpos + ")", true)
 
