@@ -80,3 +80,11 @@ Display the status of the players online in the game, total numbers or the numbe
 
 Get the latest v-log uploaded in the Tanki Online International channel
 (Google api key is needed)
+
+### News
+
+```
+>news
+```
+
+Get the latest article posted in the Tanki website
