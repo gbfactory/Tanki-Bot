@@ -1,0 +1,219 @@
+[
+    {
+        "name": "Recruit",
+        "image": "https://i.imgur.com/y0HJl8f.png",
+        "premium": "https://i.imgur.com/k8GS6oa.png",
+        "crystals": 0,
+        "exp": 0
+    },
+    {
+        "name": "Private",
+        "image": "https://i.imgur.com/5zr1vzJ.png",
+        "premium": "https://i.imgur.com/fjRvRXb.png",
+        "crystals": 10,
+        "exp": 100
+    },
+    {
+        "name": "Gefreiter",
+        "image": "https://i.imgur.com/PpLIXxs.png",
+        "premium": "https://i.imgur.com/pxTOJUa.png",
+        "crystals": 40,
+        "exp": 500
+    },
+    {
+        "name": "Corporal",
+        "image": "https://i.imgur.com/EnuzmYM.png",
+        "premium": "https://i.imgur.com/8rxr28Q.png",
+        "crystals": 120,
+        "exp": 1500
+    },
+    {
+        "name": "Master Corporal",
+        "image": "https://i.imgur.com/UkVsmb8.png",
+        "premium": "https://i.imgur.com/x6amMgO.png",
+        "crystals": 230,
+        "exp": 3700
+    },
+    {
+        "name": "Sergeant",
+        "image": "https://i.imgur.com/hA8Dx5p.png",
+        "premium": "https://i.imgur.com/3qH78R1.png",
+        "crystals": 420,
+        "exp": 7100
+    },
+    {
+        "name": "Staff Sergeant",
+        "image": "https://i.imgur.com/XpvFRX3.png",
+        "premium": "https://i.imgur.com/uW3Z6UE.png",
+        "crystals": 740,
+        "exp": 12300
+    },
+    {
+        "name": "Master Sergeant",
+        "image": "https://i.imgur.com/J6HvqhW.png",
+        "premium": "https://i.imgur.com/bpQr3xo.png",
+        "crystals": 950,
+        "exp": 20000
+    },
+    {
+        "name": "First Sergeant",
+        "image": "https://i.imgur.com/vTxMb72.png",
+        "premium": "https://i.imgur.com/7btU1uJ.png",
+        "crystals": 1400,
+        "exp": 29000
+    },
+    {
+        "name": "Sergeant-Major",
+        "image": "https://i.imgur.com/w0ntkZx.png",
+        "premium": "https://i.imgur.com/9tWv4bu.png",
+        "crystals": 2000,
+        "exp": 41000
+    },
+    {
+        "name": "Warrent Offier 1",
+        "image": "https://i.imgur.com/NQNgCx0.png",
+        "premium": "https://i.imgur.com/gxDI1ia.png",
+        "crystals": 2500,
+        "exp": 57000
+    },
+    {
+        "name": "Warrent Officer 2",
+        "image": "https://i.imgur.com/vopMXHQ.png",
+        "premium": "https://i.imgur.com/E4lhLjF.png",
+        "crystals": 3100,
+        "exp": 76000
+    },
+    {
+        "name": "Warrent Officer 3",
+        "image": "https://i.imgur.com/RTVhfXW.png",
+        "premium": "https://i.imgur.com/QS3nSQK.png",
+        "crystals": 3900,
+        "exp": 98000
+    },
+    {
+        "name": "Warrent Officer 4",
+        "image": "https://i.imgur.com/IrXs01l.png",
+        "premium": "https://i.imgur.com/By7ZIco.png",
+        "crystals": 4600,
+        "exp": 125000
+    },
+    {
+        "name": "Warrent Officer 5",
+        "image": "https://i.imgur.com/ABdpw14.png",
+        "premium": "https://i.imgur.com/UlNijtA.png",
+        "crystals": 5600,
+        "exp": 156000
+    },
+    {
+        "name": "Third Lieutenant",
+        "image": "https://i.imgur.com/PA6wpV0.png",
+        "premium": "https://i.imgur.com/FFil4Mu.png",
+        "crystals": 6600,
+        "exp": 192000
+    },
+    {
+        "name": "Second Lieutenant",
+        "image": "https://i.imgur.com/czP6p30.png",
+        "premium": "https://i.imgur.com/uxKX7Lp.png",
+        "crystals": 7900,
+        "exp": 233000
+    },
+    {
+        "name": "First Lieutenant",
+        "image": "https://i.imgur.com/ZsQKaGc.png",
+        "premium": "https://i.imgur.com/AaqbXFc.png",
+        "crystals": 8900,
+        "exp": 280000
+    },
+    {
+        "name": "Captain",
+        "image": "https://i.imgur.com/85QETBR.png",
+        "premium": "https://i.imgur.com/64uULze.png",
+        "crystals": 10000,
+        "exp": 332000
+    },
+    {
+        "name": "Major",
+        "image": "https://i.imgur.com/2BP9ryd.png",
+        "premium": "https://i.imgur.com/Bsc8CWh.png",
+        "crystals": 12000,
+        "exp": 390000
+    },
+    {
+        "name": "Lieutenant Colonel",
+        "image": "https://i.imgur.com/MVk87nd.png",
+        "premium": "https://i.imgur.com/McWEPqk.png",
+        "crystals": 14000,
+        "exp": 455000
+    },
+    {
+        "name": "Colonel",
+        "image": "https://i.imgur.com/LwGdFIz.png",
+        "premium": "https://i.imgur.com/q8dxhZY.png",
+        "crystals": 16000,
+        "exp": 527000
+    },
+    {
+        "name": "Brigadier",
+        "image": "https://i.imgur.com/ssfVd1I.png",
+        "premium": "https://i.imgur.com/PCVlwX4.png",
+        "crystals": 17000,
+        "exp": 606000
+    },
+    {
+        "name": "Major General",
+        "image": "https://i.imgur.com/EaS8tgV.png",
+        "premium": "https://i.imgur.com/egFwmvh.png",
+        "crystals": 20000,
+        "exp": 692000
+    },
+    {
+        "name": "Lieutenant General",
+        "image": "https://i.imgur.com/FV3fbCA.png",
+        "premium": "https://i.imgur.com/1zOpUt3.png",
+        "crystals": 22000,
+        "exp": 787000
+    },
+    {
+        "name": "General",
+        "image": "https://i.imgur.com/bSjCOma.png",
+        "premium": "https://i.imgur.com/QmlkDXg.png",
+        "crystals": 24000,
+        "exp": 889000
+    },
+    {
+        "name": "Marshal",
+        "image": "https://i.imgur.com/M8uF8b6.png",
+        "premium": "https://i.imgur.com/WeHQRrc.png",
+        "crystals": 28000,
+        "exp": 1000000
+    },
+    {
+        "name": "Fieldmarshal",
+        "image": "https://i.imgur.com/eOK0kS7.png",
+        "premium": "https://i.imgur.com/LkA03Yi.png",
+        "crystals": 31000,
+        "exp": 1122000
+    },
+    {
+        "name": "Commander",
+        "image": "https://i.imgur.com/fOn9vm9.png",
+        "premium": "https://i.imgur.com/5AYtWUL.png",
+        "crystals": 34000,
+        "exp": 1255000
+    },
+    {
+        "name": "Generalissimo",
+        "image": "https://i.imgur.com/KLwaUZ0.png",
+        "premium": "https://i.imgur.com/yZ1uEXI.png",
+        "crystals": 37000,
+        "exp": 1400000
+    },
+    {
+        "name": "Legend",
+        "image": "https://i.imgur.com/WhUqTcQ.png",
+        "premium": "https://i.imgur.com/kVu9WrV.png",
+        "crystals": 40000,
+        "exp": 1600000
+    }
+]
