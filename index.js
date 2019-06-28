@@ -9,31 +9,30 @@ let lv = require("./storage/levels.json");
 client.on('message', message => {
 
     // RANKS //
-    let xpMsg = 10;
-    
-    if(!xp[message.author.id]) {
-        xp[message.author.id] = {
-            xp: 0,
-            level: 0
-        };
-    } else {
+
+    // Xp aggiungi ogni messaggio scritto.
+    let xpMsg = 1;
+
+    // Se un utente è registrato nel database aggiunge xp e lvl.
+    if (xp[message.author.id]) {
         xp[message.author.id].xp = xp[message.author.id].xp + xpMsg;
         if (lv[xp[message.author.id].level + 1].exp <= xp[message.author.id].xp) {
             xp[message.author.id].level = xp[message.author.id].level + 1;
             let lvupEmbed = new Discord.RichEmbed()
-            .setTitle("Tanki Bot")
-            .setColor("#ffc300")
-            .setThumbnail(lv[xp[message.author.id].level].image)
-            .addField("✨ Rank up! ✨", `Congratulations **${message.author.username}**! \nYour rank is now **${lv[xp[message.author.id].level].name}** \n+${lv[xp[message.author.id].level].crystals} 💎`)
-            
+                .setColor("#ffc300")
+                .setThumbnail(lv[xp[message.author.id].level].image)
+                .addField("✨ Rank up! ✨", `Congratulazioni **${message.author.username}**! \nOra sei al rank **${lv[xp[message.author.id].level].name}** \n+${lv[xp[message.author.id].level].crystals} 💎`)
+
             message.channel.send({embed:lvupEmbed});
         }
         fs.writeFile("./storage/xp.json", JSON.stringify(xp), (err) => {
-            if(err) console.log(err)
+            if (err) console.log(err)
         });
     }
 
+
     // COMMAND HANDLER //
+
     let msg = message.content.toUpperCase();
     let sender = message.author;
     let args = message.content.slice(prefix.length).trim().split(' ');
@@ -51,9 +50,18 @@ client.on('message', message => {
         console.log(`${message.author.tag} ha usato il comando ${cmd}`);
     }
 
-}
-);
+});
+
+// AVVIO BOT //
+
+client.on('ready', async () => {
+    console.log('Bot avviato!');
+    client.user.setActivity("TankiBot", {
+        type: "WATCHING"
+    });
+});
 
 // TOKEN //
-const token = "";
+
+const token = ""
 client.login(token);
