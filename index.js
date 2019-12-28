@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const fs = require("fs");
 const prefix = '>';
 
-let xp = require("./storage/xp.json");
+let xp = require("./storage/dgGeneral.json");
 let lv = require("./storage/levels.json");
 
 client.on('message', message => {
