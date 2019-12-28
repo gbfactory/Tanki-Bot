@@ -1,141 +1,152 @@
 const Discord = require("discord.js");
 const snekfetch = require("snekfetch");
+let lv = require("../storage/levels.json");
 const api = "https://ratings.tankionline.com/api/eu/profile/?user=";
 
 module.exports.run = async(client, message, args, tools) => {
 
 	nome = args[0];
 
-	let nonUsNome = new Discord.RichEmbed()
-		.setAuthor("You didn't put a nickname.")
-		.setColor("#87d704");
-
-	let nonEsiste = new Discord.RichEmbed()
-		.setAuthor("This user doesn't exist.")
-		.setColor("#87d704");
-
 	if (!nome) {
-		message.channel.send({embed: nonUsNome});
+
+		let noName  = new Discord.RichEmbed()
+		.setAuthor("Devi inserire un nickname!")
+		.setColor("#f54242");
+
+		message.channel.send({embed:noName});
 	} else {
 		snekfetch.get(api + args[0]).then(r => {
 
 			if (!r.body.response) {
-				message.channel.send({embed: nonEsiste});
+
+				let noUser  = new Discord.RichEmbed()
+				.setAuthor("Giocatore non trovato!")
+				.setColor("#f54242");
+
+				message.channel.send({embed:noUser});
 			} else {
 
 				var nome = r.body.response.name;
 
-				numrank = r.body.response.rank;
+				rankNum = r.body.response.rank;
 
-				if ((numrank) == 1) {
+				if ((rankNum) == 1) {
 					rank = 'Recruit';
-					rankimg = 'recruit';
-				} else if ((numrank) == 2) {
+					rankImgN = 'recruit';
+				} else if ((rankNum) == 2) {
 					rank = 'Private';
-					rankimg = 'private';
-				} else if ((numrank) == 3) {
+					rankImgN = 'private';
+				} else if ((rankNum) == 3) {
 					rank = "Gefreiter";
-					rankimg = "gefreiter";
-				} else if ((numrank) == 4) {
+					rankImgN = "gefreiter";
+				} else if ((rankNum) == 4) {
 					rank = "Corporal";
-					rankimg = "corporal";
-				} else if ((numrank) == 5) {
+					rankImgN = "corporal";
+				} else if ((rankNum) == 5) {
 					rank = "Master Corporal";
-					rankimg = "master_corporal";
-				} else if ((numrank) == 6) {
+					rankImgN = "master_corporal";
+				} else if ((rankNum) == 6) {
 					rank = "Sergeant";
-					rankimg = "sergeant";
-				} else if ((numrank) == 7) {
+					rankImgN = "sergeant";
+				} else if ((rankNum) == 7) {
 					rank = "Staff Sergeant";
-					rankimg = "staff_sergeant";
-				} else if ((numrank) == 8) {
+					rankImgN = "staff_sergeant";
+				} else if ((rankNum) == 8) {
 					rank = "Master Sergeant";
-					rankimg = "master_sergeant";
-				} else if ((numrank) == 9) {
+					rankImgN = "master_sergeant";
+				} else if ((rankNum) == 9) {
 					rank = "First Sergeant";
-					rankimg = "first_sergeant";
-				} else if ((numrank) == 10) {
+					rankImgN = "first_sergeant";
+				} else if ((rankNum) == 10) {
 					rank = "Sergeant Major";
-					rankimg = "sergeant_major";
-				} else if ((numrank) == 11) {
+					rankImgN = "sergeant_major";
+				} else if ((rankNum) == 11) {
 					rank = "Warrant Officer 1";
-					rankimg = "warrant_officer_1";
-				} else if ((numrank) == 12) {
+					rankImgN = "warrant_officer_1";
+				} else if ((rankNum) == 12) {
 					rank = "Warrant Officer 2";
-					rankimg = "warrant_officer_2";
-				} else if ((numrank) == 13) {
+					rankImgN = "warrant_officer_2";
+				} else if ((rankNum) == 13) {
 					rank = "Warrant Officer 3";
-					rankimg = "warrant_officer_3";
-				} else if ((numrank) == 14) {
+					rankImgN = "warrant_officer_3";
+				} else if ((rankNum) == 14) {
 					rank = "Warrant Officer 4";
-					rankimg = "warrant_officer_4";
-				} else if ((numrank) == 15) {
+					rankImgN = "warrant_officer_4";
+				} else if ((rankNum) == 15) {
 					rank = "Warrant Officer 5";
-					rankimg = "warrant_officer_5";
-				} else if ((numrank) == 16) {
+					rankImgN = "warrant_officer_5";
+				} else if ((rankNum) == 16) {
 					rank = "Third Lieutenant";
-					rankimg = "third_lieutenant";
-				} else if ((numrank) == 17) {
+					rankImgN = "third_lieutenant";
+				} else if ((rankNum) == 17) {
 					rank = "Second Lieutenant";
-					rankimg = "second_lieutenant";
-				} else if ((numrank) == 18) {
+					rankImgN = "second_lieutenant";
+				} else if ((rankNum) == 18) {
 					rank = "First Lieutenant";
-					rankimg = "first_lieutenant";
-				} else if ((numrank) == 19) {
+					rankImgN = "first_lieutenant";
+				} else if ((rankNum) == 19) {
 					rank = "Captain";
-					rankimg = "captain";
-				} else if ((numrank) == 20) {
+					rankImgN = "captain";
+				} else if ((rankNum) == 20) {
 					rank = "Major";
-					rankimg = "major";
-				} else if ((numrank) == 21) {
+					rankImgN = "major";
+				} else if ((rankNum) == 21) {
 					rank = "Lieutenant Colonel";
-					rankimg = "lieutenant_colonel";
-				} else if ((numrank) == 22) {
+					rankImgN = "lieutenant_colonel";
+				} else if ((rankNum) == 22) {
 					rank = "Colonel";
-					rankimg = "colonel";
-				} else if ((numrank) == 23) {
+					rankImgN = "colonel";
+				} else if ((rankNum) == 23) {
 					rank = "Brigadier";
-					rankimg = "brigadier";
-				} else if ((numrank) == 24) {
+					rankImgN = "brigadier";
+				} else if ((rankNum) == 24) {
 					rank = "Major General";
-					rankimg = "major_general";
-				} else if ((numrank) == 25) {
+					rankImgN = "major_general";
+				} else if ((rankNum) == 25) {
 					rank = "Lieutenant General";
-					rankimg = "lieutenant_general";
-				} else if ((numrank) == 26) {
+					rankImgN = "lieutenant_general";
+				} else if ((rankNum) == 26) {
 					rank = "General";
-					rankimg = "general";
-				} else if ((numrank) == 27) {
+					rankImgN = "general";
+				} else if ((rankNum) == 27) {
 					rank = "Marshal";
-					rankimg = "marshal";
-				} else if ((numrank) == 28) {
+					rankImgN = "marshal";
+				} else if ((rankNum) == 28) {
 					rank = "Field Marshal";
-					rankimg = "field_marshal";
-				} else if ((numrank) == 29) {
+					rankImgN = "field_marshal";
+				} else if ((rankNum) == 29) {
 					rank = "Commander";
-					rankimg = "commander";
-				} else if ((numrank) == 30) {
+					rankImgN = "commander";
+				} else if ((rankNum) == 30) {
 					rank = "Generalissimo";
-					rankimg = "generalissimo";
-				} else if ((numrank) > 31) {
-					rankimg = "legend";
-					legendrank = (numrank) - 30;
-					rank = "Legend " + (legendrank);
-				} else if ((numrank) == 31) {
+					rankImgN = "generalissimo";
+				} else if ((rankNum) > 31) {
+					rankImgN = "legend";
+					rankLegNum = (rankNum) - 30;
+					rank = "Legend " + rankLegNum;
+				} else if ((rankNum) == 31) {
 					rank = "Legend";
-					rankimg = "legend";
+					rankImgN = "legend";
+				}
+
+				if (rankNum > 31) {
+					rankNumImg = 30;
+				} else {
+					rankNumImg = rankNum - 1;
 				}
 
 				if ((r.body.response.hasPremium) == true) {
-					rankimgdef = "https://www.gb-factory.com/tankionline/ranks/" + rankimg + "-premium.png";
+					rankImg = lv[rankNumImg].premium;
+					//console.log(rankImg);
 				} else {
-					rankimgdef = "https://www.gb-factory.com/tankionline/ranks/" + rankimg + ".png";
+					rankImg = lv[rankNumImg].image;
+					//console.log(rankImg);
 				}
 
 				if ((r.body.response.hasPremium) == true) {
-					rankdef = "<:premium:532190290887573504> " + rank;
+					rankName = "<:premium:660445095396376601> " + rank;
 				} else {
-					rankdef = rank;
+					rankName = rank;
 				}
 
 				// ORE DI GIOCO
@@ -148,23 +159,23 @@ module.exports.run = async(client, message, args, tools) => {
 				var pset = r.body.response.modesPlayed[6].timePlayed; //jgr
 
 				var oreSomma = puno + pdue + ptre + pqua + pcin + psei + pset;
-				var oreConve = (oreSomma / (1000 * 60 * 60)).toFixed(1);
+        			var oreConve = (oreSomma / (1000 * 60 * 60)).toFixed(0);
 				var oreForma = (oreConve).toLocaleString('en');
 
-
 				// SCORE
-				var score = (r.body.response.score).toLocaleString('en');
-				var scorenext = (r.body.response.scoreNext).toLocaleString('en');
-				var scoreleft = r.body.response.scoreNext - r.body.response.score;
-				var scoreleftfix = (scoreleft).toLocaleString('en');
+				var xp = (r.body.response.score).toLocaleString('en');
+				var xpNext = (r.body.response.scoreNext).toLocaleString('en');
+				var xpLeftR = r.body.response.scoreNext - r.body.response.score;
+				var xpLeft = (xpLeftR).toLocaleString('en');
 
 				// CRISTALLI
 				var cristalli = (r.body.response.earnedCrystals).toLocaleString('en');
 				var goldbox = (r.body.response.caughtGolds).toLocaleString('en');
 
-				// GS E EFFICIENZA
+				// GEAR SCORE
 				var gs = r.body.response.gearScore;
 
+				// EFFICIENCY
 				var effpos = (r.body.response.rating.efficiency.position).toLocaleString('en');
 				var effval = (r.body.response.rating.efficiency.value).toLocaleString('en');
 
@@ -186,20 +197,24 @@ module.exports.run = async(client, message, args, tools) => {
 				var pott = (potn).toLocaleString('en');
 
 				// EMBED
-				let embed = new Discord.RichEmbed()
+				let ratings = new Discord.RichEmbed()
 					.setTitle("Tanki Online Ratings - Profile " + nome)
 					.setURL("https://ratings.tankionline.com/en/user/" + nome)
-					.setFooter("Bot made by gb_factory#5365")
-					.setColor("#87d704")
-					.setThumbnail(rankimgdef)
+					.setFooter("Bot by GB Factory")
+					.setColor("ffdd00")
+					.setThumbnail(rankImg)
 					.setTimestamp()
-					.addField("**Name**", "<:elmetto:531923776015695883>" + nome, true)
-					.addField("**Rank**", rankdef, true)
-					.addField("**Stats**", "<:expstar:532190290308759552> Exprerience " + score + "/" + scorenext + " (-" + scoreleftfix + ") \n<:crystals:480373293594050562> Crystals earned: " + cristalli + "\n<:goldbox:480376775784792071> Gold Boxes caught: " + goldbox + "\n<:potenziamenti:481242124176588811> Supplies used: " + pott + "\n🕐 Hours in game: " + oreForma)
-					.addField("**Info**", "<:kd:531920598801055764> K/D: " + dlfix + "\n<:kills:531920598671163401> Kills: " + kill + "\n<:deaths:531920623836856320> Morti: " + morti, true)
-					.addField("**GearScore**", "<:bonus:481240753197285377>" + gs + "\n**Efficiency**" + "\n<:sconti:481240708955635743> " + effval + "(#" + effpos + ")", true)
+					.addField("Name", "<:elmetto:660442439441448981>" + nome, true)
+					.addField("Rank", rankName, true)
+					.addField("Stats", 
+					"<:tstar:660257945350701066> Experience " + xp + "/" + xpNext + " (-" + xpLeft + ") \n<:crys:660257474317910026> Cristalli Ottenuti: " + cristalli + "\n<:gold:660257810797428776> Gold Box Prese: " + goldbox + "\n<:sups:660260925546168404> Potenziamenti Usati: " + pott + "\n🕐 Ore di gioco: " + oreForma)
+					.addField("Info",
+					"<:kd:660443817379495947> K/D: " + dlfix +
+					"\n<:kk:660443817014591519> Kills: " + kill +
+					"\n<:dd:660443817161392138> Morti: " + morti, true)
+					.addField("GearScore", "⚙️ " + gs + "\nEfficiency" + "\n📈 " + effval + "(#" + effpos + ")", true)
 
-				message.channel.send({embed: embed});
+				message.channel.send({embed:ratings});
 			}
 		});
 	}
