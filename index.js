@@ -16,18 +16,25 @@ client.on('message', message => {
     // Se un utente è registrato nel database aggiunge xp e lvl.
     if (xp[message.author.id]) {
         xp[message.author.id].xp = xp[message.author.id].xp + xpMsg;
+
+        // rankup
         if (lv[xp[message.author.id].level + 1].exp <= xp[message.author.id].xp) {
-            xp[message.author.id].level = xp[message.author.id].level + 1;
+            xp[message.author.id].level = xp[message.author.id].level + 1;  // aumenta lvl
+
             let lvupEmbed = new Discord.RichEmbed()
                 .setColor("#ffc300")
                 .setThumbnail(lv[xp[message.author.id].level].image)
                 .addField("✨ Rank up! ✨", `Congratulazioni **${message.author.username}**! \nOra sei al rank **${lv[xp[message.author.id].level].name}** \n+${lv[xp[message.author.id].level].crystals} 💎`)
 
+            xp[message.author.id].cry = xp[message.author.id].cry + lv[xp[message.author.id].level].crystals    // aumenta crys
+
             message.channel.send({embed:lvupEmbed});
         }
-        fs.writeFile("./storage/xp.json", JSON.stringify(xp), (err) => {
+
+        fs.writeFile("./storage/dbGeneral.json", JSON.stringify(xp), (err) => {
             if (err) console.log(err)
         });
+
     }
 
 
