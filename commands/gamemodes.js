@@ -6,92 +6,77 @@ module.exports.run = async(client, message, args, tools) => {
 
 	nome = args[0];
 
-	// let noNome = new Discord.RichEmbed()
-	// .setTitle("Tanki Online Ratings - Gamemodes")
-	// .setURL("https://ratings.tankionline.com/en/")
-	// .setFooter("Bot made by gb_factory#5365")
-	// .setColor("#87d704")
-	// .setTimestamp()
-	// .setThumbnail("https://www.gb-factory.com/tankionline/images/gamemodes.png")
-	// .addField("Description", "Display the statistics of a user in the differents gamemodes")
-	// .addField("Usage", ">gamemodes *user nickname*")
-	// .addField("Linking", "If you don't want to type your nickname every time you can link your account using the **>link** command.");
+	let noName = new Discord.RichEmbed()
+		.setAuthor("Devi inserire un nickname!")
+		.setColor("#f54242");
 
-	let nonUsNome = new Discord.RichEmbed()
-		.setAuthor("You didn't put a nickname.")
-		.setColor("#87d704");
-
-	let nonEsiste = new Discord.RichEmbed()
-		.setAuthor("This user doesn't exist.")
-		.setColor("#87d704");
+	let noUser = new Discord.RichEmbed()
+		.setAuthor("Giocatore non trovato!")
+		.setColor("#f54242");
 
 	if (!nome) {
-		message.channel.send({
-			embed: nonUsNome
-		});
+		message.channel.send({embed:noName});
 	} else {
 		snekfetch.get(api + args[0]).then(r => {
 
 			if (!r.body.response) {
-				message.channel.send({
-					embed: nonEsiste
-				});
+				message.channel.send({embed: noUser});
 			} else {
 
 				var nome = r.body.response.name;
 
 				//esperienza guadagnata
-				var euno = (r.body.response.modesPlayed[0].scoreEarned).toLocaleString('en'); //dm
-				var edue = (r.body.response.modesPlayed[1].scoreEarned).toLocaleString('en'); //tdm
-				var etre = (r.body.response.modesPlayed[2].scoreEarned).toLocaleString('en'); //ctf
-				var equa = (r.body.response.modesPlayed[3].scoreEarned).toLocaleString('en'); //cp
-				var ecin = (r.body.response.modesPlayed[4].scoreEarned).toLocaleString('en'); //as
-				var esei = (r.body.response.modesPlayed[5].scoreEarned).toLocaleString('en'); //rgb
-				var eset = (r.body.response.modesPlayed[6].scoreEarned).toLocaleString('en'); //jgr
+				var eDM = (r.body.response.modesPlayed[0].scoreEarned).toLocaleString('en'); //dm
+				var eTDM = (r.body.response.modesPlayed[1].scoreEarned).toLocaleString('en'); //tdm
+				var eCTF = (r.body.response.modesPlayed[2].scoreEarned).toLocaleString('en'); //ctf
+				var eCP = (r.body.response.modesPlayed[3].scoreEarned).toLocaleString('en'); //cp
+				var eAS = (r.body.response.modesPlayed[4].scoreEarned).toLocaleString('en'); //as
+				var eRGB = (r.body.response.modesPlayed[5].scoreEarned).toLocaleString('en'); //rgb
+				var eSJGR = (r.body.response.modesPlayed[6].scoreEarned).toLocaleString('en'); //sjgr
+				var eJGR = (r.body.response.modesPlayed[7].scoreEarned).toLocaleString('en'); //jgr
+				var eSGE = (r.body.response.modesPlayed[8].scoreEarned).toLocaleString('en'); //sge
 
 				//tempo giocato
-				var puno = (r.body.response.modesPlayed[0].timePlayed).toLocaleString('en'); //dm
-				var pdue = (r.body.response.modesPlayed[1].timePlayed).toLocaleString('en'); //tdm
-				var ptre = (r.body.response.modesPlayed[2].timePlayed).toLocaleString('en'); //ctf
-				var pqua = (r.body.response.modesPlayed[3].timePlayed).toLocaleString('en'); //cp
-				var pcin = (r.body.response.modesPlayed[4].timePlayed).toLocaleString('en'); //as
-				var psei = (r.body.response.modesPlayed[5].timePlayed).toLocaleString('en'); //rgb
-				var pset = (r.body.response.modesPlayed[6].timePlayed).toLocaleString('en'); //jgr
+				var tDM = (r.body.response.modesPlayed[0].timePlayed / (1000 * 60 * 60)).toFixed(0); //dm
+				var tTDM = (r.body.response.modesPlayed[1].timePlayed / (1000 * 60 * 60)).toFixed(0); //tdm
+				var tCTF = (r.body.response.modesPlayed[2].timePlayed / (1000 * 60 * 60)).toFixed(0); //ctf
+				var tCP = (r.body.response.modesPlayed[3].timePlayed / (1000 * 60 * 60)).toFixed(0); //cp
+				var tAS = (r.body.response.modesPlayed[4].timePlayed / (1000 * 60 * 60)).toFixed(0); //as
+				var tRGB = (r.body.response.modesPlayed[5].timePlayed / (1000 * 60 * 60)).toFixed(0); //rgb
+				var tSJGR = (r.body.response.modesPlayed[6].timePlayed / (1000 * 60 * 60)).toFixed(0); //sjgr
+				var tJGR = (r.body.response.modesPlayed[7].timePlayed / (1000 * 60 * 60)).toFixed(0); //jgr
+				var tSGE = (r.body.response.modesPlayed[8].timePlayed / (1000 * 60 * 60)).toFixed(0); //sge
 
-				var ac = "\n";
-
-				var dmo = "<:expstar:532190290308759552> **Score**: " + euno + ac + "🕓 **Time**: " + puno;
-				var tdm = "<:expstar:532190290308759552> **Score**: " + edue + ac + "🕓 **Time**: " + pdue;
-				var ctf = "<:expstar:532190290308759552> **Score**: " + etre + ac + "🕓 **Time**: " + ptre;
-				var cpo = "<:expstar:532190290308759552> **Score**: " + equa + ac + "🕓 **Time**: " + pqua;
-				var aso = "<:expstar:532190290308759552> **Score**: " + ecin + ac + "🕓 **Time**: " + pcin;
-				var rgb = "<:expstar:532190290308759552> **Score**: " + esei + ac + "🕓 **Time**: " + psei;
-				var jgr = "<:expstar:532190290308759552> **Score**: " + eset + ac + "🕓 **Time**: " + pset;
+				var DM = "<:tstar:660257945350701066> **Score**: " + eDM + "\n" + "🕓 **Time**: " + (tDM).toLocaleString('en');
+				var TDM = "<:tstar:660257945350701066> **Score**: " + eTDM + "\n" + "🕓 **Time**: " + (tTDM).toLocaleString('en');
+				var CTF = "<:tstar:660257945350701066> **Score**: " + eCTF + "\n" + "🕓 **Time**: " + (tCTF).toLocaleString('en');
+				var CP = "<:tstar:660257945350701066> **Score**: " + eCP + "\n" + "🕓 **Time**: " + (tCP).toLocaleString('en');
+				var AS = "<:tstar:660257945350701066> **Score**: " + eAS + "\n" + "🕓 **Time**: " + (tAS).toLocaleString('en');
+				var RGB = "<:tstar:660257945350701066> **Score**: " + eRGB + "\n" + "🕓 **Time**: " + (tRGB).toLocaleString('en');
+				var SJGR = "<:tstar:660257945350701066> **Score**: " + eSJGR + "\n" + "🕓 **Time**: " + (tSJGR).toLocaleString('en');
+				var JGR = "<:tstar:660257945350701066> **Score**: " + eJGR + "\n" + "🕓 **Time**: " + (tJGR).toLocaleString('en');
+				var SGE = "<:tstar:660257945350701066> **Score**: " + eSGE + "\n" + "🕓 **Time**: " + (tSGE).toLocaleString('en');
 
 				//embed
-				let embed = new Discord.RichEmbed()
+				let gamemodes = new Discord.RichEmbed()
 					.setTitle("Tanki Online Ratings - Gamemodes " + nome)
 					.setURL("https://ratings.tankionline.com/en/user/" + nome)
-					.setFooter("Bot made by gb_factory#5365")
+					.setFooter("Bot by gb_factory#5365")
 					.setColor("#87d704")
 					.setTimestamp()
 					.setThumbnail("https://www.gb-factory.com/tankionline/images/gamemodes.png")
-					.addField("<:dm:532232815392325634> Deathmatch", dmo, true)
-					.addField("<:tdm:532232815429943305> Team Deathmatch", tdm, true)
-					.addField("<:ctf:532232815186542593> Capture The Flag", ctf, true)
-					.addField("<:cp:532232815530606596> Control Points", cpo, true)
-					.addField("<:as:532232815325085706> Assault", aso, true)
-					.addField("<:rgb:532232815434006529> Rugby", rgb, true)
-					.addField("<:jgr:532232815383805952> Juggernaut", jgr, true);
+					.addField("<:MM_DM:605414603245223956> Deathmatch", DM, true)
+					.addField("<:MM_TDM:605414603266064438> Team Deathmatch", TDM, true)
+					.addField("<:MM_CTF:605414603228315652> Capture The Flag", CTF, true)
+					.addField("<:MM_CP:605414603190566918> Control Points", CP, true)
+					.addField("<:MM_ASL:605414603207213068> Assault", AS, true)
+					.addField("<:MM_RGB:605414603228184576> Rugby", RGB, true)
+					.addField("<:MM_JGR:605414603064606721> Solo Juggernaut", SJGR, true)
+					.addField("<:MM_JGR:605414603064606721> Juggernaut", JGR, true)
+					.addField("<:sge:660455070814568470> Siege", SGE, true);
 
-				message.channel.send({
-					embed: embed
-				});
+				message.channel.send({embed:gamemodes});
 			}
-
-
 		})
 	}
-
-
 }
