@@ -1,29 +1,17 @@
 const Discord = require("discord.js");
-let xp = require("../storage/xp.json");
 const fs = require("fs");
+
+let db = require("../storage/users.json");
 
 module.exports.run = async (client, message, args) => {
 
     var rNum = Math.floor(1000 + Math.random() * 9000);
 
-    let rgNum  = new Discord.RichEmbed()
-    .setAuthor(`Benvenuto ${message.member.user.username}! \nScrivi ${rNum} per continuare o cancel per annullare.`)
-    .setColor("#87d704");
+    if(!db[message.author.id]) {
 
-    let rgAlr  = new Discord.RichEmbed()
-    .setAuthor("Sei già registrato!")
-    .setColor("#87d704");
-
-    let rgCan  = new Discord.RichEmbed()
-    .setAuthor("Hai cancellato la registrazione!")
-    .setColor("#87d704");
-
-    let rgEnd  = new Discord.RichEmbed()
-    .setAuthor("Ti sei registrato con successo!")
-    .setColor("#87d704");
-
-    if(!xp[message.author.id]) {
-
+        let rgNum  = new Discord.RichEmbed()
+            .setAuthor(`Benvenuto ${message.member.user.username}! \nScrivi ${rNum} per continuare o cancel per annullare.`)
+            .setColor("#87d704");
         message.channel.send({embed:rgNum})
         .then(function(){
             message.channel.awaitMessages(response => message.content, {
@@ -33,91 +21,100 @@ module.exports.run = async (client, message, args) => {
             })
             .then ((collected) => {
                 if (collected.first().content == "cancel") {
-                    message.channel.send({embed:alReg});
+
+                    let rgExit  = new Discord.RichEmbed()
+                        .setAuthor("Sei uscito dalla registrazione!")
+                        .setColor("#f54242");
+                    message.channel.send({embed:rgExit});
                 }
                 if (collected.first().content == rNum) {
+
                     if (args[0]) {
-                        message.channel.send(`Ti sei registrato con il nickname ${args[0]}`);
-
-                        xp[message.member.user.id] = {
-                            username: args[0],
-                            xp: 0,
-                            level: 0,
-                            cry: 0,
-                            redCry: 0,
-                            premium: false,
-                            premiumTime: 0,
-                            turrets: [],
-                            hulls: [],
-                            wins: 0,
-                            loss: 0,
-                            sVite: 0,
-                            sDanno: 0,
-                            sScudo: 0,
-                            sNos: 0,
-                            sMina: 0,
-                            sGold: 0,
-                            sBatt: 0,
-                            scatole: 0,
-                            clan: "",
-                            clanRank: "Private",
-                            paintRare: 0,
-                            paintEpcic: 0,
-                            paintLegend: 0,
-                            turrXT: 0,
-                            hullXT: 0,
-                            rep: 0
-                        };
-
-                        fs.writeFile("./storage/xp.json", JSON.stringify(xp), (err) => {
-                            if(err) console.log(err)
-                        });
-
+                        userNick = args[0];
                     } else {
-                        message.channel.send(`Ti sei registrato con il nickname ${message.member.user.username}`);
+                        userNick = message.member.user.username;
+                    }
 
-                        xp[message.member.user.id] = {
-                            username: message.member.user.username,
-                            xp: 0,
-                            level: 0,
-                            cry: 0,
-                            redCry: 0,
-                            premium: false,
-                            premiumTime: 0,
-                            turrets: [],
-                            hulls: [],
+                    db[message.member.user.id] = {
+                        username: userNick,
+                        nick: "",
+                        xp: 0,
+                        level: 0,
+                        crys: 1000,
+                        tankoins: 0,
+                        battles: {
                             wins: 0,
                             loss: 0,
-                            sVite: 0,
-                            sDanno: 0,
-                            sScudo: 0,
-                            sNos: 0,
-                            sMina: 0,
-                            sGold: 0,
-                            sBatt: 0,
-                            scatole: 0,
-                            clan: "",
-                            clanRank: "Private",
-                            paintRare: 0,
-                            paintEpcic: 0,
-                            paintLegend: 0,
-                            turrXT: 0,
-                            hullXT: 0,
-                            rep: 0
-                        };
+                        },
+                        clan: {
+                            id: null,
+                            rank: 0
+                        },
+                        items: {
+                            repair: 0,
+                            armor: 0,
+                            damage: 0,
+                            speed: 0,
+                            mine: 0,
+                            gold: 0,
+                            battery: 0
+                        },
+                        containers: {
+                            container: 0,
+                            supplybox: 0,
+                            weekly: 0,
+                            xt: 0,
+                            coinbox: 0
+                        },
+                        paint: {
+                            rare: 0,
+                            epic: 0,
+                            legendary: 0
+                        },
+                        equip: {
+                            turrets: 0,
+                            hulls: 0
+                        },
+                        turrets: {
+                            equip: "smoky",
+                            smoky: {
+                                level: 0,
+                                ups: 0,
+                                skin: [0, 0, 0, 0, 0]
+                            }
+                        },
+                        hulls: {
+                            equip: "hunter",
+                            hunter: {
+                                level: 0,
+                                ups: 0,
+                                skin: [0, 0, 0, 0]
+                            }
+                        }
+                    };
 
-                        fs.writeFile("./storage/xp.json", JSON.stringify(xp), (err) => {
-                            if(err) console.log(err)
-                        });
+                    fs.writeFile("./storage/users.json", JSON.stringify(db), (err) => {
+                        if(err) console.log(err)
+                    });
 
-                    }
+                    let rgEnd  = new Discord.RichEmbed()
+                        .setAuthor(`Ti sei registrato con il nickname ${userNick}`)
+                        .setColor("#1bd9e3")
+                    message.channel.send({embed:rgEnd});
+
                 } else {
-                    message.channel.send("Hai sbagliato ad inserire il numero!");
+                    let rgNumErr  = new Discord.RichEmbed()
+                        .setAuthor("Hai sbagliato a scrivere il numero!")
+                        .setColor("#1bd9e3")
+                    message.channel.send({embed:rgNumErr});
                 };
             });
         });
 
     } else {
+        let rgAlr  = new Discord.RichEmbed()
+            .setAuthor("Sei già registrato!")
+            .setColor("#f54242");
         message.channel.send({embed:rgAlr});
     } 
     
