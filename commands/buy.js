@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
 
     if (!db[message.author.id]) {
         let rgNo  = new Discord.RichEmbed()
-            .setAuthor("Non sei registrato!")
+            .setAuthor("You aren't registered! Use >register (username) to create a profile.")
             .setColor("#f54242");
         message.channel.send({embed:rgNo});
         return;
@@ -16,20 +16,20 @@ module.exports.run = async (client, message, args) => {
     if (!args[0]) {
         let shop = new Discord.RichEmbed()
             .setColor("#f54242")
-            .setAuthor("Devi specificare cosa vuoi comprare.")
+            .setAuthor("Wrong command usage! Use >help for more informations.")
         message.channel.send({embed:shop});
         return;
     }
 
-    if (!isNaN(args[0])) {
+    if (!isNaN(args[0]) && args[0] > 0) {
 
-        prezzo = args[0] * 10000;
+        prezzo = args[0] * 1000;
 
         if(db[message.author.id].crys >= prezzo) {
             let bought = new Discord.RichEmbed()
                 .setColor("#87d704")
                 .setThumbnail('https://i.imgur.com/CtoiatU.png')
-                .setAuthor(`Hai comprato ${args[0]} containers per ${prezzo} 💎`);
+                .setAuthor(`You bought ${args[0]} containers for ${prezzo} 💎`);
 
             db[message.author.id].crys -= prezzo;
             db[message.author.id].containers.container += args[0];
@@ -42,14 +42,14 @@ module.exports.run = async (client, message, args) => {
         } else {
             let noMoney = new Discord.RichEmbed()
                 .setColor("#f54242")
-                .setAuthor("Non hai abbastanza cristalli!");
+                .setAuthor("You don't have crystals!");
             message.channel.send({embed:noMoney});
         }
 
-    } else if (isNaN(args[0])) {
+    } else {
         let nan = new Discord.RichEmbed()
                 .setColor("#f54242")
-                .setAuthor("Devi inserire una quantità valida!");
+                .setAuthor("Not a valid input!");
         message.channel.send({embed:nan});
     } 
 
