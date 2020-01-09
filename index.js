@@ -21,7 +21,7 @@ client.on('message', async message => {
         // rankup
         if (lv[db[message.author.id].level + 1].exp <= db[message.author.id].xp) {
             db[message.author.id].level ++;  // aumenta lvl
-            db[message.author.id].cry +=lv[db[message.author.id].level].crystals    // aumenta crys
+            db[message.author.id].crys +=lv[db[message.author.id].level].crystals    // aumenta crys
 
             let lvupEmbed = new Discord.RichEmbed()
                 .setColor("#ffc300")
