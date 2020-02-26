@@ -51,14 +51,6 @@ client.on('message', async message => {
     let youCant = new Discord.RichEmbed()
     .setAuthor("Non puoi usare il bot in questo canale!")
     .setColor("#87d704");
-
-    // blocco msg nel canale general di italian culture server
-    if (message.channel.id === '488001350320259076'){
-        message.channel.send({embed:youCant});
-        return;
-    }
-    // end blocco msg
-
     try {
         let commandFile = require(`./commands/${cmd}.js`);
         commandFile.run(client, message, args);
