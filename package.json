@@ -1,0 +1,19 @@
+{
+  "name": "TankiBot",
+  "version": "21.02.2020",
+  "description": "A Tanki Online bot with game's function from API and custom economy.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "gbfactory(https://gbfactory.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://discord.gg/cH8Tvbn"
+  },
+  "homepage": "https://tanki.gbfactory.net",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "mysql": "^2.18.1"
+  }
+}
