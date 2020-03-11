@@ -66,7 +66,7 @@ client.on('message', async message => {
 // AVVIO BOT //
 
 client.on('ready', async () => {
-    console.log('Bot avviato!');
+    console.log('Bot started!');
     client.user.setActivity("Tanki Online", {
         type: "PLAYING"
     });
