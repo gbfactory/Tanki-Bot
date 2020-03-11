@@ -1,57 +1,69 @@
+/**
+ * Tanki Bot.
+ * 
+ * Bot shop where you can buy items.
+ * 
+ * @author gbfactory
+ * @since  06.01.2020
+*/
+
 const Discord = require("discord.js");
 
-let db = require("../storage/users.json");
+module.exports.run = async (client, message, args, con) => {
 
-module.exports.run = async (client, message, args) => {
+    let authorId = message.author.id;
 
-    if (!db[message.author.id]) {
-        let rgNo  = new Discord.RichEmbed()
-            .setAuthor("Non sei registrato!")
-            .setColor("#f54242");
-        message.channel.send({embed:rgNo});
-        return;
-    }
+    con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
+        if (err) throw err;
 
-    let inArrivo = new Discord.RichEmbed()
-        .setColor("#00ffff")
-        .setAuthor("Tanki Bot")
-        .setTitle("Benvenuto nel Tanki Bot Shop!")
-        .setDescription("Questa categoria sarà disponibile prossimamente!")
-        .setThumbnail('https://en.tankiwiki.com/images/en/thumb/3/39/Shop_logo.jpg/400px-Shop_logo.jpg.png')
+        if (rows.length < 1) {
+            let rgNo  = new Discord.RichEmbed()
+                .setAuthor("You aren't registered! Use >register (username) to create a profile.")
+                .setColor("#f54242");
+            message.channel.send({embed:rgNo});
+            return;
+        }
 
-    if (args[0] == "turrets") {
-        message.channel.send({embed:inArrivo});
-    } else if (args[0] == "hulls") {
-        message.channel.send({embed:inArrivo});
-    } else if (args[0] == "containers") {
+        if (!args[0]) {
+            let shop = new Discord.RichEmbed()
+                .setColor("#00ffff")
+                .setAuthor("Tanki Bot")
+                .setTitle("<:MenuShop:661186115310583808> Shop")
+                .setDescription("Select a category")
+                .addField("**Categories**", "`>shop turrets` \n`>shop hulls` \n`>shop containers` \n`>shop special`")
+                .setThumbnail('https://i.imgur.com/ZOclxPD.png')
+            message.channel.send({embed:shop});
+            return;
+        } else if (args[0] == "turrets" || args[0] == "t") {
+            message.channel.send("❌ Coming soon...")
+        } else if (args[0] == "hulls" || args[0] == "h") {
+            message.channel.send("❌ Coming soon...")
+        } else if (args[0] == "containers" || args[0] == "c") {
+            let shopContainers = new Discord.RichEmbed()
+                .setColor("#00ffff")
+                .setThumbnail('https://i.imgur.com/CtoiatU.png')
+                .setAuthor("Tanki Bot")
+                .setTitle("<:MenuShop:661186115310583808> Shop - Containers")
+                .setDescription("Buy containers with `>buy <quantity>`")
+                .addField("<:MenuContainers:661186115147137056> 1 Container", "5000 💎", true)
+                .addField("<:MenuContainers:661186115147137056> How to buy", "`>buy <quantity>`", true)
+                .addField("<:MenuContainers:661186115147137056> How to open", "`>open c`", true)
+            message.channel.send({embed:shopContainers});
 
-        let shopContainers = new Discord.RichEmbed()
-            .setColor("#00ffff")
-            .setThumbnail('https://i.imgur.com/CtoiatU.png')
-            .setAuthor("Tanki Bot")
-            .setTitle("<:MenuShop:661186115310583808> Shop Containers")
-            .setDescription("Quanti containers vuoi acquistare?")
-            .addField("<:MenuContainers:661186115147137056> 1 Container", "10.000 💎", true)
-            .addField("<:MenuContainers:661186115147137056> 5 Containers", "50.000 💎", true)
-            .addField("<:MenuContainers:661186115147137056> 15 Containers", "150.000 💎", true)
-            .addField("<:MenuContainers:661186115147137056> 30 Containers", "300.000 💎", true)
-            .addField("<:MenuContainers:661186115147137056> 50 Containers", "500.000 💎", true)
-            .addField("<:MenuContainers:661186115147137056> Quanti ne vuoi?", ">buy <quantità>", true)
-            .setFooter("Bot by gb_factory");
+        } else if (args[0] == "special") {
+            let shopSpecial = new Discord.RichEmbed()
+                .setColor("#00ffff")
+                .setThumbnail('https://i.imgur.com/CtoiatU.png')
+                .setAuthor("Tanki Bot")
+                .setTitle("<:MenuShop:661186115310583808> Shop - Special")
+                .setDescription("Buy with `>buy <item>`")
+                .addField("<:Probitva2:684069669585682498> Pro Battle", "8000 💎 (❌)", true)
+                .addField("<:Clan_license:684069669191155728> Clan License", "2000 <:tankoin:660948390263128124> (❌)", true)
+                .addField("<:Rename_pass:684069669208064177> Rename Pass", "1000 <:tankoin:660948390263128124>", true)
+                .addField("<:Battle_Pass:684069669069520925> Battle Pass", "500 <:tankoin:660948390263128124> (❌)", true)
+            message.channel.send({embed:shopSpecial});
+        }
 
-        message.channel.send({embed:shopContainers});
-    } else {
-        
-        let shop = new Discord.RichEmbed()
-            .setColor("#00ffff")
-            .setAuthor("Tanki Bot")
-            .setTitle("<:MenuShop:661186115310583808> Tanki Bot Shop!")
-            .setDescription("Cosa vorresti acquistare?")
-            .addField("Categorie:", "```>shop turrets``` ```>shop hulls``` ```>shop containers``` ```>shop passes```")
-            .setThumbnail('https://en.tankiwiki.com/images/en/thumb/3/39/Shop_logo.jpg/400px-Shop_logo.jpg.png')
-            .setFooter("Bot by gb_factory");
-
-        message.channel.send({embed:shop})
-    }
+    });
 
 }
