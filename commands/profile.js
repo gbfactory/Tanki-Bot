@@ -1,84 +1,99 @@
 const Discord = require("discord.js");
 
-let db = require("../storage/users.json");
 let lv = require("../storage/levels.json");
+let eq = require("../storage/equip.json");
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (client, message, args, con) => {
 
     if (!args[0]) {
-        var username = message.author.username;
-        var userid = message.author.id;
-
-        // se non ci sono args e l'utente non è registrato
-        if (!db[userid]) {
-            let rgNo  = new Discord.RichEmbed()
-                .setAuthor("Non sei registrato!")
-                .setColor("#f54242");
-            message.channel.send({embed:rgNo});
-            return;
-        }
-
+        var authorId = message.author.id;
     } else if (message.mentions.members.first()) {
-        // se ci sono args l'username è la persona menzionata
-        var username = message.mentions.users.first().username;
-        var userid = message.mentions.users.first().id;
-
-        // se l'utente menzionato non è registrato
-        if (!db[userid]) {
-            let rgNo  = new Discord.RichEmbed()
-                .setAuthor("Questo utente non è registrato!")
-                .setColor("#f54242");
-            message.channel.send({embed:rgNo});
-            return;
-        }
+        var authorId = message.mentions.users.first().id;
     } else {
         let err  = new Discord.RichEmbed()
-            .setAuthor("Non hai menzionato un utente!")
+            .setAuthor("You didn't mention an user!")
             .setColor("#f54242");
         message.channel.send({embed:err});
         return;
     }
-
-    let rankImg = lv[db[userid].level].image;
-    let rank = lv[db[userid].level].name;
-    let crys = db[userid].crys;
-    let tankoins = db[userid].tankoins;
-
-    let expCur = db[userid].xp;
-    let expTot = lv[db[userid].level + 1].exp;
-    let expDif = expTot - expCur;
-
-    let getTurret = db[userid].turrets.equip;
-    let getHull = db[userid].hulls.equip;
-
-    let turret = getTurret.charAt(0).toUpperCase() + getTurret.slice(1) + " M" + db[userid].turrets[getTurret].level;
-    let hull = getHull.charAt(0).toUpperCase() + getHull.slice(1) + " M" + db[userid].hulls[getHull].level;
     
-    let wins = db[userid].battles.wins;
-    let losses = db[userid].battles.loss;
-    let ratio = wins/losses;
+    con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
+        if (err) throw err;
 
-    if (isNaN(ratio)) {
-        ratio = 0;
-    }
+        if (rows.length < 1 && !args[0]) {
+            let rgNo  = new Discord.RichEmbed()
+                .setAuthor("You aren't registered! Use >register (username) to create a profile.")
+                .setColor("#f54242");
+            message.channel.send({embed:rgNo});
+            return;
+        } else if (rows.length < 1 && message.mentions.members.first()) {
+            let rgNo  = new Discord.RichEmbed()
+                .setAuthor("This user isn't registered!")
+                .setColor("#f54242");
+            message.channel.send({embed:rgNo});
+            return;
+        }
 
-    if (db[userid].nick == "") {
-        tankiNick = "Non impostato";
-    } else {
-        tankiNick = db[userid].nick;
-    }
+        let profile = new Discord.RichEmbed();
+        profile.setAuthor("Tanki Bot");
+        profile.setTitle("<:elmetto:660442439441448981> User Profile");
+        profile.setColor("#87d704");
+        profile.setTimestamp();
+    
+        con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
+            if (err) throw err;
 
-    let profile = new Discord.RichEmbed()
-        .setAuthor("Tanki Bot")
-        .setTitle("User Profile")
-        .setColor("#87d704")
-        .setThumbnail(rankImg)
-        .addField(`**Profilo di ${username}**`, `**Rank:** ${rank} \n**Crystals:** ${crys} <:crystal:660948418746777613> \n**Tankoins:** ${tankoins} <:tankoin:660948390263128124> \n**Experience:** ${expCur}/${expTot} (-${expDif})`, true)
-        .addField(`**Battaglie**`, `**Vittore:** ${wins} \n**Sconfitte:** ${losses} \n**Ratio:** ${ratio}%`, true)
-        .addField("**Nickname Tanki**", tankiNick + " \nApri il garage con \n>garage", true)
-        .setFooter("Bot by GB Factory")
-        .setTimestamp();
+            if (rows[0].nick == "") {
+                tankiNick = "";
+            } else {
+                tankiNick = "(Tanki Nickname: " + rows[0].nick + ")";
+            }
 
-    message.channel.send({embed:profile});
+            let rankImg = lv[rows[0].level].image;
+            let username = rows[0].username;
 
+            let rank = lv[rows[0].level].name;
+            let crys = rows[0].crys;
+            let tankoins = rows[0].tankoins;
+
+            let expCur = rows[0].xp;
+            let expTot;
+            let expDif;
+            if (rows[0].level < 30) {
+                expTot = lv[rows[0].level + 1].exp;
+                expDif = expTot - expCur;
+            } else {
+                expTot = 0;
+                expDif = 0;
+            }
+        
+            let wins = rows[0].wins;
+            let losses = rows[0].losses;
+            let ratio = wins/losses;
+
+            if (isNaN(ratio)) ratio = 0;
+
+            profile.setThumbnail(rankImg);
+            profile.setDescription(`Profile of ${username} ${tankiNick}`);
+            profile.addField(`**Info**`, `**Rank:** ${rank} \n**Crystals:** ${crys} 💎 \n**Tankoins:** ${tankoins} <:tankoin:660948390263128124> \n**Experience:** ${expCur}/${expTot} (-${expDif})`, true);
+            profile.addField(`**Battles**`, `**Wins:** ${wins} \n**Losses:** ${losses} \n**Ratio:** ${ratio}%`, true);
+            
+            let getTurret = rows[0].equipTurret;
+            let getHull = rows[0].equipHull;
+
+            con.query(`SELECT ${getTurret}, ${getHull} FROM garage WHERE id = ${authorId}`, (err, rows) => {
+                if (err) throw err
+
+                let turret = getTurret.charAt(0).toUpperCase() + getTurret.slice(1) + " Mk" + rows[0][getTurret];
+                let hull = getHull.charAt(0).toUpperCase() + getHull.slice(1) + " Mk" + rows[0][getHull];
+                
+                profile.addField("**Equip**", `${turret} \n${hull}`, true);
+
+                message.channel.send({embed:profile});
+            })
+
+        });
+
+    });
+ 
 }
