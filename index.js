@@ -1,59 +1,98 @@
+/**
+ * Tanki Bot.
+ * 
+ * Main index file.
+ * 
+ * @author gbfactory
+ * @since  12.07.2017
+*/
+
+// Dependencies
 const Discord = require('discord.js');
+const mysql = require("mysql");
+
+// New discord client
 const client = new Discord.Client();
-const fs = require("fs");
+
+// Prefisso bot
 const prefix = '>';
 
-let db = require("./storage/users.json");
+// Json file with levels info
 let lv = require("./storage/levels.json");
 
+// Mysql connection to db
+var con = mysql.createConnection({
+    host: "",
+    user: "",
+    password: "",
+    database: ""
+});
+
+con.connect(err => {
+    if (err) throw err;
+    console.log("Connsesso al database!")
+})
+
+// On message event
 client.on('message', async message => {
 
-    // xp x msg
-    var xpMsg = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-    //console.log(xpMsg);
+    // LEVELING SYSTEM
+    var authorId = message.author.id;
+    var authorName = message.author.username;
 
-    // LIVELLI v2019//
+    var xpMsg = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
 
-    // Se un utente è registrato nel database aggiunge xp e lvl.
-    if (db[message.author.id]) {
-        db[message.author.id].xp += xpMsg;  //aumenta xp ogni msg
+    con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
+        if (err) throw err;
 
-        // rankup
-        if (lv[db[message.author.id].level + 1].exp <= db[message.author.id].xp) {
-            db[message.author.id].level ++;  // aumenta lvl
-            db[message.author.id].crys +=lv[db[message.author.id].level].crystals    // aumenta crys
+        if (rows.length > 0) {
 
-            let lvupEmbed = new Discord.RichEmbed()
-                .setColor("#ffc300")
-                .setThumbnail(lv[db[message.author.id].level].image)
-                .addField("✨ Rank up! ✨", `Congratulazioni **${message.author.username}**! \nOra sei al rank **${lv[db[message.author.id].level].name}** \n+${lv[db[message.author.id].level].crystals} 💎`)
+            // exp 
+            let xp = rows[0].xp;
+            con.query(`UPDATE users SET xp = ${xp + xpMsg} WHERE id = '${authorId}'`);
+        
+            // ranks
+            let lvl = rows[0].level;
 
-            message.channel.send({embed:lvupEmbed});
+            if (lvl < 30) {
+                if (lv[lvl + 1].exp <= xp) {
+                    let crys = rows[0].crys;
+                    let addCrys = lv[lvl + 1].crystals;
+                    
+                    con.query(`UPDATE users SET level = ${lvl + 1} WHERE id = '${authorId}'`);
+                    con.query(`UPDATE users SET crys = ${crys + addCrys} WHERE id = '${authorId}'`);
+        
+                    let lvupEmbed = new Discord.RichEmbed()
+                        .setColor("#ffc300")
+                        .setThumbnail(lv[lvl + 1].image)
+                        .addField("✨ Rank up! ✨", `Congratulations **${authorName}**! \nNow you are **${lv[lvl + 1].name}** \n+${lv[lvl + 1].crystals} 💎`)
+        
+                    message.channel.send({embed:lvupEmbed});
+                }
+            }
         }
 
-        fs.writeFile("./storage/users.json", JSON.stringify(db), (err) => {
-            if (err) console.log(err)
-        });
+    });
 
-    }
-
-
-    // COMMAND HANDLER v2018//
-
+    // Vars
     let msg = message.content.toUpperCase();
     let sender = message.author;
     let args = message.content.slice(prefix.length).trim().split(' ');
     let cmd = args.shift().toLowerCase();
 
+    // Check if the author is a bot
     if (message.author.bot) return;
+
+    // Check if the message doesn't start with the prefix
     if (!message.content.startsWith(prefix)) return;
 
-    let youCant = new Discord.RichEmbed()
-    .setAuthor("Non puoi usare il bot in questo canale!")
-    .setColor("#87d704");
+    // Check if the message is from dm
+    if (message.channel.type !== 'text') return;
+
+    // Command handler
     try {
         let commandFile = require(`./commands/${cmd}.js`);
-        commandFile.run(client, message, args);
+        commandFile.run(client, message, args, con);
     } catch (e) {
         console.log(e.message);
     } finally {
@@ -62,18 +101,16 @@ client.on('message', async message => {
 
 });
 
-
-// AVVIO BOT //
-
+// Bot on start
 client.on('ready', async () => {
-    console.log('Bot started!');
+    console.log('Bot avviato!');
     client.user.setActivity("Tanki Online", {
         type: "PLAYING"
     });
 });
 
 
-// TOKEN //
+// Token
+const token = "";
 
-const token = ""
 client.login(token);
