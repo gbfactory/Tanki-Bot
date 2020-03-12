@@ -12,11 +12,10 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args, con) => {
 
     let authorId = message.author.id;
+    console.log(authorId);
 
-    con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
+    con.query(`SELECT id, username, crys FROM users WHERE id = '${authorId}'`, (err, rows) => {
         if (err) throw err;
-
-        var rowsUsers = rows;
 
         if (rows.length < 1) {
             let rgNo  = new Discord.RichEmbed()
@@ -26,7 +25,7 @@ module.exports.run = async (client, message, args, con) => {
             return;
         }
 
-        con.query(`SELECT * FROM items WHERE id = '${authorId}'`, (err, rows) => {
+        con.query(`SELECT id, gold FROM items WHERE id = '${authorId}'`, (err, rows) => {
             if (err) throw err;
 
             if (rows[0].gold < 1) {
@@ -38,7 +37,6 @@ module.exports.run = async (client, message, args, con) => {
             }
 
             var dropper = message.author.username;
-            var dropperId = message.author.id;
 
             let dropEmbed = new Discord.RichEmbed()
                 .setColor('#ebcc34')
@@ -51,16 +49,23 @@ module.exports.run = async (client, message, args, con) => {
 
                 message.channel.awaitMessages(response => response.content === 'goldbox', { max: 1, time: 20000, errors: ['time']}).then(collected => {
 
+                    var takenId = collected.first().author.id;
+
                     let dropTaken = new Discord.RichEmbed()
                         .setColor('#ebcc34')
                         .setAuthor(`${collected.first().author.username} has taken the Gold Box!`)
                         .setThumbnail('https://i.imgur.com/7heALnz.png')
                         .setFooter(`Dropped by ${dropper}`)
                     message.channel.send({embed:dropTaken});
+   
+                    con.query(`UPDATE items SET gold = ${rows[0].gold - 1} WHERE id = '${authorId}'`);
 
-                    con.query(`UPDATE items SET gold = ${rows[0].gold - 1} WHERE id = '${dropperId}'`);
+                    con.query(`SELECT id, crys FROM users WHERE id = '${takenId}'`, (err, rows) => {
+                        if (err) throw err;
 
-                    con.query(`UPDATE users SET crys = ${rowsUsers[0].crys + 1000} WHERE id = '${collected.first().author.id}'`);
+                        con.query(`UPDATE users SET crys = ${rows[0].crys + 1000} WHERE id = '${takenId}'`);
+
+                    });
 
                 }).catch(collected => {
 
@@ -70,9 +75,9 @@ module.exports.run = async (client, message, args, con) => {
                         .setFooter(`Dropped by ${dropper}`)
                     
                     message.channel.send({embed:dropNot});
-                })
-            })
+                });
 
+            });
 
         });
 
