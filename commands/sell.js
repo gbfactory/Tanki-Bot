@@ -1,131 +1,75 @@
+/**
+ * Tanki Bot. ECONOMY.
+ * 
+ * Sell items
+ * 
+ * @author gbfactory
+ * @since 04.03.2020
+ */
+
 const Discord = require("discord.js");
-const fs = require("fs");
 
-let db = require("../storage/users.json");
+module.exports.run = async(client, message, args, con) => {
+   
+   var authorId = message.author.id;
 
-module.exports.run = async (client, message, args) => {
+   function random(min, max) {
+       return Math.floor(Math.random() * (max - min + 1) + min);
+   }
 
-    let authorId = message.author.id;
+   con.query(`SELECT id, crys FROM users WHERE id = ${authorId}`, (err, rows) => {
+       if (err) throw err;
 
-    if (!db[authorId]) {
-        let rgNo  = new Discord.RichEmbed()
-            .setAuthor("Non sei registrato!")
-            .setColor("#f54242");
-        message.channel.send({embed:rgNo});
-        return;
-    }
+       var rowsUsers = rows;
 
-    if (!args[0]) {
-        let shop = new Discord.RichEmbed()
-            .setColor("#f54242")
-            .setAuthor("Devi specificare cosa vuoi vendere.")
-        message.channel.send({embed:shop});
-        return;
-    }
+       if (rows.length < 1) {
+           let rgNo  = new Discord.RichEmbed()
+               .setAuthor("You aren't registered! Use >register (username) to create a profile.")
+               .setColor("#f54242");
+           message.channel.send({embed:rgNo});
+           return;
+       }
+       
+       con.query(`SELECT * FROM items WHERE id = ${authorId}`, (err, rows) => {
+           if (err) throw err;
 
-    if (args[0] == "paints") {
-        var paintRare = db[authorId].paint.rare;
-        var paintEpic = db[authorId].paint.epic;
-        var paintLegd = db[authorId].paint.legendary;
+           var repair = rows[0].repair;
+           var armor = rows[0].armor;
+           var damage = rows[0].damage;
+           var nitro = rows[0].nitro;
+           var mine = rows[0].mine;
+           var battery = rows[0].battery;
+           var rare = rows[0].rare;
+           var epic = rows[0].epic;
+           var legendary = rows[0].legendary;
+           var turrets = rows[0].skinTurrets;
+           var hulls = rows[0].skinHulls;
 
-        var paintPrice = (paintRare * 1000) + (paintEpic * 1500) + (paintLegd * 2000);
+           var price = (repair * 50) + (armor * 25) + (damage * 25) + (nitro * 25) + (mine * 25) + (battery * 60) + (rare * random(2000, 4000)) + (epic * random(4000, 8000)) + (legendary * random(8000, 16000)) + (turrets * 100000) + (hulls * 100000);
 
-        db[authorId].crys += paintPrice;
+           //message.channel.send(price)
+               
+           //message.channel.send(rowsUsers[0].crys)
 
-        if (paintPrice <= 0) {
-            let noPaint = new Discord.RichEmbed()
-                .setColor("#f54242")
-                .setAuthor("Non hai vernici da vendere.")
-            message.channel.send({embed:noPaint});
-            return;
-        }
+           var newPrice = rowsUsers[0].crys + price;
 
-        db[authorId].paint.rare = 0;
-        db[authorId].paint.epic = 0;
-        db[authorId].paint.legendary = 0;
+           //message.channel.send(newPrice)
+               
+           con.query(`UPDATE users SET crys = ${newPrice} WHERE id = ${authorId}`);
+               
+           con.query(`UPDATE items SET repair = 0, armor = 0, damage = 0, nitro = 0, mine = 0, battery = 0, rare = 0, epic = 0, legendary = 0, skinTurrets = 0, skinHulls = 0 WHERE id = ${authorId}`);
+                               
+           //message.channel.send(`You sold *all* for **${price}** crystals!`);
 
-        fs.writeFile("./storage/users.json", JSON.stringify(db), (err) => {
-            if(err) console.log(err)
-        });
+           let embed = new Discord.RichEmbed()
+               .setColor("#ff6600")
+               .setAuthor("Sell")
+               .setThumbnail("https://i.imgur.com/HrJS6eH.png")
+               .setDescription(`You sold *all* for **${price}** crystals!`);
+           
+           message.channel.send({embed:embed});
 
-        let soldPaint = new Discord.RichEmbed()
-            .setColor("#1dd914")
-            .setAuthor("Hai venduto tutte le vernici per " + paintPrice + " 💎!")
-           .setThumbnail("https://i.imgur.com/oleyJg5.png")
-            .setFooter("Bot by GB Factory")
-        message.channel.send({embed:soldPaint});
-        return;
-
-    } else if (args[0] == "skins") {
-        var equipTurrs = db[authorId].equip.turrets;
-        var equipHulls = db[authorId].equip.hulls;
-
-        var skinsPrice = (equipTurrs * 3000) + (equipHulls * 3000);
-
-        db[authorId].crys += skinsPrice;
-
-        if (skinsPrice <= 0) {
-            let noSkins = new Discord.RichEmbed()
-                .setColor("#f54242")
-                .setAuthor("Non hai skins da vendere.")
-            message.channel.send({embed:noSkins});
-            return;
-        }
-
-        db[authorId].equip.turrets = 0;
-        db[authorId].equip.turrets = 0;
-
-        fs.writeFile("./storage/users.json", JSON.stringify(db), (err) => {
-            if(err) console.log(err)
-        });
-
-        let soldSkins = new Discord.RichEmbed()
-            .setColor("#1dd914")
-            .setAuthor("Hai venduto tutte le skins per " + skinsPrice + " 💎!")
-            .setThumbnail("https://i.imgur.com/d7K0B7S.png")
-            .setFooter("Bot by GB Factory")
-        message.channel.send({embed:soldSkins});
-        return;
-
-    } else if (args[0] == "supplies") {
-        var repair = db[authorId].items.repair;
-        var armor = db[authorId].items.armor;
-        var damage = db[authorId].items.damage;
-        var speed = db[authorId].items.speed;
-        var mine = db[authorId].items.mine;
-        var battery = db[authorId].items.battery;
-
-        var supsPrice = repair * 150 + armor * 50 + damage * 50 + speed * 50 + mine * 50 + battery * 100;
-
-        db[authorId].crys += supsPrice;
-
-        if (supsPrice <= 0) {
-            let noSups = new Discord.RichEmbed()
-                .setColor("#f54242")
-                .setAuthor("Non hai potenziamenti da vendere.")
-            message.channel.send({embed:noSups});
-            return;
-        }
-
-        db[authorId].items.repair = 0;
-        db[authorId].items.armor = 0;
-        db[authorId].items.damage = 0;
-        db[authorId].items.speed = 0;
-        db[authorId].items.mine = 0;
-        db[authorId].items.battery = 0;
-
-        fs.writeFile("./storage/users.json", JSON.stringify(db), (err) => {
-            if(err) console.log(err)
-        });
-
-        let soldSups = new Discord.RichEmbed()
-            .setColor("#1dd914")
-            .setAuthor("Hai venduto tutti i potenziamenti per " + supsPrice + " 💎!")
-            .setThumbnail("https://i.imgur.com/cl039Xx.png")
-            .setFooter("Bot by GB Factory")
-        message.channel.send({embed:soldSups});
-        return;
-
-    }
+       });
+   });
 
 }
