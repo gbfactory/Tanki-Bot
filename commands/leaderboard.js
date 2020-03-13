@@ -93,7 +93,7 @@ module.exports.run = async (client, message, args, con) => {
                     posPointer = "";
                 }
 
-                topExp.addField(` ${i + 1} - ${rows[i].username} ${posPointer}`, `<:tankoin:660948390263128124>  ${rows[i].xp}`, true)
+                topExp.addField(` ${i + 1} - ${rows[i].username} ${posPointer}`, `<:tankoin:660948390263128124>  ${rows[i].tankoins}`, true)
             }
 
             message.channel.send({embed:topExp});
