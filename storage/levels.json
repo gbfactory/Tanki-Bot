@@ -1,219 +1,281 @@
 [
     {
         "name": "Recruit",
-        "image": "https://i.imgur.com/y0HJl8f.png",
+        "image": "https://en.tankiwiki.com/images/en/6/64/IconsNormal_01.png",
         "premium": "https://i.imgur.com/k8GS6oa.png",
+        "icon": "<:IconsNormal_01:671703034660913153>",
         "crystals": 0,
-        "exp": 0
+        "exp": 0,
+        "bonus": 50
     },
     {
         "name": "Private",
-        "image": "https://i.imgur.com/5zr1vzJ.png",
+        "image": "https://en.tankiwiki.com/images/en/9/91/IconsNormal_02.png",
         "premium": "https://i.imgur.com/fjRvRXb.png",
+        "icon": "<:IconsNormal_02:671703034182631454>",
         "crystals": 10,
-        "exp": 100
+        "exp": 100,
+        "bonus": 85
     },
     {
         "name": "Gefreiter",
-        "image": "https://i.imgur.com/PpLIXxs.png",
+        "image": "https://en.tankiwiki.com/images/en/2/20/IconsNormal_03.png",
         "premium": "https://i.imgur.com/pxTOJUa.png",
+        "icon": "<:IconsNormal_03:671703035306704917>",
         "crystals": 40,
-        "exp": 500
+        "exp": 500,
+        "bonus": 150
     },
     {
         "name": "Corporal",
-        "image": "https://i.imgur.com/EnuzmYM.png",
+        "image": "https://en.tankiwiki.com/images/en/d/d6/IconsNormal_04.png",
         "premium": "https://i.imgur.com/8rxr28Q.png",
+        "icon": "<:IconsNormal_04:671703035453636618>",
         "crystals": 120,
-        "exp": 1500
+        "exp": 1500,
+        "bonus": 250
     },
     {
         "name": "Master Corporal",
-        "image": "https://i.imgur.com/UkVsmb8.png",
+        "image": "https://en.tankiwiki.com/images/en/5/51/IconsNormal_05.png",
         "premium": "https://i.imgur.com/x6amMgO.png",
+        "icon": "<:IconsNormal_05:671703035843706881>",
         "crystals": 230,
-        "exp": 3700
+        "exp": 3700,
+        "bonus": 350
     },
     {
         "name": "Sergeant",
-        "image": "https://i.imgur.com/hA8Dx5p.png",
+        "image": "https://en.tankiwiki.com/images/en/5/57/IconsNormal_06.png",
         "premium": "https://i.imgur.com/3qH78R1.png",
+        "icon": "<:IconsNormal_06:671703035415756810>",
         "crystals": 420,
-        "exp": 7100
+        "exp": 7100,
+        "bonus": 500
     },
     {
         "name": "Staff Sergeant",
-        "image": "https://i.imgur.com/XpvFRX3.png",
+        "image": "https://en.tankiwiki.com/images/en/5/53/IconsNormal_07.png",
         "premium": "https://i.imgur.com/uW3Z6UE.png",
+        "icon": "<:IconsNormal_07:671703036607070268>",
         "crystals": 740,
-        "exp": 12300
+        "exp": 12300,
+        "bonus": 600
     },
     {
         "name": "Master Sergeant",
-        "image": "https://i.imgur.com/J6HvqhW.png",
+        "image": "https://en.tankiwiki.com/images/en/6/6b/IconsNormal_08.png",
         "premium": "https://i.imgur.com/bpQr3xo.png",
+        "icon": "<:IconsNormal_08:671703037257187370>",
         "crystals": 950,
-        "exp": 20000
+        "exp": 20000,
+        "bonus": 750
     },
     {
         "name": "First Sergeant",
-        "image": "https://i.imgur.com/vTxMb72.png",
+        "image": "https://en.tankiwiki.com/images/en/1/14/IconsNormal_09.png",
         "premium": "https://i.imgur.com/7btU1uJ.png",
+        "icon": "<:IconsNormal_09:671703035290058764>",
         "crystals": 1400,
-        "exp": 29000
+        "exp": 29000,
+        "bonus": 850
     },
     {
         "name": "Sergeant-Major",
-        "image": "https://i.imgur.com/w0ntkZx.png",
+        "image": "https://en.tankiwiki.com/images/en/6/63/IconsNormal_10.png",
         "premium": "https://i.imgur.com/9tWv4bu.png",
+        "icon": "<:IconsNormal_10:671703036220932099>",
         "crystals": 2000,
-        "exp": 41000
+        "exp": 41000,
+        "bonus": 950
     },
     {
-        "name": "Warrent Offier 1",
-        "image": "https://i.imgur.com/NQNgCx0.png",
+        "name": "Warrent Officer 1",
+        "image": "https://en.tankiwiki.com/images/en/3/39/IconsNormal_11.png",
         "premium": "https://i.imgur.com/gxDI1ia.png",
+        "icon": "<:IconsNormal_11:671703034799063050>",
         "crystals": 2500,
-        "exp": 57000
+        "exp": 57000,
+        "bonus": 1100
     },
     {
         "name": "Warrent Officer 2",
-        "image": "https://i.imgur.com/vopMXHQ.png",
+        "image": "https://en.tankiwiki.com/images/en/5/50/IconsNormal_12.png",
         "premium": "https://i.imgur.com/E4lhLjF.png",
+        "icon": "<:IconsNormal_12:671703034526564352>",
         "crystals": 3100,
-        "exp": 76000
+        "exp": 76000,
+        "bonus": 1200
     },
     {
         "name": "Warrent Officer 3",
-        "image": "https://i.imgur.com/RTVhfXW.png",
+        "image": "https://en.tankiwiki.com/images/en/c/cc/IconsNormal_13.png",
         "premium": "https://i.imgur.com/QS3nSQK.png",
+        "icon": "<:IconsNormal_13:671703034954252368>",
         "crystals": 3900,
-        "exp": 98000
+        "exp": 98000,
+        "bonus": 1350
     },
     {
         "name": "Warrent Officer 4",
-        "image": "https://i.imgur.com/IrXs01l.png",
+        "image": "https://en.tankiwiki.com/images/en/e/e8/IconsNormal_14.png",
         "premium": "https://i.imgur.com/By7ZIco.png",
+        "icon": "<:IconsNormal_14:671703035772403712>",
         "crystals": 4600,
-        "exp": 125000
+        "exp": 125000,
+        "bonus": 1450
     },
     {
         "name": "Warrent Officer 5",
-        "image": "https://i.imgur.com/ABdpw14.png",
+        "image": "https://en.tankiwiki.com/images/en/5/55/IconsNormal_15.png",
         "premium": "https://i.imgur.com/UlNijtA.png",
+        "icon": "<:IconsNormal_15:671703035864678430>",
         "crystals": 5600,
-        "exp": 156000
+        "exp": 156000,
+        "bonus": 1550
     },
     {
         "name": "Third Lieutenant",
-        "image": "https://i.imgur.com/PA6wpV0.png",
+        "image": "https://en.tankiwiki.com/images/en/3/3f/IconsNormal_16.png",
         "premium": "https://i.imgur.com/FFil4Mu.png",
+        "icon": "<:IconsNormal_16:671703036577447937>",
         "crystals": 6600,
-        "exp": 192000
+        "exp": 192000,
+        "bonus": 1700
     },
     {
         "name": "Second Lieutenant",
-        "image": "https://i.imgur.com/czP6p30.png",
+        "image": "https://en.tankiwiki.com/images/en/4/48/IconsNormal_17.png",
         "premium": "https://i.imgur.com/uxKX7Lp.png",
+        "icon": "<:IconsNormal_17:671703037231890440>",
         "crystals": 7900,
-        "exp": 233000
+        "exp": 233000,
+        "bonus": 1800
     },
     {
         "name": "First Lieutenant",
-        "image": "https://i.imgur.com/ZsQKaGc.png",
+        "image": "https://en.tankiwiki.com/images/en/7/72/IconsNormal_18.png",
         "premium": "https://i.imgur.com/AaqbXFc.png",
+        "icon": "<:IconsNormal_18:671703037076701184>",
         "crystals": 8900,
-        "exp": 280000
+        "exp": 280000,
+        "bonus": 1950
     },
     {
         "name": "Captain",
-        "image": "https://i.imgur.com/85QETBR.png",
+        "image": "https://en.tankiwiki.com/images/en/e/ed/IconsNormal_19.png",
         "premium": "https://i.imgur.com/64uULze.png",
+        "icon": "<:IconsNormal_19:671703037873487891>",
         "crystals": 10000,
-        "exp": 332000
+        "exp": 332000,
+        "bonus": 2050
     },
     {
         "name": "Major",
-        "image": "https://i.imgur.com/2BP9ryd.png",
+        "image": "https://en.tankiwiki.com/images/en/b/b3/IconsNormal_20.png",
         "premium": "https://i.imgur.com/Bsc8CWh.png",
+        "icon": "<:IconsNormal_20:671703035982118933>",
         "crystals": 12000,
-        "exp": 390000
+        "exp": 390000,
+        "bonus": 2150
     },
     {
         "name": "Lieutenant Colonel",
-        "image": "https://i.imgur.com/MVk87nd.png",
+        "image": "https://en.tankiwiki.com/images/en/c/c8/IconsNormal_21.png",
         "premium": "https://i.imgur.com/McWEPqk.png",
+        "icon": "<:IconsNormal_21:671703036246229016>",
         "crystals": 14000,
-        "exp": 455000
+        "exp": 455000,
+        "bonus": 2300
     },
     {
         "name": "Colonel",
-        "image": "https://i.imgur.com/LwGdFIz.png",
+        "image": "https://en.tankiwiki.com/images/en/7/7c/IconsNormal_22.png",
         "premium": "https://i.imgur.com/q8dxhZY.png",
+        "icon": "<:IconsNormal_22:671703037189816320>",
         "crystals": 16000,
-        "exp": 527000
+        "exp": 527000,
+        "bonus": 2400
     },
     {
         "name": "Brigadier",
-        "image": "https://i.imgur.com/ssfVd1I.png",
+        "image": "https://en.tankiwiki.com/images/en/2/24/IconsNormal_23.png",
         "premium": "https://i.imgur.com/PCVlwX4.png",
+        "icon": "<:IconsNormal_23:671703036409937935>",
         "crystals": 17000,
-        "exp": 606000
+        "exp": 606000,
+        "bonus": 2550
     },
     {
         "name": "Major General",
-        "image": "https://i.imgur.com/EaS8tgV.png",
+        "image": "https://en.tankiwiki.com/images/en/7/73/IconsNormal_24.png",
         "premium": "https://i.imgur.com/egFwmvh.png",
+        "icon": "<:IconsNormal_24:671703037013786624>",
         "crystals": 20000,
-        "exp": 692000
+        "exp": 692000,
+        "bonus": 2650
     },
     {
         "name": "Lieutenant General",
-        "image": "https://i.imgur.com/FV3fbCA.png",
+        "image": "https://en.tankiwiki.com/images/en/7/71/IconsNormal_25.png",
         "premium": "https://i.imgur.com/1zOpUt3.png",
+        "icon": "<:IconsNormal_25:671703038012030996>",
         "crystals": 22000,
-        "exp": 787000
+        "exp": 787000,
+        "bonus": 2750
     },
     {
         "name": "General",
-        "image": "https://i.imgur.com/bSjCOma.png",
+        "image": "https://en.tankiwiki.com/images/en/0/04/IconsNormal_26.png",
         "premium": "https://i.imgur.com/QmlkDXg.png",
+        "icon": "<:IconsNormal_26:671703037353525268>",
         "crystals": 24000,
-        "exp": 889000
+        "exp": 889000,
+        "bonus": 2900
     },
     {
         "name": "Marshal",
-        "image": "https://i.imgur.com/M8uF8b6.png",
+        "image": "https://en.tankiwiki.com/images/en/0/0f/IconsNormal_27.png",
         "premium": "https://i.imgur.com/WeHQRrc.png",
+        "icon": "<:IconsNormal_27:671703037529686017>",
         "crystals": 28000,
-        "exp": 1000000
+        "exp": 1000000,
+        "bonus": 3000
     },
     {
         "name": "Fieldmarshal",
-        "image": "https://i.imgur.com/eOK0kS7.png",
+        "image": "https://en.tankiwiki.com/images/en/3/38/IconsNormal_28.png",
         "premium": "https://i.imgur.com/LkA03Yi.png",
+        "icon": "<:IconsNormal_28:671703038192386048>",
         "crystals": 31000,
-        "exp": 1122000
+        "exp": 1122000,
+        "bonus": 3150
     },
     {
         "name": "Commander",
-        "image": "https://i.imgur.com/fOn9vm9.png",
+        "image": "https://en.tankiwiki.com/images/en/d/db/IconsNormal_29.png",
         "premium": "https://i.imgur.com/5AYtWUL.png",
+        "icon": "<:IconsNormal_29:671703037416570882>",
         "crystals": 34000,
-        "exp": 1255000
+        "exp": 1255000,
+        "bonus": 3250
     },
     {
         "name": "Generalissimo",
-        "image": "https://i.imgur.com/KLwaUZ0.png",
+        "image": "https://en.tankiwiki.com/images/en/e/eb/IconsNormal_30.png",
         "premium": "https://i.imgur.com/yZ1uEXI.png",
+        "icon": "<:IconsNormal_30:671703037575692328>",
         "crystals": 37000,
-        "exp": 1400000
+        "exp": 1400000,
+        "bonus": 3350
     },
     {
         "name": "Legend",
-        "image": "https://i.imgur.com/WhUqTcQ.png",
+        "image": "https://en.tankiwiki.com/images/en/5/55/IconsNormal_31.png",
         "premium": "https://i.imgur.com/kVu9WrV.png",
+        "icon": "<:IconsNormal_31:671703037647126529>",
         "crystals": 40000,
-        "exp": 1600000
+        "exp": 1600000,
+        "bonus": 3550
     }
 ]
