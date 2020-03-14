@@ -17,6 +17,21 @@ module.exports.run = async(client, message, args, con) => {
        return Math.floor(Math.random() * (max - min + 1) + min);
    }
 
+   function embedGenerator(item, price) {
+       let embed = new Discord.RichEmbed()
+        .setColor("#ff6600")
+        .setAuthor("Sell")
+        .setThumbnail("https://i.imgur.com/HrJS6eH.png")
+
+       if (price > 0) {
+           embed.setDescription(`You sold *${item}* for **${price}** crystals!`);
+       } else {
+           embed.setDescription(`You don't have *${item}* to sell!`);
+       }
+
+       return embed;
+   }
+
    con.query(`SELECT id, crys FROM users WHERE id = ${authorId}`, (err, rows) => {
        if (err) throw err;
 
@@ -33,41 +48,80 @@ module.exports.run = async(client, message, args, con) => {
        con.query(`SELECT * FROM items WHERE id = ${authorId}`, (err, rows) => {
            if (err) throw err;
 
-           var repair = rows[0].repair;
-           var armor = rows[0].armor;
-           var damage = rows[0].damage;
-           var nitro = rows[0].nitro;
-           var mine = rows[0].mine;
-           var battery = rows[0].battery;
-           var rare = rows[0].rare;
-           var epic = rows[0].epic;
-           var legendary = rows[0].legendary;
-           var turrets = rows[0].skinTurrets;
-           var hulls = rows[0].skinHulls;
+           if (args[0] === 'all') {
+                
+                var repair = rows[0].repair;
+                var armor = rows[0].armor;
+                var damage = rows[0].damage;
+                var nitro = rows[0].nitro;
+                var mine = rows[0].mine;
+                var battery = rows[0].battery;
+                var rare = rows[0].rare;
+                var epic = rows[0].epic;
+                var legendary = rows[0].legendary;
+                var turrets = rows[0].skinTurrets;
+                var hulls = rows[0].skinHulls;
+    
+                var price = (repair * 50) + (armor * 25) + (damage * 25) + (nitro * 25) + (mine * 25) + (battery * 60) + (rare * random(2000, 4000)) + (epic * random(4000, 8000)) + (legendary * random(8000, 16000)) + (turrets * 100000) + (hulls * 100000);
+    
+                var newPrice = rowsUsers[0].crys + price;
+                    
+                con.query(`UPDATE users SET crys = ${newPrice} WHERE id = ${authorId}`);
+                    
+                con.query(`UPDATE items SET repair = 0, armor = 0, damage = 0, nitro = 0, mine = 0, battery = 0, rare = 0, epic = 0, legendary = 0, skinTurrets = 0, skinHulls = 0 WHERE id = ${authorId}`);
+            
+                message.channel.send({embed:embedGenerator('all', price)});
 
-           var price = (repair * 50) + (armor * 25) + (damage * 25) + (nitro * 25) + (mine * 25) + (battery * 60) + (rare * random(2000, 4000)) + (epic * random(4000, 8000)) + (legendary * random(8000, 16000)) + (turrets * 100000) + (hulls * 100000);
+            } else if (args[0] === 'supplies') {
 
-           //message.channel.send(price)
-               
-           //message.channel.send(rowsUsers[0].crys)
+                var repair = rows[0].repair;
+                var armor = rows[0].armor;
+                var damage = rows[0].damage;
+                var nitro = rows[0].nitro;
+                var mine = rows[0].mine;
+                var battery = rows[0].battery;
+    
+                var price = (repair * 50) + (armor * 25) + (damage * 25) + (nitro * 25) + (mine * 25) + (battery * 60);
+    
+                var newPrice = rowsUsers[0].crys + price;
+                    
+                con.query(`UPDATE users SET crys = ${newPrice} WHERE id = ${authorId}`);
+                    
+                con.query(`UPDATE items SET repair = 0, armor = 0, damage = 0, nitro = 0, mine = 0, battery = 0 WHERE id = ${authorId}`);
+            
+                message.channel.send({embed:embedGenerator('supplies', price)});
 
-           var newPrice = rowsUsers[0].crys + price;
+            } else if (args[0] === 'paints') {
 
-           //message.channel.send(newPrice)
-               
-           con.query(`UPDATE users SET crys = ${newPrice} WHERE id = ${authorId}`);
-               
-           con.query(`UPDATE items SET repair = 0, armor = 0, damage = 0, nitro = 0, mine = 0, battery = 0, rare = 0, epic = 0, legendary = 0, skinTurrets = 0, skinHulls = 0 WHERE id = ${authorId}`);
-                               
-           //message.channel.send(`You sold *all* for **${price}** crystals!`);
+                var rare = rows[0].rare;
+                var epic = rows[0].epic;
+                var legendary = rows[0].legendary;
 
-           let embed = new Discord.RichEmbed()
-               .setColor("#ff6600")
-               .setAuthor("Sell")
-               .setThumbnail("https://i.imgur.com/HrJS6eH.png")
-               .setDescription(`You sold *all* for **${price}** crystals!`);
-           
-           message.channel.send({embed:embed});
+                var price = (rare * random(2000, 4000)) + (epic * random(4000, 8000)) + (legendary * random(8000, 16000));
+    
+                var newPrice = rowsUsers[0].crys + price;
+                    
+                con.query(`UPDATE users SET crys = ${newPrice} WHERE id = ${authorId}`);
+                    
+                con.query(`UPDATE items SET rare = 0, epic = 0, legendary = 0 WHERE id = ${authorId}`);
+            
+                message.channel.send({embed:embedGenerator('paints', price)});
+
+            } else if(args[0] === 'skins') {
+                
+                var turrets = rows[0].skinTurrets;
+                var hulls = rows[0].skinHulls;
+    
+                var price = (turrets * 100000) + (hulls * 100000);
+    
+                var newPrice = rowsUsers[0].crys + price;
+                    
+                con.query(`UPDATE users SET crys = ${newPrice} WHERE id = ${authorId}`);
+                    
+                con.query(`UPDATE items SET skinTurrets = 0, skinHulls = 0 WHERE id = ${authorId}`);
+            
+                message.channel.send({embed:embedGenerator('skins', price)});
+            }
 
        });
    });
