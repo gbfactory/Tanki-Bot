@@ -19,9 +19,8 @@ module.exports.run = async (client, message, args, tools) => {
 		snekfetch.get(api).then(cry => {
 
 			let cryEmb = new Discord.RichEmbed()
-				.setAuthor("Tanki Ratings")
+				.setAuthor("Tanki Bot")
 				.setTitle("Top Crystals")
-				.setURL("https://ratings.tankionline.com/en/")
 				.setColor("#00c2ff")
 				.setThumbnail("https://i.imgur.com/90wIzOj.png")
 				.setTimestamp()
@@ -39,9 +38,8 @@ module.exports.run = async (client, message, args, tools) => {
 		snekfetch.get(api).then(eff => {
 
 			let effEmb = new Discord.RichEmbed()
-				.setAuthor("Tanki Ratings")
+				.setAuthor("Tanki Bot")
 				.setTitle("Top Efficiency")
-				.setURL("https://ratings.tankionline.com/en/")
 				.setColor("#ffa100")
 				.setThumbnail("https://i.imgur.com/jNPuErF.png")
 				.setTimestamp();
@@ -59,9 +57,8 @@ module.exports.run = async (client, message, args, tools) => {
 		snekfetch.get(api).then(gol => {
 
 			let golEmb = new Discord.RichEmbed()
-				.setAuthor("Tanki Ratings")
+				.setAuthor("Tanki Bot")
 				.setTitle("Top Golds")
-				.setURL("https://ratings.tankionline.com/en/")
 				.setColor("#fffc00")
 				.setThumbnail("https://i.imgur.com/M6wVUOH.png")
 				.setTimestamp();
@@ -79,9 +76,8 @@ module.exports.run = async (client, message, args, tools) => {
 		snekfetch.get(api).then(sco => {
 
 			let scoEmb = new Discord.RichEmbed()
-				.setAuthor("Tanki Ratings")
+				.setAuthor("Tanki Bot")
 				.setTitle("Top Score")
-				.setURL("https://ratings.tankionline.com/en/")
 				.setColor("#00ff19")
 				.setThumbnail("https://i.imgur.com/dcuovHE.png")
 				.setTimestamp();
@@ -97,9 +93,8 @@ module.exports.run = async (client, message, args, tools) => {
 	} else {
 
 		let topEmb = new Discord.RichEmbed()
-			.setAuthor("Tanki Ratings")
-			.setTitle("Top")
-			.setURL("https://ratings.tankionline.com/en/")
+			.setAuthor("Tanki Bot")
+			.setTitle("Weekly Tops")
 			.setColor("#87d704")
 			.setThumbnail("https://i.imgur.com/ifOqPcp.png")
 			.addField("Description", "Display the top players of the week.")
