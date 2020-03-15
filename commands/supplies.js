@@ -1,81 +1,71 @@
-const snekfetch = require("snekfetch");
+/**
+ * Tanki Bot.
+ * 
+ * RATINGS: check players' supplies usage
+ * 
+ * @author gbfactory
+ * @since  09.08.2017
+*/
+
 const Discord = require("discord.js");
+const snekfetch = require("snekfetch");
+
 const api = "https://ratings.tankionline.com/get_stat/profile/?user=";
 
 module.exports.run = async(client, message, args, tools) => {
 
-	nome = args[0];
+	var nickname = args[0];
 
-	let nonUsNome = new Discord.RichEmbed()
-		.setAuthor("You didn't put a nickname.")
-		.setColor("#87d704");
+    var nickname = args[0];
 
-	let nonEsiste = new Discord.RichEmbed()
-		.setAuthor("This user doesn't exist.")
-		.setColor("#87d704");
+    if (!nickname) {
+        let noNickname = new Discord.RichEmbed()
+        .setAuthor('You have to specify a nickname >ratings (nickname)')
+        .setColor('#f54242');
 
-	if (!nome) {
-		message.channel.send({
-			embed: nonUsNome
-		});
-	} else {
-		snekfetch.get(api + args[0]).then(r => {
+        return message.channel.send({embed:noNickname});
+    }
 
-			if (!r.body.response) {
-				message.channel.send({
-					embed: nonEsiste
-				});
-			} else {
+    snekfetch.get(api + nickname).then(r => {
 
-				var nome = r.body.response.name;
+        if (r.body.responseType === 'NOT_FOUND') {
+            let noUser = new Discord.RichEmbed()
+            .setAuthor('Player not found!')
+            .setColor('#f54242');
 
-				var nuno = (r.body.response.suppliesUsage[0].name).toLocaleString('en');
-				var ndue = (r.body.response.suppliesUsage[1].name).toLocaleString('en');
-				var ntre = (r.body.response.suppliesUsage[2].name).toLocaleString('en');
-				var nqua = (r.body.response.suppliesUsage[3].name).toLocaleString('en');
-				var ncin = (r.body.response.suppliesUsage[4].name).toLocaleString('en');
-				var nsei = (r.body.response.suppliesUsage[5].name).toLocaleString('en');
-				var nset = (r.body.response.suppliesUsage[6].name).toLocaleString('en');
+            return message.channel.send({embed:noUser});
+        } else if (!r.body.responseType) {
+            let noApi = new Discord.RichEmbed()
+            .setAuthor('Tanki Online API unavailable. Try again later.')
+            .setColor('#f54242');
+            return message.channel.send({embed:noApi});
+		}
+		
+		var res = r.body.response;
+		
+		var name = res.name;
 
-				var uuno = (r.body.response.suppliesUsage[0].usages).toLocaleString('en');
-				var udue = (r.body.response.suppliesUsage[1].usages).toLocaleString('en');
-				var utre = (r.body.response.suppliesUsage[2].usages).toLocaleString('en');
-				var uqua = (r.body.response.suppliesUsage[3].usages).toLocaleString('en');
-				var ucin = (r.body.response.suppliesUsage[4].usages).toLocaleString('en');
-				var usei = (r.body.response.suppliesUsage[5].usages).toLocaleString('en');
-				var uset = (r.body.response.suppliesUsage[6].usages).toLocaleString('en');
+		var suppliesArray = res.suppliesUsage;
+		var suppliesUsage = 0;
 
-				var ac = "\n";
-				var dp = ": ";
+		//embed
+		let supplies = new Discord.RichEmbed()
+		.setAuthor('Tanki Bot')
+        .setTitle(`Ratings - Profile`)
+        .setDescription(`Profile of ${name}`)
+		.setColor("#00ff19")
+		.setTimestamp()
+		.setThumbnail("https://i.imgur.com/KSN7NV8.png")
 
-				var uno = nuno + dp + uuno;
-				var due = ac + ndue + dp + udue;
-				var tre = ac + ntre + dp + utre;
-				var qua = ac + nqua + dp + uqua
-				var cin = ac + ncin + dp + ucin;
-				var sei = ac + nsei + dp + usei;
-				var set = ac + nset + dp + uset;
+		for (var i = 0; i < suppliesArray.length; i++) {
+			supplies.addField(suppliesArray[i]['name'], suppliesArray[i]['usages'], true)
+			suppliesUsage += suppliesArray[i]['usages'];
+		}
 
-				var lista = uno + due + tre + qua + cin + sei + set;
+		supplies.addField("<:sups:660260925546168404> **Total Supplies Used**", suppliesUsage, true);
 
-				//embed
-				let potEmb = new Discord.RichEmbed()
-					.setTitle("Tanki Online Ratings - Supplies " + nome)
-					.setURL("https://ratings.tankionline.com/en/user/" + nome)
-					.setFooter("Bot made by gb_factory#5365")
-					.setColor("#00ff19")
-					.setTimestamp()
-					.setThumbnail("https://www.gb-factory.com/tankionline/images/supplies.png")
-					.addField("Supplies Used", lista);
+		message.channel.send({embed:supplies});
 
-				message.channel.send({
-					embed: potEmb
-				});
-			}
-
-
-		})
-	}
-
-
+	})
+	
 }
