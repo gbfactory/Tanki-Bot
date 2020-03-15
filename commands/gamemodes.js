@@ -79,7 +79,7 @@ module.exports.run = async(client, message, args, tools) => {
 		//embed
 		let gamemodes = new Discord.RichEmbed()
 			.setAuthor('Tanki Bot')
-			.setTitle(`Ratings - Profile`)
+			.setTitle(`Ratings - Gamemodes`)
 			.setDescription(`Profile of ${name}`)
 			.setColor("#87d704")
 			.setTimestamp()
