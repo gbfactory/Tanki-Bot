@@ -36,20 +36,22 @@ module.exports.run = async (client, message, args, con) => {
 
         if (!isNaN(args[0]) && args[0] > 0) {
 
-            prezzo = args[0] * 5000;
+            var quantity = args[0];
+            var prezzo = quantity * 5000;
 
             if(rowsUsers[0].crys >= prezzo) {
 
                 let bought = new Discord.RichEmbed()
                     .setColor("#87d704")
                     .setThumbnail('https://i.imgur.com/CtoiatU.png')
-                    .setAuthor(`You bought ${args[0]} containers for ${prezzo} 💎`);
+                    .setAuthor(`You bought ${quantity} containers for ${prezzo} 💎`);
 
-                con.query(`UPDATE users SET crys = ${rowsUsers[0].crys - prezzo} WHERE id = '${authorId}'`);
+                con.query(`UPDATE users SET crys = ${parseInt(rowsUsers[0].crys) - prezzo} WHERE id = '${authorId}'`);
 
                 con.query(`SELECT * FROM items WHERE id = '${authorId}'`, (err, rows) => {
-                    if (err) throw err;
-                    con.query(`UPDATE items SET containers = ${rows[0].containers + args[0]} WHERE id = '${authorId}'`);
+                    if (err) throw err;             
+                    
+                    con.query(`UPDATE items SET containers = ${parseInt(rows[0].containers) + parseInt(quantity)} WHERE id = '${authorId}'`);
                     
                     message.channel.send({embed:bought});
                 });
@@ -69,11 +71,11 @@ module.exports.run = async (client, message, args, con) => {
                     .setThumbnail('https://en.tankiwiki.com/images/en/9/9c/Rename_pass_preview.png')
                     .setAuthor(`You bought a Rename Pass for 2000 Tankoins`);
 
-                con.query(`UPDATE users SET tankoins = ${rowsUsers[0].tankoins - 2000} WHERE id = '${authorId}'`);
+                con.query(`UPDATE users SET tankoins = ${parseInt(rowsUsers[0].tankoins) - 2000} WHERE id = '${authorId}'`);
 
                 con.query(`SELECT coinbox FROM items WHERE id = '${authorId}'`, (err, rows) => {
                     if (err) throw err;
-                    con.query(`UPDATE items SET coinbox = ${rows[0].coinbox + 1} WHERE id = '${authorId}'`);
+                    con.query(`UPDATE items SET coinbox = ${parseInt(rows[0].coinbox) + 1} WHERE id = '${authorId}'`);
                     
                     message.channel.send({embed:bought});
                 });
