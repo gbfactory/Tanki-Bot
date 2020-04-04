@@ -1,0 +1,32 @@
+[
+    {
+        "type": "supplies",
+        "name": "100 of Each Supplies",
+        "quantity": 100,
+        "image": "https://i.imgur.com/GZRXlN3.png"
+    },
+    {
+        "type": "repair",
+        "name": "150 Repair Kits",
+        "quantity": 150,
+        "image": "https://i.imgur.com/EJr4UBu.png"
+    },
+    {
+        "type": "crystals",
+        "name": "Small Pack of Crystals (1500)",
+        "quantity": 1500,
+        "image": "https://i.imgur.com/B24Sjw7.png"
+    },
+    {
+        "type": "crystals",
+        "name": "Medium Pack of Crystals (2500)",
+        "quantity": 2500,
+        "image": "https://i.imgur.com/B24Sjw7.png"
+    },
+    {
+        "type": "crystals",
+        "name": "Large Pack of Crystals (5000)",
+        "quantity": 5000,
+        "image": "https://i.imgur.com/c7gUlGw.png"
+    }
+]

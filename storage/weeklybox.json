@@ -1,0 +1,312 @@
+[
+    {
+        "repair": 100,
+        "armor": 200,
+        "damage": 200,
+        "nitro": 200,
+        "mine": 200,
+        "battery": 100,
+        "crystals": 5000,
+        "tankoins": 50
+    },
+    {
+        "repair": 100,
+        "armor": 200,
+        "damage": 200,
+        "nitro": 200,
+        "mine": 200,
+        "battery": 100,
+        "crystals": 7000,
+        "tankoins": 50
+    },
+    {
+        "repair": 100,
+        "armor": 300,
+        "damage": 300,
+        "nitro": 300,
+        "mine": 300,
+        "battery": 100,
+        "crystals": 10000,
+        "tankoins": 50
+    },
+    {
+        "repair": 200,
+        "armor": 500,
+        "damage": 500,
+        "nitro": 500,
+        "mine": 500,
+        "battery": 100,
+        "crystals": 21000,
+        "tankoins": 80
+    },
+    {
+        "repair": 300,
+        "armor": 700,
+        "damage": 700,
+        "nitro": 700,
+        "mine": 700,
+        "battery": 200,
+        "crystals": 32000,
+        "tankoins": 80
+    },
+    {
+        "repair": 300,
+        "armor": 900,
+        "damage": 900,
+        "nitro": 900,
+        "mine": 900,
+        "battery": 200,
+        "crystals": 42000,
+        "tankoins": 80
+    },
+    {
+        "repair": 400,
+        "armor": 1100,
+        "damage": 1100,
+        "nitro": 1100,
+        "mine": 1100,
+        "battery": 200,
+        "crystals": 53000,
+        "tankoins": 80
+    },
+    {
+        "repair": 500,
+        "armor": 1300,
+        "damage": 1300,
+        "nitro": 1300,
+        "mine": 1300,
+        "battery": 300,
+        "crystals": 64000,
+        "tankoins": 150
+    },
+    {
+        "repair": 500,
+        "armor": 1500,
+        "damage": 1500,
+        "nitro": 1500,
+        "mine": 1500,
+        "battery": 300,
+        "crystals": 71000,
+        "tankoins": 150
+    },
+    {
+        "repair": 600,
+        "armor": 1700,
+        "damage": 1700,
+        "nitro": 1700,
+        "mine": 1700,
+        "battery": 300,
+        "crystals": 82000,
+        "tankoins": 150
+    },
+    {
+        "repair": 700,
+        "armor": 1900,
+        "damage": 1900,
+        "nitro": 1900,
+        "mine": 1900,
+        "battery": 400,
+        "crystals": 92000,
+        "tankoins": 150
+    },
+    {
+        "repair": 700,
+        "armor": 2100,
+        "damage": 2100,
+        "nitro": 2100,
+        "mine": 2100,
+        "battery": 400,
+        "crystals": 103000,
+        "tankoins": 150
+    },
+    {
+        "repair": 800,
+        "armor": 2300,
+        "damage": 2300,
+        "nitro": 2300,
+        "mine": 2300,
+        "battery": 400,
+        "crystals": 114000,
+        "tankoins": 280
+    },
+    {
+        "repair": 900,
+        "armor": 2500,
+        "damage": 2500,
+        "nitro": 2500,
+        "mine": 2500,
+        "battery": 500,
+        "crystals": 125000,
+        "tankoins": 280
+    },
+    {
+        "repair": 1000,
+        "armor": 2800,
+        "damage": 2800,
+        "nitro": 2800,
+        "mine": 2800,
+        "battery": 500,
+        "crystals": 135000,
+        "tankoins": 280
+    },
+    {
+        "repair": 1000,
+        "armor": 3000,
+        "damage": 3000,
+        "nitro": 3000,
+        "mine": 3000,
+        "battery": 500,
+        "crystals": 146000,
+        "tankoins": 280
+    },
+    {
+        "repair": 1100,
+        "armor": 3100,
+        "damage": 3100,
+        "nitro": 3100,
+        "mine": 3100,
+        "battery": 600,
+        "crystals": 153000,
+        "tankoins": 280
+    },
+    {
+        "repair": 1100,
+        "armor": 3300,
+        "damage": 3300,
+        "nitro": 3300,
+        "mine": 3300,
+        "battery": 600,
+        "crystals": 164000,
+        "tankoins": 280
+    },
+    {
+        "repair": 1200,
+        "armor": 3500,
+        "damage": 3500,
+        "nitro": 3500,
+        "mine": 3500,
+        "battery": 600,
+        "crystals": 175000,
+        "tankoins": 280
+    },
+    {
+        "repair": 1300,
+        "armor": 3800,
+        "damage": 3800,
+        "nitro": 3800,
+        "mine": 3800,
+        "battery": 700,
+        "crystals": 185000,
+        "tankoins": 280
+    },
+    {
+        "repair": 1400,
+        "armor": 4000,
+        "damage": 4000,
+        "nitro": 4000,
+        "mine": 4000,
+        "battery": 700,
+        "crystals": 196000,
+        "tankoins": 350
+    },
+    {
+        "repair": 1400,
+        "armor": 4200,
+        "damage": 4200,
+        "nitro": 4200,
+        "mine": 4200,
+        "battery": 700,
+        "crystals": 207000,
+        "tankoins": 350
+    },
+    {
+        "repair": 1500,
+        "armor": 4400,
+        "damage": 4400,
+        "nitro": 4400,
+        "mine": 4400,
+        "battery": 800,
+        "crystals": 217000,
+        "tankoins": 350
+    },
+    {
+        "repair": 1600,
+        "armor": 4600,
+        "damage": 4600,
+        "nitro": 4600,
+        "mine": 4600,
+        "battery": 800,
+        "crystals": 228000,
+        "tankoins": 350
+    },
+    {
+        "repair": 1600,
+        "armor": 4800,
+        "damage": 4800,
+        "nitro": 4800,
+        "mine": 4800,
+        "battery": 800,
+        "crystals": 235000,
+        "tankoins": 350
+    },
+    {
+        "repair": 1700,
+        "armor": 5000,
+        "damage": 5000,
+        "nitro": 5000,
+        "mine": 5000,
+        "battery": 900,
+        "crystals": 246000,
+        "tankoins": 350
+    },
+    {
+        "repair": 1800,
+        "armor": 5200,
+        "damage": 5200,
+        "nitro": 5200,
+        "mine": 5200,
+        "battery": 900,
+        "crystals": 257000,
+        "tankoins": 450
+    },
+    {
+        "repair": 1800,
+        "armor": 5400,
+        "damage": 5400,
+        "nitro": 5400,
+        "mine": 5400,
+        "battery": 900,
+        "crystals": 267000,
+        "tankoins": 450
+    },
+    {
+        "repair": 1900,
+        "armor": 5600,
+        "damage": 5600,
+        "nitro": 5600,
+        "mine": 5600,
+        "battery": 1000,
+        "crystals": 278000,
+        "tankoins": 650
+    },
+    {
+        "repair": 20000,
+        "armor": 5800,
+        "damage": 5800,
+        "nitro": 5800,
+        "mine": 5800,
+        "battery": 1000,
+        "crystals": 289000,
+        "tankoins": 750
+    },
+    {
+        "repair": 2000,
+        "armor": 6000,
+        "damage": 6000,
+        "nitro": 6000,
+        "mine": 6000,
+        "battery": 1000,
+        "crystals": 300000,
+        "tankoins": 1000
+    }
+]

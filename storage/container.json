@@ -1,1801 +1,2422 @@
-[
-    {
-        "type": "item",
-        "rarity": "common",
-        "name": "Crystals",
-        "quantity": 3500,
-        "image": "https://i.imgur.com/uC19geS.png"
-    },
-    {
-        "type": "item",
-        "rarity": "common",
-        "name": "Double Armor",
-        "quantity": 125,
-        "image": "https://en.tankiwiki.com/images/en/thumb/5/55/Inventory_double_armor.png/160px-Inventory_double_armor.png"
-    },
-    {
-        "type": "item",
-        "rarity": "common",
-        "name": "Double Damage",
-        "quantity": 125,
-        "image": "https://en.tankiwiki.com/images/en/thumb/b/be/Inventory_double_power.png/160px-Inventory_double_power.png"
-    },
-    {
-        "type": "item",
-        "rarity": "common",
-        "name": "Speed Boost",
-        "quantity": 125,
-        "image": "https://en.tankiwiki.com/images/en/thumb/1/12/Inventory_nitro.png/160px-Inventory_nitro.png"
-    },
-    {
-        "type": "item",
-        "rarity": "common",
-        "name": "Mine",
-        "quantity": 125,
-        "image": "https://en.tankiwiki.com/images/en/e/eb/Inventory_mine.png"
-    },
-    {
-        "type": "item",
-        "rarity": "uncommon",
-        "name": "Crystals",
-        "quantity": 10000,
-        "image": "https://i.imgur.com/uC19geS.png"
-    },
-    {
-        "type": "item",
-        "rarity": "uncommon",
-        "name": "Repair Kits",
-        "quantity": 125,
-        "image": "https://en.tankiwiki.com/images/en/thumb/b/b5/Inventory_first_aid.png/160px-Inventory_first_aid.png"
-    },
-    {
-        "type": "item",
-        "rarity": "uncommon",
-        "name": "Batteries",
-        "quantity": 50,
-        "image": "https://en.tankiwiki.com/images/en/f/f5/Supply_battery_preview.png"
-    },
-    {
-        "type": "pack",
-        "rarity": "uncommon",
-        "name": "Supplies",
-        "quantity": 100,
-        "image": "https://i.imgur.com/4DnrEqA.png"
-    },
-    {
-        "type": "premium",
-        "rarity": "uncommon",
-        "name": "Premium",
-        "quantity": 3,
-        "image": "https://en.tankiwiki.com/images/en/c/cf/Premium_item.png"
-    },
-    {
-        "type": "item",
-        "rarity": "uncommon",
-        "name": "Gold Boxes",
-        "quantity": 5,
-        "image": "https://en.tankiwiki.com/images/en/thumb/d/dd/Goldboxsupply.png/160px-Goldboxsupply.png"
-    },
-    {
-        "type": "item",
-        "rarity": "rare",
-        "name": "Crystals",
-        "quantity": 25000,
-        "image": "https://i.imgur.com/uC19geS.png"
-    },
-    {
-        "type": "item",
-        "rarity": "rare",
-        "name": "Battery",
-        "quantity": 150,
-        "image": "https://en.tankiwiki.com/images/en/f/f5/Supply_battery_preview.png"
-    },
-    {
-        "type": "pack",
-        "rarity": "rare",
-        "name": "Supplies",
-        "quantity": 250,
-        "image": "https://i.imgur.com/4DnrEqA.png"
-    },
-    {
-        "type": "premium",
-        "rarity": "rare",
-        "name": "Premium Account",
-        "quantity": 10,
-        "image": "https://en.tankiwiki.com/images/en/c/cf/Premium_item.png"
-    },
-    {
-        "type": "item",
-        "rarity": "rare",
-        "name": "Gold Boxes",
-        "quantity": 10,
-        "image": "https://en.tankiwiki.com/images/en/thumb/d/dd/Goldboxsupply.png/160px-Goldboxsupply.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Lava",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/7e/Coloring_lava.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Lead",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/2c/Coloring_lead.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Invader",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/af/Coloring_Invader.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Safari",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/9a/Coloring_safari.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Dragon",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a6/Coloring_dragon.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Magma",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/7e/Magma_preview.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Mary",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/8c/Coloring_mary.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Sahara",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d3/Coloring_sahara.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Night",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/8f/Hellowin_2014.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Storm",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a1/Coloring_storm.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "In Love",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/f2/Coloring_kitty_new.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Carbon",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/7e/Coloring_carbon.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Confetti",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/eb/Coloring_confetti.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Alien",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/51/Coloring_alien.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Chainmail",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/69/Kolchuga_preview.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Dirty",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/cf/Coloring_dirty.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Jaguar",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/ae/Coloring_jaguar.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Desert",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/1/10/Coloring_desert.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Guerrilla",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/e8/Coloring_Guerrilla.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Swash",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/fe/Coloring_swash.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Harlequin",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a2/Coloring_harlequin.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Pixel",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/f1/Pixel_preview.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Corrosion",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/f2/Coloring_corrosion.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Tundra",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/e3/Coloring_tundra.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Vortex",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d4/Coloring_Vortex.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Pixel Heart",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/4/49/Valentine_Day_2013.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Roger",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/ae/Coloring_roger.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Fracture",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/e9/Coloring_Fracture.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Cedar",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/fb/Coloring_cedar.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Python",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c9/Coloring_python.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Sakura",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/f6/Coloring_Sakura.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Grassland",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/0d/Coloring_grasslands.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Soft Flowers",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/b/be/International_Womens_Day_2013.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Electra",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/4/4b/Coloring_electra.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Moss",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/60/Coloring_moss.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "First Love",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/4/45/First_love.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Sandstone",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/f6/Coloring_sandstone.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Spark",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/72/Coloring_spark.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Jeans",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/e2/Coloring_jeans.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Digital",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/fb/Coloring_digital.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Rustle",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/05/Coloring_autumn.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Blacksmith",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/2c/Coloring_Blacksmith.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Hohloma",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/62/Coloring_hohloma.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Loam",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d8/Coloring_bonfire.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Rhino",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/3/3a/Coloring_Rhino.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Winter",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/75/Coloring_winter.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Urban",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/3/34/Coloring_urban.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Sweater",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/3/31/New_Year_2014-2015.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Atom",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/8f/Atom_preview.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Savanna",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/fd/Coloring_savanna.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Cherry",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/6b/Coloring_Cherry.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Emerald",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d0/Coloring_abstract.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Irbis",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/3/30/Coloring_irbis.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Disco",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/2e/Coloring_disco.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Mars",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/03/Mars_preview.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Hive",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/24/Coloring_Hive.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Inferno",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c1/Coloring_inferno.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Jade",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/89/Coloring_nefrit.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Tiger",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/03/Tigr_preview.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "kaleidoscope",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a0/Coloring_kaleidoscope.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Taiga",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/62/Coloring_taiga.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Red Urban",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/ae/Coloring_red_urban.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Nano",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/9d/Nano_preview.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Prodigi",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/5d/Coloring_prodigi.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Rock",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/0c/Coloring_rock.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Raccon",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/af/Coloring_Raccoon.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Needle",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a4/Coloring_needle.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Picasso",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/95/Coloring_picasso.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Space",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/27/Space.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Graffiti",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/3/30/Coloring_Graffiti.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Zeus",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/2e/Coloring_zevs.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Clay",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/56/Coloring_clay.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Lumberjack",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/74/Coloring_Lumberjack.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Africa",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/67/Coloring_Africa.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Australia",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/4/43/Australia.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "England",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/21/England.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Argentina",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a2/Argentina.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Belgium",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/3/32/Belgium.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Brazil",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c7/Brasil.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Denmark",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/69/Denmark.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Germany",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/9b/Germany.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Egypt",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/3/37/Egypt.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Iran",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d1/Iran.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Iceland",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c1/Iceland.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Spain",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/58/Spain.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Colombia",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/80/Colombia.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Costa Rica",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d9/Costarica.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Morocco",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/e4/Morocco.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Mexico",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/0a/Mexico.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Nigeria",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/59/Nigeria.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Panama",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/3/3f/Panama.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Peru",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a8/Peru.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Portugal",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/1/12/Portugal.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Poland",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/db/Puland.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "South Korea",
-        "quantity": 1,
-        "image": ""
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "https://en.tankiwiki.com/images/en/e/ee/Russia.png",
-        "quantity": 1,
-        "image": "Russia"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Saudi Arabia",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/ae/Saudiarabia.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Senegal",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/22/Senegal.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Serbia",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/76/Serbia.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Tunisia",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/08/Tunisia.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Uruguay",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/29/Uruguay.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "France",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/de/France.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Croatia",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/94/Croatia.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Switzerland",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/01/Switzerland.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Sweden",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/98/Sweden.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "rare",
-        "name": "Japan",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/fc/Japan.png"
-    },
-    {
-        "type": "item",
-        "rarity": "epic",
-        "name": "Crystals",
-        "quantity": 100000,
-        "image": "https://i.imgur.com/uC19geS.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Moonwalker",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a8/Coloring_Moonwalker.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Eternity",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/af/Coloring_eternity.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Red Suit",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/3/3d/Red_Suit.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Arachnid",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/aa/Coloring_arachnid.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Liquid Metal",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/79/Coloring_liquid_metal.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Drought",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/8e/Coloring_drought.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Strawberry",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/6d/Strawberry.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Barber Shop",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/91/Barber_Shop.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Scandinavia",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/db/Scandinavia.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Lunar Soil",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/67/Lunar_soil.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Rust",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/20/Rust.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Steak",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/66/Steak.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Amber",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d3/Coloring_amber.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Lime",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/ab/Coloring_lime.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Neuron",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/77/Coloring_domino.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Domino",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/77/Coloring_domino.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Mint",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/b/b8/Coloring_mint.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Watercolor",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a7/Coloring_watercolor.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Pajamas",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/99/Pajamas.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Vanadium",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/1/12/Vanadium.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Glitch",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/01/Glitch.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Frost",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/70/Coloring_frost.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Golden Star",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/cf/Pobeda_2015.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Sunset Camouflage",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/65/Sunset_Camouflage.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "All You Need Is",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/66/Valentines_Paint_2017.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Zombie",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c3/Zombie.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Fire of Valor",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d4/Fire_of_valor.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Spangles",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/db/Spangles.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Snowflake",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/27/Snowflake.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Liliac Petals",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/2d/Paint_lilac_petals.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Retina",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c2/Paint_retina.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Chill bro!",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/90/Paint_chill_bro.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Secret of the Aliens",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c4/SecretOfTheAliens.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "New Year 2018",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/5e/Paint_New_Year_2018.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Azure",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/af/Paint_Azure.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Gucciflage",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c5/Paint_Gucciflage.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Hallucination",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/ce/Paint_Hallucination.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Hypercube",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/f6/Paint_Hypercube.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Kungur Ice Cave",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/06/Paint_Kungur_Ice_Cave.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Lollipop",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/6a/Paint_Lollipop.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Lotus",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/7/75/Paint_Lotus.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Monet",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/f0/Paint_Monet.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Paisley Flame",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/50/Paint_Paisley_Flame.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Paisley Ice",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/e8/Paint_Paisley_Ice.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Peaks",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/1/1d/Paint_Peaks.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Phantom",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/27/Paint_Phantom.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Play-Doh",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/64/Paint_Play_Doh.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Pop Art",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c4/Paint_Pop_Art.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Potter",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/b/b8/Paint_Potter.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Pulsas",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/9b/Paint_Pulsar.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Ripple",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/82/Paint_Ripple.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Silicate",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/68/Paint_Sillicate.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Sudoku",
-        "quantity": 1,
-        "image": ""
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Zigzag",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/1/18/Paint_Zigzag.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Abstract Lines",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c0/Paint_abstract_lines.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Blue Square",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/2d/Paint_blue_square.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Condensed Milk",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/05/Paint_condensed_milk.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "E236",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/5a/Paint_E236.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Feathers",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/9f/Paint_feathers.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Fire Dragon",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a2/Paint_fire_dragon.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Megapolis",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c9/Paint_megapolis.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Stained Glass",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/87/Paint_stained_glass.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "epic",
-        "name": "Thunderball",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/1/1b/Paint_thunderball.png"
-    },
-    {
-        "type": "item",
-        "rarity": "legendary",
-        "name": "Crystals",
-        "quantity": 300000,
-        "image": "https://i.imgur.com/uC19geS.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Flow",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d2/Coloring_flow.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Nightmare",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/27/Paint_Nightmare.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Spectrum",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/6a/Paint_Spectre.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Holiday Lights",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/ec/Paint_Holiday_lights.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Matrix",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/9d/Paint_Matrix.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Mosaic",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c9/Paint_Mosaic.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Vertigo",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/2b/Paint_Vertigo.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Prodigy 2.0",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c6/Paint_Prodigy2.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Breating Hearts",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/25/BeatingHearts_paint.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Ginga",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/54/Ginga_paint.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Magnolia",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/4/46/Paint_magnolia.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Galaxy",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/4/41/Galaxy_paint.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Eruption",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/2f/Paint_eruption.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Siberian Tiger",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/ce/Paint_siberian_tiger.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Secret Sauce",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a9/Paint_secret_sauce.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Canyon Hero",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/4/45/Paint_Canyon_hero.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Pastila",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/b/be/Paint_pastila.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Prestigio",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/1/1d/Paint_prestigio.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Beholder",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d9/Paint_beholder.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Synesthesia",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/67/Paint_synesthesia.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Gears",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/eb/Paint_Gears.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Radioactive Jelly",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/fd/Paint_Radioactive_jelly.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Spinner",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/c/c6/Paint_Spinner.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Tentacles",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/b/bf/Paint_Tentacles.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "LEDs",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/e9/Paint_LEDs.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Meteor Shower",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d7/Paint_Meteor_shower.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Fall leaves",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/a/a3/Paint_Fall_leaves.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Mount Fuji",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/b/bf/Paint_Mount_Fuji.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Electrohive",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/d/d7/Paint_Electrohive.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Synth-pop",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/82/Paint_Synth-pop.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Runes",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/fc/Paint_Runes.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Symbiote",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/97/Paint_Symbiote.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Tic-tac-toe",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/62/Paint_Tic-tac-toe.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Barbed Wire",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/b/bd/Paint_Barbed_Wire.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Bunny",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/4/42/Paint_Bunny.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Tesseract Camo",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/80/Paint_Tessaract_Camo.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Lava Lamp",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/4/44/Paint_Lava_Lamp.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Silver Bricks",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/50/Paint_Silver_Bricks.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Lightning Storm",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/f8/Paint_Lightning_storm.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Touch of chill",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/5e/Touch_of_chill.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Northern Lights",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/e/e8/Paint_Northern_lights.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Disco 2.0",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/8b/Paint_Disco_2.0.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Cyberpunk",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/2c/Paint_Cyberpunk.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "First Kiss",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/8/88/Paint_First_Kiss.png"
-    },
-    {
-        "type": "paint",
-        "rarity": "legendary",
-        "name": "Honor",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/1/1b/Paint_Honor.png"
-    },
-    {
-        "type": "item",
-        "rarity": "exotic",
-        "name": "Crystals",
-        "quantity": 1000000,
-        "image": "https://i.imgur.com/uC19geS.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Firebird XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/4/48/Firebird_XT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Direbird Demonic",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/4/47/Firebird_DC.png/157px-Firebird_DC.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Freeze XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/a/a2/FreezeXT.png/160px-FreezeXT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Isida XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/d/d7/IsidaXT.png/160px-IsidaXT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Hammer XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/c/cb/Hammer_XT.png/160px-Hammer_XT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Twins XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/21/Twins_XT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Ricochet XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/5/51/RicochetXT.png/160px-RicochetXT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Smoky XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/5/55/Smoky_XT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Vulcan XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/0f/Vulcan_XT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Thunder XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/22/Thunder_XT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Thunder Legacy",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/94/Thunder_Legacy.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Railgun XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/65/Railgun_XT_M3.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Railgun Legacy",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/7/78/Railgun_Legacy.png/160px-Railgun_Legacy.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Magnum XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/f/f8/MagnumXT.png/160px-MagnumXT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Shaft XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/9/9c/ShaftXT.png/160px-ShaftXT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Wasp XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/2/2c/Wasp_XT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Hornet XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/0/06/Hornet_XT_M3.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Hornet Legacy",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/4/40/Hornet_Legacy.png/160px-Hornet_Legacy.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Viking XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/9/95/Viking_XT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Viking Legacy",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/67/Viking_Legacy.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Hunter XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/6/67/HunterXT.png/160px-HunterXT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Dictator XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/thumb/7/7d/DictatorXT.png/160px-DictatorXT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Titan XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/6/6f/Titan_XT.png"
-    },
-    {
-        "type": "skin",
-        "rarity": "exotic",
-        "name": "Mammoth XT",
-        "quantity": 1,
-        "image": "https://en.tankiwiki.com/images/en/f/ff/Mammoth_XT.png"
-    }
-]
+{
+    "common": [
+        {
+            "type": "crystals",
+            "rarity": "common",
+            "name": "Crystals",
+            "quantity": 1500,
+            "image": "https://i.imgur.com/B24Sjw7.png"
+        },
+        {
+            "type": "crystals",
+            "rarity": "common",
+            "name": "Crystals",
+            "quantity": 2500,
+            "image": "https://i.imgur.com/B24Sjw7.png"
+        },
+        {
+            "type": "crystals",
+            "rarity": "common",
+            "name": "Crystals",
+            "quantity": 3500,
+            "image": "https://i.imgur.com/B24Sjw7.png"
+        },
+        {
+            "type": "armor",
+            "rarity": "common",
+            "name": "Double Armor",
+            "quantity": 100,
+            "image": "https://en.tankiwiki.com/images/en/thumb/5/55/Inventory_double_armor.png/160px-Inventory_double_armor.png"
+        },
+        {
+            "type": "damage",
+            "rarity": "common",
+            "name": "Double Damage",
+            "quantity": 100,
+            "image": "https://en.tankiwiki.com/images/en/thumb/b/be/Inventory_double_power.png/160px-Inventory_double_power.png"
+        },
+        {
+            "type": "speed",
+            "rarity": "common",
+            "name": "Speed Boost",
+            "quantity": 100,
+            "image": "https://en.tankiwiki.com/images/en/thumb/1/12/Inventory_nitro.png/160px-Inventory_nitro.png"
+        },
+        {
+            "type": "mine",
+            "rarity": "common",
+            "name": "Mine",
+            "quantity": 100,
+            "image": "https://en.tankiwiki.com/images/en/e/eb/Inventory_mine.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "common",
+            "name": "Tankoins",
+            "quantity": 3,
+            "image": "https://i.imgur.com/vkpGrTd.png"
+        },
+        {
+            "type": "gold",
+            "rarity": "common",
+            "name": "Gold Box",
+            "quantity": 1,
+            "image": "https://i.imgur.com/CL7aura.png"
+        }
+    ],
+    "uncommon": [
+        {
+            "type": "crystals",
+            "rarity": "uncommon",
+            "name": "Crystals",
+            "quantity": 8000,
+            "image": "https://i.imgur.com/NhFb2N8.png"
+        },
+        {
+            "type": "crystals",
+            "rarity": "uncommon",
+            "name": "Crystals",
+            "quantity": 10000,
+            "image": "https://i.imgur.com/NhFb2N8.png"
+        },
+        {
+            "type": "repair",
+            "rarity": "uncommon",
+            "name": "Repair Kits",
+            "quantity": 150,
+            "image": "https://en.tankiwiki.com/images/en/thumb/b/b5/Inventory_first_aid.png/160px-Inventory_first_aid.png"
+        },
+        {
+            "type": "battery",
+            "rarity": "uncommon",
+            "name": "Batteries",
+            "quantity": 50,
+            "image": "https://en.tankiwiki.com/images/en/f/f5/Supply_battery_preview.png"
+        },
+        {
+            "type": "sups",
+            "rarity": "uncommon",
+            "name": "Supplies",
+            "quantity": 125,
+            "image": "https://i.imgur.com/4DnrEqA.png"
+        },
+        {
+            "type": "premium",
+            "rarity": "uncommon",
+            "name": "Premium",
+            "quantity": 3,
+            "image": "https://en.tankiwiki.com/images/en/c/cf/Premium_item.png"
+        },
+        {
+            "type": "gold",
+            "rarity": "uncommon",
+            "name": "Gold Boxes",
+            "quantity": 5,
+            "image": "https://i.imgur.com/dO0bb1I.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "uncommon",
+            "name": "Tankoins",
+            "quantity": 10,
+            "image": "https://i.imgur.com/fpM3gEX.png"
+        }
+    ],
+    "rare": [
+        {
+            "type": "crystals",
+            "rarity": "rare",
+            "name": "Crystals",
+            "quantity": 10000,
+            "image": "https://i.imgur.com/c7gUlGw.png"
+        },
+        {
+            "type": "crystals",
+            "rarity": "rare",
+            "name": "Crystals",
+            "quantity": 25000,
+            "image": "https://i.imgur.com/c7gUlGw.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "rare",
+            "name": "Tankoins",
+            "quantity": 80,
+            "image": "https://i.imgur.com/bX3mqAP.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "rare",
+            "name": "Tankoins",
+            "quantity": 100,
+            "image": "https://i.imgur.com/bX3mqAP.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "rare",
+            "name": "Tankoins",
+            "quantity": 150,
+            "image": "https://i.imgur.com/bX3mqAP.png"
+        },
+        {
+            "type": "sups",
+            "rarity": "rare",
+            "name": "Supplies",
+            "quantity": 250,
+            "image": "https://i.imgur.com/4DnrEqA.png"
+        },
+        {
+            "type": "premium",
+            "rarity": "rare",
+            "name": "Premium Account",
+            "quantity": 10,
+            "image": "https://en.tankiwiki.com/images/en/c/cf/Premium_item.png"
+        },
+        {
+            "type": "gold",
+            "rarity": "rare",
+            "name": "Gold Boxes",
+            "quantity": 10,
+            "image": "https://i.imgur.com/bjWmF0c.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Lava",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/7e/Coloring_lava.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Lead",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2c/Coloring_lead.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Invader",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/af/Coloring_Invader.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Safari",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/9a/Coloring_safari.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Dragon",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a6/Coloring_dragon.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Magma",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/7e/Magma_preview.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Mary",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8c/Coloring_mary.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Sahara",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d3/Coloring_sahara.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Night",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8f/Hellowin_2014.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Storm",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a1/Coloring_storm.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "In Love",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f2/Coloring_kitty_new.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Carbon",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/7e/Coloring_carbon.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Confetti",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/eb/Coloring_confetti.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Alien",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/51/Coloring_alien.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Chainmail",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/69/Kolchuga_preview.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Dirty",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/cf/Coloring_dirty.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Jaguar",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/ae/Coloring_jaguar.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Desert",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/10/Coloring_desert.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Guerrilla",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e8/Coloring_Guerrilla.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Swash",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fe/Coloring_swash.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Harlequin",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a2/Coloring_harlequin.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Pixel",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f1/Pixel_preview.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Corrosion",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f2/Coloring_corrosion.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Tundra",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e3/Coloring_tundra.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Vortex",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d4/Coloring_Vortex.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Pixel Heart",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/49/Valentine_Day_2013.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Roger",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/ae/Coloring_roger.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Fracture",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e9/Coloring_Fracture.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Cedar",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fb/Coloring_cedar.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Python",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c9/Coloring_python.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Sakura",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f6/Coloring_Sakura.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Grassland",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0d/Coloring_grasslands.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Soft Flowers",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/be/International_Womens_Day_2013.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Electra",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/4b/Coloring_electra.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Moss",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/60/Coloring_moss.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "First Love",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/45/First_love.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Sandstone",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f6/Coloring_sandstone.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Spark",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/72/Coloring_spark.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Jeans",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e2/Coloring_jeans.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Digital",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fb/Coloring_digital.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Rustle",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/05/Coloring_autumn.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Blacksmith",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2c/Coloring_Blacksmith.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Hohloma",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/62/Coloring_hohloma.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Loam",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d8/Coloring_bonfire.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Rhino",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/3a/Coloring_Rhino.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Winter",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/75/Coloring_winter.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Urban",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/34/Coloring_urban.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Sweater",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/31/New_Year_2014-2015.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Atom",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8f/Atom_preview.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Savanna",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fd/Coloring_savanna.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Cherry",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/6b/Coloring_Cherry.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Emerald",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d0/Coloring_abstract.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Irbis",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/30/Coloring_irbis.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Disco",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2e/Coloring_disco.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Mars",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/03/Mars_preview.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Hive",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/24/Coloring_Hive.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Inferno",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c1/Coloring_inferno.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Jade",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/89/Coloring_nefrit.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Tiger",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/03/Tigr_preview.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "kaleidoscope",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a0/Coloring_kaleidoscope.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Taiga",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/62/Coloring_taiga.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Red Urban",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/ae/Coloring_red_urban.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Nano",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/9d/Nano_preview.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Prodigi",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/5d/Coloring_prodigi.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Rock",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0c/Coloring_rock.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Raccon",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/af/Coloring_Raccoon.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Needle",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a4/Coloring_needle.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Picasso",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/95/Coloring_picasso.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Space",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/27/Space.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Graffiti",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/30/Coloring_Graffiti.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Zeus",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2e/Coloring_zevs.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Clay",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/56/Coloring_clay.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Lumberjack",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/74/Coloring_Lumberjack.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Africa",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/67/Coloring_Africa.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Australia",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/43/Australia.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "England",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/21/England.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Argentina",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a2/Argentina.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Belgium",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/32/Belgium.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Brazil",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c7/Brasil.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Denmark",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/69/Denmark.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Germany",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/9b/Germany.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Egypt",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/37/Egypt.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Iran",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d1/Iran.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Iceland",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c1/Iceland.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Spain",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/58/Spain.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Colombia",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/80/Colombia.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Costa Rica",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d9/Costarica.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Morocco",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e4/Morocco.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Mexico",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0a/Mexico.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Nigeria",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/59/Nigeria.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Panama",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/3f/Panama.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Peru",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a8/Peru.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Portugal",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/12/Portugal.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Poland",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/db/Puland.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "South Korea",
+            "quantity": 1,
+            "image": ""
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "https://en.tankiwiki.com/images/en/e/ee/Russia.png",
+            "quantity": 1,
+            "image": "Russia"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Saudi Arabia",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/ae/Saudiarabia.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Senegal",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/22/Senegal.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Serbia",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/76/Serbia.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Tunisia",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/08/Tunisia.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Uruguay",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/29/Uruguay.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "France",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/de/France.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Croatia",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/94/Croatia.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Switzerland",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/01/Switzerland.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Sweden",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/98/Sweden.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "rare",
+            "name": "Japan",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fc/Japan.png"
+        }
+    ],
+    "epic": [
+        {
+            "type": "crystals",
+            "rarity": "epic",
+            "name": "Crystals",
+            "quantity": 50000,
+            "image": "https://i.imgur.com/gkp8Ren.png"
+        },
+        {
+            "type": "crystals",
+            "rarity": "epic",
+            "name": "Crystals",
+            "quantity": 100000,
+            "image": "https://i.imgur.com/gkp8Ren.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "epic",
+            "name": "Tankoins",
+            "quantity": 150,
+            "image": "https://i.imgur.com/iSeMDSV.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "epic",
+            "name": "Tankoins",
+            "quantity": 300,
+            "image": "https://i.imgur.com/iSeMDSV.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "epic",
+            "name": "Tankoins",
+            "quantity": 500,
+            "image": "https://i.imgur.com/iSeMDSV.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Moonwalker",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a8/Coloring_Moonwalker.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Eternity",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/af/Coloring_eternity.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Red Suit",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/3d/Red_Suit.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Arachnid",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/aa/Coloring_arachnid.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Liquid Metal",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/79/Coloring_liquid_metal.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Drought",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8e/Coloring_drought.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Strawberry",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/6d/Strawberry.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Barber Shop",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/91/Barber_Shop.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Scandinavia",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/db/Scandinavia.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Lunar Soil",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/67/Lunar_soil.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Rust",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/20/Rust.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Steak",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/66/Steak.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Amber",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d3/Coloring_amber.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Lime",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/ab/Coloring_lime.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Neuron",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e6/Coloring_neuron.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Domino",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/77/Coloring_domino.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Mint",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/b8/Coloring_mint.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Watercolor",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a7/Coloring_watercolor.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Pajamas",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/99/Pajamas.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Vanadium",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/12/Vanadium.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Glitch",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/01/Glitch.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Frost",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/70/Coloring_frost.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Golden Star",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/cf/Pobeda_2015.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Sunset Camouflage",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/65/Sunset_Camouflage.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "All You Need Is",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/66/Valentines_Paint_2017.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Zombie",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c3/Zombie.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Fire of Valor",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d4/Fire_of_valor.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Spangles",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/db/Spangles.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Snowflake",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/27/Snowflake.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Liliac Petals",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2d/Paint_lilac_petals.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Retina",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c2/Paint_retina.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Chill bro!",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/90/Paint_chill_bro.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Secret of the Aliens",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c4/SecretOfTheAliens.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "New Year Gift",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/5e/Paint_New_Year_2018.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Azure",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/af/Paint_Azure.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Gucciflage",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c5/Paint_Gucciflage.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Hallucination",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/ce/Paint_Hallucination.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Hypercube",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f6/Paint_Hypercube.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Kungur Ice Cave",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/06/Paint_Kungur_Ice_Cave.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Lollipop",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/6a/Paint_Lollipop.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Lotus",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/75/Paint_Lotus.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Monet",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f0/Paint_Monet.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Paisley Flame",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/50/Paint_Paisley_Flame.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Paisley Ice",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e8/Paint_Paisley_Ice.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Peaks",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/1d/Paint_Peaks.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Phantom",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/27/Paint_Phantom.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Play-Doh",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/64/Paint_Play_Doh.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Pop Art",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c4/Paint_Pop_Art.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Potter",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/b8/Paint_Potter.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Pulsas",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/9b/Paint_Pulsar.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Ripple",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/82/Paint_Ripple.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Silicate",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/68/Paint_Sillicate.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Sudoku",
+            "quantity": 1,
+            "image": ""
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Zigzag",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/18/Paint_Zigzag.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Abstract Lines",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c0/Paint_abstract_lines.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Blue Square",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2d/Paint_blue_square.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Condensed Milk",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/05/Paint_condensed_milk.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "E236",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/5a/Paint_E236.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Feathers",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/9f/Paint_feathers.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Fire Dragon",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a2/Paint_fire_dragon.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Megapolis",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c9/Paint_megapolis.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Stained Glass",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/87/Paint_stained_glass.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "epic",
+            "name": "Thunderball",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/1b/Paint_thunderball.png"
+        }
+    ],
+    "legendary": [
+        {
+            "type": "crystals",
+            "rarity": "legendary",
+            "name": "Crystals",
+            "quantity": 300000,
+            "image": "https://i.imgur.com/cvpWBkM.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "legendary",
+            "name": "Tankoins",
+            "quantity": 1000,
+            "image": "https://i.imgur.com/kchdfBL.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "legendary",
+            "name": "Tankoins",
+            "quantity": 2000,
+            "image": "https://i.imgur.com/kchdfBL.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "legendary",
+            "name": "Tankoins",
+            "quantity": 3000,
+            "image": "https://i.imgur.com/kchdfBL.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Flow",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d2/Coloring_flow.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Nightmare",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/27/Paint_Nightmare.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Spectrum",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/6a/Paint_Spectre.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Holiday Lights",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/ec/Paint_Holiday_lights.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Matrix",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/9d/Paint_Matrix.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Mosaic",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c9/Paint_Mosaic.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Vertigo",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2b/Paint_Vertigo.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Prodigy 2.0",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c6/Paint_Prodigy2.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Breating Hearts",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/25/BeatingHearts_paint.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Ginga",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/54/Ginga_paint.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Magnolia",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/46/Paint_magnolia.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Galaxy",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/41/Galaxy_paint.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Eruption",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2f/Paint_eruption.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Siberian Tiger",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/ce/Paint_siberian_tiger.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Secret Sauce",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a9/Paint_secret_sauce.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Canyon Hero",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/45/Paint_Canyon_hero.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Pastila",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/be/Paint_pastila.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Prestigio",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/1d/Paint_prestigio.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Valour",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/bb/Paint_valour.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Beholder",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d9/Paint_beholder.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Synesthesia",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/67/Paint_synesthesia.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Gears",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/eb/Paint_Gears.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Radioactive Jelly",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fd/Paint_Radioactive_jelly.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Spinner",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c6/Paint_Spinner.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Tentacles",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/bf/Paint_Tentacles.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "LEDs",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e9/Paint_LEDs.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Meteor Shower",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d7/Paint_Meteor_shower.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Fall leaves",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a3/Paint_Fall_leaves.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Mount Fuji",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/bf/Paint_Mount_Fuji.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Electrohive",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d7/Paint_Electrohive.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Synth-pop",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/82/Paint_Synth-pop.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Runes",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fc/Paint_Runes.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Symbiote",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/97/Paint_Symbiote.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Tic-tac-toe",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/62/Paint_Tic-tac-toe.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Barbed Wire",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/bd/Paint_Barbed_Wire.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Bunny",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/42/Paint_Bunny.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Tesseract Camo",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/80/Paint_Tessaract_Camo.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Lava Lamp",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/44/Paint_Lava_Lamp.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Silver Bricks",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/50/Paint_Silver_Bricks.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Lightning Storm",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f8/Paint_Lightning_storm.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Touch of chill",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/5e/Touch_of_chill.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Northern Lights",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e8/Paint_Northern_lights.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Disco 2.0",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8b/Paint_Disco_2.0.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Cyberpunk",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2c/Paint_Cyberpunk.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "First Kiss",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/88/Paint_First_Kiss.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Honor",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/1b/Paint_Honor.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Holo",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/53/Paint_Holo.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Liana",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/69/Paint_Liana.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Fire golem",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/35/Paint_Fire_Golem.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Spring",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8a/Paint_Spring.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Holi",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/4a/Paint_Holi.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "LOL",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f4/Paint_lol.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Diamond",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/48/Paint_Diamond.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Far North",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/01/Paint_Far_North.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Microbiology",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/64/Paint_Microbiology.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Alien abduction",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d4/Paint_Alien_abduction.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Galaxian Explosion",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/98/Paint_Galaxian_explosion.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Bubble Gum",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/7c/Paint_Bubble_gum.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Honor",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/1b/Paint_Honor.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Golden Gears",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/49/Paint_Golden_gears.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Thanko's Armor",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/dd/Paint_Thankos_Armor.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "X Noir",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f6/Paint_X_Noir.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Yay Ten",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/32/Paint_Yay_Ten.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Visual Disrputor",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/c5/Paint_Visual_disruptor.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Thankos",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/51/Paint_Thankos.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Alien Skin",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/ff/Paint_Alien_skin.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Alien Regeneration",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/72/Paint_Alien_regeneration.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Alien Nebula",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2f/Paint_Alien_nebula.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Turbo",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/85/Paint_turbo.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Monochrome",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/1a/Paint_monochrome.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Badger-badger",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8a/Paint_Badger-badger.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Busted",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/75/Paint_Busted.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Demolisher 2.0",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a3/Paint_Demolisher_2.0.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Radar",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/20/Paint_Radar.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Tanks 2.0",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/86/Paint_Tanks_2.0.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Electric Sheep",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/de/Paint_Electric_Sheep.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Not a lantern",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/cc/Paint_Not_a_lantern.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Nanosuit Armor",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/3e/Paint_Nanosuit_Armor.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Night City",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/22/Paint_Night_City.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Smoke Screen",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2c/Paint_Smoke_Screen.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Glam Croc",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/19/Paint_Glam_Croc.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Kapuljat",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0b/Paint_Kapuljat.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Cyborg",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/03/Paint_Cyborg.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Cucurbita Pepo",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8e/Paint_Halloween2019.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Seventies Fun",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a1/Paint_Seventies_Fun.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Quantum Camo",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d9/Paint_Quantum_Camo.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Living Armor",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/7a/Paint_Living_Armor.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Magic Circles",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/52/Paint_Magic_Circles.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Trapped Inside",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0c/Paint_Trapped_Inside.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Jolly Season",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/9d/Paint_Jolly_Season.pngv"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Under the Tree",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/22/Paint_Under_the_Tree.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Sparks",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/37/Paint_Sparks.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Frigid Coat",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/03/Paint_Frigid_Coat.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Ice Flurry",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/56/Paint_Ice_Flurry.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Souls",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/72/Paint_Souls.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Tankoin Tank",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f8/Paint_Tankoin_Tank.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Cosmic Blast",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/53/Paint_Cosmic_Blast.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Funky Medicine",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/db/Paint_Funky_medicine.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Atmospheric Conditions",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/1b/Paint_Atmospheric_Conditions.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Digital Borealis",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/96/Paint_Digital_Borealis.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Groovy Neon",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/19/Paint_Groovy_Neon.png"
+        },
+        {
+            "type": "paint",
+            "rarity": "legendary",
+            "name": "Loving Camo",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/48/Paint_Loving_Camo.png"
+        }
+    ],
+    "exotic": [
+        {
+            "type": "crystals",
+            "rarity": "exotic",
+            "name": "Crystals",
+            "quantity": 1000000,
+            "image": "https://i.imgur.com/wnubOml.png"
+        },
+        {
+            "type": "tankoins",
+            "rarity": "exotic",
+            "name": "Tankoins",
+            "quantity": 10000,
+            "image": "https://i.imgur.com/DogMxOB.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Firebird XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/48/Firebird_XT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Firebird DC",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/4/47/Firebird_DC.png/157px-Firebird_DC.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Freeze XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/a/a2/FreezeXT.png/160px-FreezeXT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Isida XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/d/d7/IsidaXT.png/160px-IsidaXT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Hammer XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/c/cb/Hammer_XT.png/160px-Hammer_XT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Twins XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/21/Twins_XT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Ricochet XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/5/51/RicochetXT.png/160px-RicochetXT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Ricochet LC",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/0/0f/Skin_ricochet_legacy.png/160px-Skin_ricochet_legacy.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Smoky XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/55/Smoky_XT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Striker XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/a/ab/StrikerXT.png/156px-StrikerXT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Vulcan XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0f/Vulcan_XT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Vulcan PR",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/8/81/Skin_vulcan_prime.png/160px-Skin_vulcan_prime.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Thunder XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/22/Thunder_XT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Thunder LC",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/94/Thunder_Legacy.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Thunder PR",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/8/87/ThunderPR.png/160px-ThunderPR.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Thunder UT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/f/fe/Thunder_Ultra_Skin.png/160px-Thunder_Ultra_Skin.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Railgun XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/65/Railgun_XT_M3.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Railgun LC",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/7/78/Railgun_Legacy.png/160px-Railgun_Legacy.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Railgun PR",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/7/73/Skin_railgun_prime.png/160px-Skin_railgun_prime.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Railgun UT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/b/b6/Railgun_ultra.png/160px-Railgun_ultra.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Magnum XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/f/f8/MagnumXT.png/160px-MagnumXT.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Gauss PR",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/5/51/Skin_gauss_prime.png/159px-Skin_gauss_prime.png"
+        },
+        {
+            "type": "turret",
+            "rarity": "exotic",
+            "name": "Shaft XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/9/9c/ShaftXT.png/160px-ShaftXT.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Wasp XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/2c/Wasp_XT.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Hornet XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/06/Hornet_XT_M3.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Hornet LC",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/4/40/Hornet_Legacy.png/160px-Hornet_Legacy.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Hornet PR",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/f/f8/Hornet_Prime.png/160px-Hornet_Prime.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Viking XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/95/Viking_XT.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Viking LC",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/67/Viking_Legacy.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Viking PR",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/a/aa/Skin_viking_prime.png/160px-Skin_viking_prime.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Viking UT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/8/8a/Viking_Ultra_Skin.png/160px-Viking_Ultra_Skin.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Hunter XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/6/67/HunterXT.png/160px-HunterXT.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Hunter PR",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/8/88/Skin_hunter_prime.png/160px-Skin_hunter_prime.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Dictator XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/7/7d/DictatorXT.png/160px-DictatorXT.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Titan XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/6f/Titan_XT.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Titan PR",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/thumb/4/42/Skin_titan_prime.png/160px-Skin_titan_prime.png"
+        },
+        {
+            "type": "hull",
+            "rarity": "exotic",
+            "name": "Mammoth XT",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/ff/Mammoth_XT.png"
+        }
+    ]
+}

@@ -1,0 +1,146 @@
+[
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 100000,
+        "image": "https://i.imgur.com/DogMxOB.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 3000,
+        "image": "https://i.imgur.com/kchdfBL.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 2000,
+        "image": "https://i.imgur.com/kchdfBL.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 1000,
+        "image": "https://i.imgur.com/iSeMDSV.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 500,
+        "image": "https://i.imgur.com/iSeMDSV.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 300,
+        "image": "https://i.imgur.com/bX3mqAP.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 200,
+        "image": "https://i.imgur.com/bX3mqAP.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 100,
+        "image": "https://i.imgur.com/bX3mqAP.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 50,
+        "image": "https://i.imgur.com/fpM3gEX.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 40,
+        "image": "https://i.imgur.com/fpM3gEX.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 30,
+        "image": "https://i.imgur.com/fpM3gEX.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 10,
+        "image": "https://i.imgur.com/fpM3gEX.png"
+    },
+    {
+        "type": "tankoins",
+        "name": "Tankoins",
+        "quantity": 1,
+        "image": "https://i.imgur.com/vkpGrTd.png"
+    },
+    {
+        "type": "crystals",
+        "name": "Crystals",
+        "quantity": 60000,
+        "image": "https://i.imgur.com/cvpWBkM.png"
+    },
+    {
+        "type": "crystals",
+        "name": "Crystals",
+        "quantity": 30000,
+        "image": "https://i.imgur.com/gkp8Ren.png"
+    },
+    {
+        "type": "crystals",
+        "name": "Crystals",
+        "quantity": 15000,
+        "image": "https://i.imgur.com/c7gUlGw.png"
+    },
+    {
+        "type": "crystals",
+        "name": "Crystals",
+        "quantity": 2000,
+        "image": "https://i.imgur.com/NhFb2N8.png"
+    },
+    {
+        "type": "crystals",
+        "name": "Crystals",
+        "quantity": 1000,
+        "image": "https://i.imgur.com/B24Sjw7.png"
+    },
+    {
+        "type": "barreries",
+        "name": "Batteries",
+        "quantity": 15,
+        "image": "https://i.imgur.com/jFFDsbg.png"
+    },
+    {
+        "type": "repair",
+        "name": "Repair Kits",
+        "quantity": 30,
+        "image": "https://i.imgur.com/EJr4UBu.png"
+    },
+    {
+        "type": "damage",
+        "name": "Double Damages",
+        "quantity": 30,
+        "image": "https://i.imgur.com/IqWONoi.png"
+    },
+    {
+        "type": "armor",
+        "name": "Double Armors",
+        "quantity": 30,
+        "image": "https://i.imgur.com/mBLHapo.png"
+    },
+    {
+        "type": "nitro",
+        "name": "Speedups",
+        "quantity": 30,
+        "image": "https://i.imgur.com/nQ5DxzH.png"
+    },
+    {
+        "type": "mine",
+        "name": "Mines",
+        "quantity": 30,
+        "image": "https://i.imgur.com/XopyhId.png"
+    }
+]

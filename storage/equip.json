@@ -1,0 +1,794 @@
+{
+    "firebird": {
+        "level": [
+            {
+                "name": "Firebird Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/0/01/Turret_firebird_m0_2.png/200px-Turret_firebird_m0_2.png",
+                "rank": 3,
+                "price": 1,
+                "minDamage": 0,
+                "maxDamage": 200
+            },
+            {
+                "name": "Firebird Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/0/01/Turret_firebird_m0_2.png/200px-Turret_firebird_m0_2.png",
+                "rank": 6,
+                "price": 1000,
+                "minDamage": 0,
+                "maxDamage": 273
+            },
+            {
+                "name": "Firebird Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/ff/Turret_firebird_m1_2.png/200px-Turret_firebird_m1_2.png",
+                "rank": 10,
+                "price": 10000,
+                "minDamage": 0,
+                "maxDamage": 323
+            },
+            {
+                "name": "Firebird Mk4",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/ff/Turret_firebird_m1_2.png/200px-Turret_firebird_m1_2.png",
+                "rank": 14,
+                "price": 34000,
+                "minDamage": 0,
+                "maxDamage": 391
+            },
+            {
+                "name": "Firebird Mk5",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/f8/Turret_firebird_m2_2.png/200px-Turret_firebird_m2_2.png",
+                "rank": 18,
+                "price": 54000,
+                "minDamage": 0,
+                "maxDamage": 450
+            },
+            {
+                "name": "Firebird Mk6",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/f8/Turret_firebird_m2_2.png/200px-Turret_firebird_m2_2.png",
+                "rank": 22,
+                "price": 90000,
+                "minDamage": 0,
+                "maxDamage": 508
+            },
+            {
+                "name": "Firebird Mk7",
+                "image": "https://en.tankiwiki.com/images/en/thumb/6/61/Turret_firebird_m3_2.png/200px-Turret_firebird_m3_2.png",
+                "rank": 27,
+                "price": 150000,
+                "minDamage": 0,
+                "maxDamage": 582
+            }
+        ]
+    },
+    "freeze": {
+        "level": [
+            {
+                "name": "Freeze Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/1/1f/Turret_freeze_m0.png/200px-Turret_freeze_m0.png",
+                "rank": 3,
+                "price": 350,
+                "minDamage": 0,
+                "maxDamage": 450
+            },
+            {
+                "name": "Freeze Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/1/1f/Turret_freeze_m0.png/200px-Turret_freeze_m0.png",
+                "rank": 7,
+                "price": 2000,
+                "minDamage": 0,
+                "maxDamage": 529
+            },
+            {
+                "name": "Freeze Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/fd/Turret_freeze_m1.png/200px-Turret_freeze_m1.png",
+                "rank": 12,
+                "price": 18000,
+                "minDamage": 0,
+                "maxDamage": 595
+            },
+            {
+                "name": "Freeze Mk4",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/fd/Turret_freeze_m1.png/200px-Turret_freeze_m1.png",
+                "rank": 17,
+                "price": 47000,
+                "minDamage": 0,
+                "maxDamage": 661
+            },
+            {
+                "name": "Freeze Mk5",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/f7/Turret_freeze_m2.png/200px-Turret_freeze_m2.png",
+                "rank": 20,
+                "price": 71000,
+                "minDamage": 0,
+                "maxDamage": 701
+            },
+            {
+                "name": "Freeze Mk6",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/f7/Turret_freeze_m2.png/200px-Turret_freeze_m2.png",
+                "rank": 23,
+                "price": 101000,
+                "minDamage": 0,
+                "maxDamage": 741
+            },
+            {
+                "name": "Freeze Mk7",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/f2/Turret_freeze_m3.png/200px-Turret_freeze_m3.png",
+                "rank": 27,
+                "price": 150000,
+                "minDamage": 0,
+                "maxDamage": 792
+            }
+        ]
+    },
+    "isida": {
+        "level": [
+            {
+                "name": "Isida Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/1/17/Turret_isida_m0.png/200px-Turret_isida_m0.png",
+                "rank": 3,
+                "price": 350,
+                "minDamage": 200,
+                "maxDamage": 500
+            },
+            {
+                "name": "Isida Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/1/17/Turret_isida_m0.png/200px-Turret_isida_m0.png",
+                "rank": 6,
+                "price": 1000,
+                "minDamage": 229,
+                "maxDamage": 573
+            },
+            {
+                "name": "Isida Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/8/8d/Turret_isida_m1.png/200px-Turret_isida_m1.png",
+                "rank": 10,
+                "price": 10000,
+                "minDamage": 252,
+                "maxDamage": 632
+            },
+            {
+                "name": "Isida Mk4",
+                "image": "https://en.tankiwiki.com/images/en/thumb/8/8d/Turret_isida_m1.png/200px-Turret_isida_m1.png",
+                "rank": 15,
+                "price": 34000,
+                "minDamage": 282,
+                "maxDamage": 705
+            },
+            {
+                "name": "Isida Mk5",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/f1/Turret_isida_m2.png/200px-Turret_isida_m2.png",
+                "rank": 18,
+                "price": 54000,
+                "minDamage": 300,
+                "maxDamage": 750
+            },
+            {
+                "name": "Isida Mk6",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/f1/Turret_isida_m2.png/200px-Turret_isida_m2.png",
+                "rank": 22,
+                "price": 90000,
+                "minDamage": 323,
+                "maxDamage": 808
+            },
+            {
+                "name": "Isida Mk7",
+                "image": "https://en.tankiwiki.com/images/en/thumb/5/5f/Turret_isida_m3.png/200px-Turret_isida_m3.png",
+                "rank": 27,
+                "price": 150000,
+                "minDamage": 352,
+                "maxDamage": 882
+            }
+        ]
+    },
+    "hammer": {
+        "level": [
+            {
+                "name": "Hammer Mk1",
+                "image": "https://en.tankiwiki.com/images/en/b/b6/Hammer_m0.png",
+                "rank": 4,
+                "price": 350,
+                "minDamage": 60,
+                "maxDamage": 540
+            },
+            {
+                "name": "Hammer Mk2",
+                "image": "https://en.tankiwiki.com/images/en/b/b6/Hammer_m0.png",
+                "rank": 7,
+                "price": 2000,
+                "minDamage": 70,
+                "maxDamage": 635
+            },
+            {
+                "name": "Hammer Mk3",
+                "image": "https://en.tankiwiki.com/images/en/8/88/Hammer_m1.png",
+                "rank": 10,
+                "price": 10000,
+                "minDamage": 75,
+                "maxDamage": 682
+            },
+            {
+                "name": "Hammer Mk4",
+                "image": "https://en.tankiwiki.com/images/en/8/88/Hammer_m1.png",
+                "rank": 14,
+                "price": 28000,
+                "minDamage": 82,
+                "maxDamage": 746
+            },
+            {
+                "name": "Hammer Mk5",
+                "image": "https://en.tankiwiki.com/images/en/c/c1/Hammer_m2.png",
+                "rank": 19,
+                "price": 62000,
+                "minDamage": 91,
+                "maxDamage": 825
+            },
+            {
+                "name": "Hammer Mk6",
+                "image": "https://en.tankiwiki.com/images/en/c/c1/Hammer_m2.png",
+                "rank": 23,
+                "price": 101000,
+                "minDamage": 105,
+                "maxDamage": 952
+            },
+            {
+                "name": "Hammer Mk7",
+                "image": "https://en.tankiwiki.com/images/en/1/18/Hammer_m3.png",
+                "rank": 27,
+                "price": 150000,
+                "minDamage": 120,
+                "maxDamage": 1080
+            }
+        ]
+    },
+    "twins": {
+        "level": [
+            {
+                "name": "Twins Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/d0/Turret_twins_m0.png/200px-Turret_twins_m0.png",
+                "rank": 3,
+                "price": 350,
+                "minDamage": 90,
+                "maxDamage": 120
+            },
+            {
+                "name": "Twins Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/d0/Turret_twins_m0.png/200px-Turret_twins_m0.png",
+                "rank": 6,
+                "price": 1000,
+                "minDamage": 104,
+                "maxDamage": 134
+            },
+            {
+                "name": "Twins Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/a/a1/Turret_twins_m1.png/200px-Turret_twins_m1.png",
+                "rank": 11,
+                "price": 14000,
+                "minDamage": 119,
+                "maxDamage": 149
+            },
+            {
+                "name": "Twins Mk4",
+                "image": "https://en.tankiwiki.com/images/en/thumb/a/a1/Turret_twins_m1.png/200px-Turret_twins_m1.png",
+                "rank": 14,
+                "price": 28000,
+                "minDamage": 128,
+                "maxDamage": 158
+            },
+            {
+                "name": "Twins Mk5",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/d1/Turret_twins_m2.png/200px-Turret_twins_m2.png",
+                "rank": 19,
+                "price": 62000,
+                "minDamage": 142,
+                "maxDamage": 172
+            },
+            {
+                "name": "Twins Mk6",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/d1/Turret_twins_m2.png/200px-Turret_twins_m2.png",
+                "rank": 23,
+                "price": 101000,
+                "minDamage": 154,
+                "maxDamage": 184
+            },
+            {
+                "name": "Twins Mk7",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/d3/Turret_twins_m3.png/200px-Turret_twins_m3.png",
+                "rank": 27,
+                "price": 456000,
+                "minDamage": 190,
+                "maxDamage": 220
+            }
+        ]
+    },
+    "ricochet": {
+        "level": [
+            {
+                "name": "Ricochet Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/2/2c/Turret_ricochet_m0.png/200px-Turret_ricochet_m0.png",
+                "rank": 3,
+                "price": 400,
+                "minDamage": 150,
+                "maxDamage": 210
+            },
+            {
+                "name": "Ricochet Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/2/2c/Turret_ricochet_m0.png/200px-Turret_ricochet_m0.png",
+                "rank": 3,
+                "price": 400,
+                "minDamage": 150,
+                "maxDamage": 210
+            },
+            {
+                "name": "Ricochet Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/2/26/Turret_ricochet_m1.png/200px-Turret_ricochet_m1.png",
+                "rank": 3,
+                "price": 400,
+                "minDamage": 150,
+                "maxDamage": 210
+            },
+            {
+                "name": "Ricochet Mk4",
+                "image": "https://en.tankiwiki.com/images/en/thumb/2/26/Turret_ricochet_m1.png/200px-Turret_ricochet_m1.png",
+                "rank": 3,
+                "price": 400,
+                "minDamage": 150,
+                "maxDamage": 210
+            },
+            {
+                "name": "Ricochet Mk5",
+                "image": "https://en.tankiwiki.com/images/en/thumb/7/72/Turret_ricochet_m2.png/200px-Turret_ricochet_m2.png",
+                "rank": 3,
+                "price": 400,
+                "minDamage": 150,
+                "maxDamage": 210
+            },
+            {
+                "name": "Ricochet Mk6",
+                "image": "https://en.tankiwiki.com/images/en/thumb/7/72/Turret_ricochet_m2.png/200px-Turret_ricochet_m2.png",
+                "rank": 3,
+                "price": 400,
+                "minDamage": 150,
+                "maxDamage": 210
+            },
+            {
+                "name": "Ricochet Mk7",
+                "image": "https://en.tankiwiki.com/images/en/thumb/b/bc/Turret_ricochet_m3.png/200px-Turret_ricochet_m3.png",
+                "rank": 3,
+                "price": 400,
+                "minDamage": 150,
+                "maxDamage": 210
+            }
+        ]
+    },
+    "smoky": {
+        "level": [
+            {
+                "name": "Smoky Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/2/20/Turret_smoky_m0.png/200px-Turret_smoky_m0.png",
+                "rank": 0,
+                "price": 0,
+                "minDamage": 210,
+                "maxDamage": 330
+            },
+            {
+                "name": "Smoky Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/5/57/Turret_smoky_m1.png/200px-Turret_smoky_m1.png",
+                "rank": 9,
+                "price": 11000,
+                "minDamage": 259,
+                "maxDamage": 405
+            },
+            {
+                "name": "Smoky Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/e/e9/Turret_smoky_m2.png/200px-Turret_smoky_m2.png",
+                "rank": 22,
+                "price": 114800,
+                "minDamage": 339,
+                "maxDamage": 527
+            },
+            {
+                "name": "Smoky Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/6/61/Turret_smoky_m3.png/200px-Turret_smoky_m3.png",
+                "rank": 27,
+                "price": 228200,
+                "minDamage": 370,
+                "maxDamage": 574
+            }
+        ]
+    },
+    "vulcan": {
+        "level": [
+            {
+                "name": "Vulcan Mk0",
+                "image": "https://en.tankiwiki.com/images/en/6/63/Vulcan0.png",
+                "rank": 4,
+                "price": 450,
+                "minDamage": 82,
+                "maxDamage": 345
+            },
+            {
+                "name": "Vulcan Mk1",
+                "image": "https://en.tankiwiki.com/images/en/2/22/Vulcan1.png",
+                "rank": 12,
+                "price": 28300,
+                "minDamage": 109,
+                "maxDamage": 456
+            },
+            {
+                "name": "Vulcan Mk2",
+                "image": "https://en.tankiwiki.com/images/en/1/11/Vulcan2.png",
+                "rank": 17,
+                "price": 82700,
+                "minDamage": 131,
+                "maxDamage": 507
+            },
+            {
+                "name": "Vulcan Mk3",
+                "image": "https://en.tankiwiki.com/images/en/e/e4/Vulcan3.png",
+                "rank": 27,
+                "price": 232350,
+                "minDamage": 145,
+                "maxDamage": 608
+            }
+        ]
+    },
+    "thunder": {
+        "level": [
+            {
+                "name": "Thunder Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/6/66/Turret_thunder_m0.png/200px-Turret_thunder_m0.png",
+                "rank": 2,
+                "price": 150,
+                "minDamage": 360,
+                "maxDamage": 510
+            },
+            {
+                "name": "Thunder Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/0/0c/Turret_thunder_m1.png/200px-Turret_thunder_m1.png",
+                "rank": 14,
+                "price": 38600,
+                "minDamage": 505,
+                "maxDamage": 705
+            },
+            {
+                "name": "Thunder Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/1/12/Turret_thunder_m2.png/200px-Turret_thunder_m2.png",
+                "rank": 19,
+                "price": 110500,
+                "minDamage": 561,
+                "maxDamage": 780
+            },
+            {
+                "name": "Thunder Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/3/3c/Turret_thunder_m3.png/200px-Turret_thunder_m3.png",
+                "rank": 27,
+                "price": 214400,
+                "minDamage": 650,
+                "maxDamage": 900
+            }
+        ]
+    },
+    "railgun": {
+        "level": [
+            {
+                "name": "Railgun Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/8/83/Turret_railgun_m0.png/200px-Turret_railgun_m0.png",
+                "rank": 4,
+                "price": 500,
+                "minDamage": 390,
+                "maxDamage": 810
+            },
+            {
+                "name": "Railgun Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/9/9b/Turret_railgun_m1.png/200px-Turret_railgun_m1.png",
+                "rank": 13,
+                "price": 31400,
+                "minDamage": 534,
+                "maxDamage": 1088
+            },
+            {
+                "name": "Railgun Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/8/84/Turret_railgun_m2.png/200px-Turret_railgun_m2.png",
+                "rank": 18,
+                "price": 96100,
+                "minDamage": 595,
+                "maxDamage": 1205
+            },
+            {
+                "name": "Railgun Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/c/c9/Turret_railgun_m3.png/200px-Turret_railgun_m3.png",
+                "rank": 27,
+                "price": 226250,
+                "minDamage": 703,
+                "maxDamage": 1414
+            }
+        ]
+    },
+    "shaft": {
+        "level": [
+            {
+                "name": "Shaft Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/9/9e/Turret_shaft_m0_2.png/200px-Turret_shaft_m0_2.png",
+                "rank": 5,
+                "price": 550,
+                "minDamage": 380,
+                "maxDamage": 1650
+            },
+            {
+                "name": "Shaft Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/0/06/Turret_shaft_m1_2.png/200px-Turret_shaft_m1_2.png",
+                "rank": 10,
+                "price": 17900,
+                "minDamage": 477,
+                "maxDamage": 2086
+            },
+            {
+                "name": "Shaft Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/7/7f/Turret_shaft_m2_2.png/200px-Turret_shaft_m2_2.png",
+                "rank": 20,
+                "price": 103600,
+                "minDamage": 586,
+                "maxDamage": 2572
+            },
+            {
+                "name": "Shaft Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/7/7b/Turret_shaft_m3_2.png/200px-Turret_shaft_m3_2.png",
+                "rank": 27,
+                "price": 231300,
+                "minDamage": 662,
+                "maxDamage": 2911
+            }
+        ]
+    },
+    "wasp": {
+        "level": [
+            {
+                "name": "Wasp Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/df/Hull_wasp_m0.png/200px-Hull_wasp_m0.png",
+                "rank": 0,
+                "price": 100,
+                "minDamage": 1000,
+                "maxDamage": null
+            },
+            {
+                "name": "Wasp Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/8/88/Hull_wasp_m1.png/200px-Hull_wasp_m1.png",
+                "rank": 10,
+                "price": 13100,
+                "minDamage": 1264,
+                "maxDamage": null
+            },
+            {
+                "name": "Wasp Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/5/57/Hull_wasp_m2.png/200px-Hull_wasp_m2.png",
+                "rank": 22,
+                "price": 102700,
+                "minDamage": 1617,
+                "maxDamage": null
+            },
+            {
+                "name": "Wasp Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/c/c8/Hull_wasp_m3.png/200px-Hull_wasp_m3.png",
+                "rank": 27,
+                "price": 203100,
+                "minDamage": 1764,
+                "maxDamage": null
+            }
+        ]
+    },
+    "hornet": {
+        "level": [
+            {
+                "name": "Hornet Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/7/77/Hull_hornet_m0.png/200px-Hull_hornet_m0.png",
+                "rank": 4,
+                "price": 400,
+                "minDamage": 1000,
+                "maxDamage": null
+            },
+            {
+                "name": "Hornet Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/4/4b/Hull_hornet_m1.png/200px-Hull_hornet_m1.png",
+                "rank": 12,
+                "price": 23100,
+                "minDamage": 1323,
+                "maxDamage": null
+            },
+            {
+                "name": "Hornet Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/7/79/Hull_hornet_m2.png/200px-Hull_hornet_m2.png",
+                "rank": 17,
+                "price": 70500,
+                "minDamage": 1470,
+                "maxDamage": null
+            },
+            {
+                "name": "Hornet Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/5/5b/Hull_hornet_m3.png/200px-Hull_hornet_m3.png",
+                "rank": 27,
+                "price": 225050,
+                "minDamage": 1764,
+                "maxDamage": null
+            }
+        ]
+    },
+    "hunter": {
+        "level": [
+            {
+                "name": "Hunter Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/7/79/Hull_hunter_m0.png/200px-Hull_hunter_m0.png",
+                "rank": 0,
+                "price": 0,
+                "minDamage": 1000,
+                "maxDamage": null
+            },
+            {
+                "name": "Hunter Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/d4/Hull_hunter_m1.png/200px-Hull_hunter_m1.png",
+                "rank": 14,
+                "price": 29900,
+                "minDamage": 1264,
+                "maxDamage": null
+            },
+            {
+                "name": "Hunter Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/0/06/Hull_hunter_m2.png/200px-Hull_hunter_m2.png",
+                "rank": 19,
+                "price": 94100,
+                "minDamage": 1617,
+                "maxDamage": null
+            },
+            {
+                "name": "Hunter Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/f7/Hull_hunter_m3.png/200px-Hull_hunter_m3.png",
+                "rank": 27,
+                "price": 200000,
+                "minDamage": 2647,
+                "maxDamage": null
+            }
+        ]
+    },
+    "viking": {
+        "level": [
+            {
+                "name": "Viking Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/fc/Hull_vicing_m0.png/200px-Hull_vicing_m0.png",
+                "rank": 4,
+                "price": 600,
+                "minDamage": 1500,
+                "maxDamage": null
+            },
+            {
+                "name": "Viking Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/4/42/Hull_vicing_m1.png/200px-Hull_vicing_m1.png",
+                "rank": 11,
+                "price": 19300,
+                "minDamage": 1941,
+                "maxDamage": null
+            },
+            {
+                "name": "Viking Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/fc/Hull_vicing_m2.png/200px-Hull_vicing_m2.png",
+                "rank": 21,
+                "price": 99900,
+                "minDamage": 2382,
+                "maxDamage": null
+            },
+            {
+                "name": "Viking Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/de/Hull_vicing_m3.png/200px-Hull_vicing_m3.png",
+                "rank": 27,
+                "price": 204200,
+                "minDamage": 2647,
+                "maxDamage": null
+            }
+        ]
+    },
+    "dictator": {
+        "level": [
+            {
+                "name": "Dictator Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/b/be/Hull_dictator_m0.png/200px-Hull_dictator_m0.png",
+                "rank": 2,
+                "price": 300,
+                "minDamage": 1500,
+                "maxDamage": null
+            },
+            {
+                "name": "Dictator Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/5/56/Hull_dictator_m1.png/200px-Hull_dictator_m1.png",
+                "rank": 13,
+                "price": 26700,
+                "minDamage": 2029,
+                "maxDamage": null
+            },
+            {
+                "name": "Dictator Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/c/cd/Hull_dictator_m2.png/200px-Hull_dictator_m2.png",
+                "rank": 18,
+                "price": 81800,
+                "minDamage": 2250,
+                "maxDamage": null
+            },
+            {
+                "name": "Dictator Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/d7/Hull_dictator_m3.png/200px-Hull_dictator_m3.png",
+                "rank": 27,
+                "price": 210300,
+                "minDamage": 2647,
+                "maxDamage": null
+            }
+        ]
+    },
+    "titan": {
+        "level": [
+            {
+                "name": "Titan Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/2/21/Hull_titan_m0.png/200px-Hull_titan_m0.png",
+                "rank": 2,
+                "price": 200,
+                "minDamage": 2000,
+                "maxDamage": null
+            },
+            {
+                "name": "Titan Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/2/26/Hull_titan_m1.png/200px-Hull_titan_m1.png",
+                "rank": 8,
+                "price": 6000,
+                "minDamage": 2411,
+                "maxDamage": null
+            },
+            {
+                "name": "Titan Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/de/Hull_titan_m2.png/200px-Hull_titan_m2.png",
+                "rank": 22,
+                "price": 92900,
+                "minDamage": 3235,
+                "maxDamage": null
+            },
+            {
+                "name": "Titan Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/5/56/Hull_titan_m3.png/200px-Hull_titan_m3.png",
+                "rank": 27,
+                "price": 220000,
+                "minDamage": 3529,
+                "maxDamage": null
+            }
+        ]
+    },
+    "mammoth": {
+        "level": [
+            {
+                "name": "Mammoth Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/3/3c/Hull_mammoth_m0.png/200px-Hull_mammoth_m0.png",
+                "rank": 3,
+                "price": 500,
+                "minDamage": 2000,
+                "maxDamage": null
+            },
+            {
+                "name": "Mammoth Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/a/ac/Hull_mammoth_m1.png/200px-Hull_mammoth_m1.png",
+                "rank": 7,
+                "price": 3200,
+                "minDamage": 2352,
+                "maxDamage": null
+            },
+            {
+                "name": "Mammoth Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/6/6d/Hull_mammoth_m2.png/200px-Hull_mammoth_m2.png",
+                "rank": 20,
+                "price": 76700,
+                "minDamage": 3117,
+                "maxDamage": null
+            },
+            {
+                "name": "Mammoth Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/9/9c/Hull_mammoth_m3.png/200px-Hull_mammoth_m3.png",
+                "rank": 27,
+                "price": 228700,
+                "minDamage": 3529,
+                "maxDamage": null
+            }
+        ]
+    }
+}
