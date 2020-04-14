@@ -46,3 +46,6 @@ Tanki Bot is made in **Javascript** using **Node.JS**. Its uses a **MySQL** data
 
 ## Bot Support
 If you find any bugs you can open a **GitHub Issue** or contact me on Discord **gb_factory#5365**.
+
+## Copyright
+GNU General Public License v3.0
