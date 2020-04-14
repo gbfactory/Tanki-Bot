@@ -39,4 +39,10 @@ A lot of things are still work-in-progress
 | `sell (all / paints / supplies / skins )` | With the sell commands you can sell all your items for crystals. With the arg `all` you sell everything you own. With paints, supplies and skins you sell only the selected category of items.
 | `leaderboard` | In the leaderboard you can check who are the best players of the Tanki Bot. It has subcommands for each leaderboard category (crystals, xp, tankoins).
 | `drop` | With the drop command you can literally drop a gold box in the discord chat. The first that writes the keyword `goldbox` will take the Gold Box and get 1000 crystals. You can drop a gold if you first find one in a container.
-| `premium` | With this command you can check the status of your premium account. You can find premium time in containers. (At the moment premium account doesn't give advantages to players). 
+| `premium` | With this command you can check the status of your premium account. You can find premium time in containers. (At the moment premium account doesn't give advantages to players).
+
+## Bot information
+Tanki Bot is made in **Javascript** using **Node.JS**. Its uses a **MySQL** database to store users informations and **JSON** to store items informations.
+
+## Bot Support
+If you find any bugs you can open a **GitHub Issue** or contact me on Discord **gb_factory#5365**.
