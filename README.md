@@ -20,6 +20,7 @@ Commands that works with the Tanki Online API or commanda that gives you informa
 |`supplies (player)` | Check the supplies usage of a given player. (Single supply and total usage)
 |`news` | See the latest news postes in the en tanki website. Works with Wordpress API
 |`fact` | Get a random fact about tanki - all the facts are from the Tanki Wiki
+|`status (no args / test)` | Check how many players are on Tanki at the moment.
 
 ## Economy
 
