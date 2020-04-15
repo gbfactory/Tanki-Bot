@@ -22,10 +22,10 @@ let lv = require("./storage/levels.json");
 
 // Mysql connection to db
 var con = mysql.createConnection({
-    host: "",
-    user: "",
-    password: "",
-    database: ""
+    host: "localhost",
+    user: "root",
+    password: "1234",
+    database: "tankibot"
 });
 
 con.connect(err => {
@@ -37,42 +37,45 @@ con.connect(err => {
 client.on('message', async message => {
 
     // LEVELING SYSTEM
-    var authorId = message.author.id;
-    var authorName = message.author.username;
-
-    var xpMsg = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
-
-    con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
-        if (err) throw err;
-
-        if (rows.length > 0) {
-
-            // exp 
-            let xp = rows[0].xp;
-            con.query(`UPDATE users SET xp = ${xp + xpMsg} WHERE id = '${authorId}'`);
-        
-            // ranks
-            let lvl = rows[0].level;
-
-            if (lvl < 30) {
-                if (lv[lvl + 1].exp <= xp) {
-                    let crys = rows[0].crys;
-                    let addCrys = lv[lvl + 1].crystals;
-                    
-                    con.query(`UPDATE users SET level = ${lvl + 1} WHERE id = '${authorId}'`);
-                    con.query(`UPDATE users SET crys = ${crys + addCrys} WHERE id = '${authorId}'`);
-        
-                    let lvupEmbed = new Discord.RichEmbed()
-                        .setColor("#ffc300")
-                        .setThumbnail(lv[lvl + 1].image)
-                        .addField("✨ Rank up! ✨", `Congratulations **${authorName}**! \nNow you are **${lv[lvl + 1].name}** \n+${lv[lvl + 1].crystals} 💎`)
-        
-                    message.channel.send({embed:lvupEmbed});
+    // commands don't give xp!
+    if (!message.content.startsWith(prefix)) {
+        var authorId = message.author.id;
+        var authorName = message.author.username;
+    
+        var xpMsg = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+    
+        con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
+            if (err) throw err;
+    
+            if (rows.length > 0) {
+    
+                // exp 
+                let xp = rows[0].xp;
+                con.query(`UPDATE users SET xp = ${xp + xpMsg} WHERE id = '${authorId}'`);
+            
+                // ranks
+                let lvl = rows[0].level;
+    
+                if (lvl < 30) {
+                    if (lv[lvl + 1].exp <= xp) {
+                        let crys = rows[0].crys;
+                        let addCrys = lv[lvl + 1].crystals;
+                        
+                        con.query(`UPDATE users SET level = ${lvl + 1} WHERE id = '${authorId}'`);
+                        con.query(`UPDATE users SET crys = ${crys + addCrys} WHERE id = '${authorId}'`);
+            
+                        let lvupEmbed = new Discord.RichEmbed()
+                            .setColor("#ffc300")
+                            .setThumbnail(lv[lvl + 1].image)
+                            .addField("✨ Rank up! ✨", `🎉 Congratulations **${authorName}**! \nNow you are **${lv[lvl + 1].name}** \n+${lv[lvl + 1].crystals} 💎`)
+            
+                        message.channel.send({embed:lvupEmbed});
+                    }
                 }
             }
-        }
-
-    });
+    
+        });
+    }
 
     // Vars
     let msg = message.content.toUpperCase();
@@ -94,7 +97,8 @@ client.on('message', async message => {
         let commandFile = require(`./commands/${cmd}.js`);
         commandFile.run(client, message, args, con);
     } catch (e) {
-        console.log(e.message);
+        //console.log(e.message);
+        console.log(`${message.author.tag} used a non existing cmd (${cmd})`);
     } finally {
         console.log(`${message.author.tag} used ${cmd}`);
     }
@@ -111,6 +115,11 @@ client.on('ready', async () => {
 
 
 // Token
-const token = "";
+
+// PRODUCTION
+//const token = "NDc3NTU4NzEyNzAyMzM3MDQ0.Dk-nLA.cQoKdHFYn3O7Rg4jtiJKLZW3NN4";
+
+// DEV
+const token = "NjY0MjczMTIxNDEwNDE2NjQy.XhXvBw.pMdrt3GHqeP2AvMKMXc6KNuCF0M";
 
 client.login(token);
