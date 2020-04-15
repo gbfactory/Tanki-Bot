@@ -22,10 +22,10 @@ let lv = require("./storage/levels.json");
 
 // Mysql connection to db
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "1234",
-    database: "tankibot"
+    host: "",
+    user: "",
+    password: "",
+    database: ""
 });
 
 con.connect(err => {
@@ -115,11 +115,6 @@ client.on('ready', async () => {
 
 
 // Token
-
-// PRODUCTION
-//const token = "NDc3NTU4NzEyNzAyMzM3MDQ0.Dk-nLA.cQoKdHFYn3O7Rg4jtiJKLZW3NN4";
-
-// DEV
-const token = "NjY0MjczMTIxNDEwNDE2NjQy.XhXvBw.pMdrt3GHqeP2AvMKMXc6KNuCF0M";
+const token = "";
 
 client.login(token);
