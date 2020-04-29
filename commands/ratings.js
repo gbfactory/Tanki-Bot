@@ -46,6 +46,8 @@ module.exports.run = async(client, message, args, tools) => {
         // Name
         var name = res.name;
 
+        console.log(name);
+
         // Stats
         var kills = res.kills;
         var deaths = res.deaths;
@@ -66,9 +68,14 @@ module.exports.run = async(client, message, args, tools) => {
         var hasPremium = res.hasPremium; // boolean
 
         // Rank
-        var rank = res.rank - 1;
+        if (res.rank > 30) {
+            var rank = 30;
+            var rankName = "Legend " + (res.rank - 30)
+        } else {
+            var rank = res.rank - 1;
+            var rankName = lv[rank].name;
+        }
 
-        var rankName = lv[rank].name;
         var rankEmoji = lv[rank].icon;
 
         if (hasPremium) {
