@@ -41,7 +41,7 @@ module.exports.run = async (client, message, args, con) => {
             let dropEmbed = new Discord.RichEmbed()
                 .setColor('#ebcc34')
                 .setTitle('A Gold Box has just dropped')
-                .setDescription('Take it by writing `goldbox` in the chat')
+                .setDescription('<a:golddropping:520985638317588480> Take it by writing `goldbox` in the chat')
                 .setThumbnail('https://en.tankiwiki.com/images/en/thumb/1/10/Gold.png/150px-Gold.png')
                 .setFooter(`Dropped by ${dropper}`)
 
