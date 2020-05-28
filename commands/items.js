@@ -18,7 +18,7 @@ module.exports.run = async(client, message, args, tools) => {
 
     if (!nickname) {
         let noNickname = new Discord.RichEmbed()
-        .setAuthor('You have to specify a nickname >ratings (nickname)')
+        .setAuthor('You have to specify a nickname >items (nickname)')
         .setColor('#f54242');
 
         return message.channel.send({embed:noNickname});
