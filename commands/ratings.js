@@ -46,8 +46,6 @@ module.exports.run = async(client, message, args, tools) => {
         // Name
         var name = res.name;
 
-        console.log(name);
-
         // Stats
         var kills = res.kills;
         var deaths = res.deaths;
@@ -84,6 +82,8 @@ module.exports.run = async(client, message, args, tools) => {
             var rankImg = lv[rank].image;
         }
 
+        var premiumBanner = hasPremium ? '<:pbanner:720011348217430157> ' : '';
+
         // Supplies usage
         var suppliesArray = res.suppliesUsage;
         var suppliesUsage = 0;
@@ -110,12 +110,13 @@ module.exports.run = async(client, message, args, tools) => {
         .setDescription(`Profile of ${name}`)
         .setColor('#29ad1d')
         .setThumbnail(rankImg)
+        .setURL(`https://ratings.tankionline.com/en/user/${name}`)
         .setTimestamp()
         .addField(`Name`, `<:elmetto:660442439441448981> ${name}`, true)
-        .addField(`Rank`, `${rankEmoji} ${rankName}`, true)
+        .addField(`Rank`, `${premiumBanner} ${rankEmoji} ${rankName}`, true)
         .addField(`<:xp:661186205458628608> Score`, `${scoreBase} 🔸 ${score} (-${scoreLeft}) 🔸 ${scoreNext}`)
-        .addField(`Info`, `💎 Crystals: ${earnedCrystals} \n<:gold:660257810797428776> Gold Boxes ${caughtGolds} \n🕐 Game Time: ${gameTime} \n<:sups:660260925546168404> Supplies: ${suppliesUsage} \n⚙️ GearScore: ${gearScore}`, true)
-        .addField(`Stats`, `<:Clan_destroyed:660950530096496661> Kills: ${kills} \n<:Clan_death:660950530071461890> Deaths: ${deaths} \n<:Clan_kd:660950530293497866> K/D: ${kd}`, true)
+        .addField(`Info`, `💎 Crystals: ${earnedCrystals} \n<:gold:660257810797428776> Gold Boxes ${caughtGolds} \n🕐 Game Time: ${gameTime} \n<:sups:660260925546168404> Supplies: ${suppliesUsage}`, true)
+        .addField(`Stats`, `<:Clan_destroyed:660950530096496661> Kills: ${kills} \n<:Clan_death:660950530071461890> Deaths: ${deaths} \n<:Clan_kd:660950530293497866> K/D: ${kd} \n⚙️ GearScore: ${gearScore}`, true)
 
         message.channel.send({embed:ratings});
         
