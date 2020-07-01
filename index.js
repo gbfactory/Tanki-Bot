@@ -1,5 +1,5 @@
 /**
- * Tanki Bot.
+ * Tanki Bot
  * 
  * Main index file.
  * 
@@ -110,7 +110,7 @@ client.on('message', async message => {
         //console.log(e.message);
         console.log(`[Command Handler] ${message.author.tag} used a non existing cmd (${cmd})`);
     } finally {
-        console.log(`[Comnmand Handler] ${message.author.tag} used ${cmd}`);
+        console.log(`[Command Handler] ${message.author.tag} used ${cmd}`);
     }
 
 });
