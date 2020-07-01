@@ -14,23 +14,33 @@ const mysql = require("mysql");
 // New discord client
 const client = new Discord.Client();
 
-// Prefisso bot
+// Bot prefix
 const prefix = '>';
 
-// Json file with levels info
+// Json files
 let lv = require("./storage/levels.json");
+let config = require('./config.json');
 
 // Mysql connection to db
+let env;
+if (config['dev']) {
+    env = 'development';
+} else {
+    env = 'production';
+}
+
+console.log('[Tanki Bot] Starting in "' + env + '".');
+
 var con = mysql.createConnection({
-    host: "",
-    user: "",
-    password: "",
-    database: ""
+    host: config[env]['database']['host'],
+    user: config[env]['database']['user'],
+    password: config[env]['database']['password'],
+    database: config[env]['database']['database']
 });
 
 con.connect(err => {
     if (err) throw err;
-    console.log("Connsesso al database!")
+    console.log("[Tanki Bot] Connected to the database!");
 })
 
 // On message event
@@ -98,23 +108,20 @@ client.on('message', async message => {
         commandFile.run(client, message, args, con);
     } catch (e) {
         //console.log(e.message);
-        console.log(`${message.author.tag} used a non existing cmd (${cmd})`);
+        console.log(`[Command Handler] ${message.author.tag} used a non existing cmd (${cmd})`);
     } finally {
-        console.log(`${message.author.tag} used ${cmd}`);
+        console.log(`[Comnmand Handler] ${message.author.tag} used ${cmd}`);
     }
 
 });
 
 // Bot on start
 client.on('ready', async () => {
-    console.log('Bot avviato!');
+    console.log('[Tanki Bot] Started!');
     client.user.setActivity("Tanki Online", {
         type: "PLAYING"
     });
 });
 
-
 // Token
-const token = "";
-
-client.login(token);
+client.login(config[env]['token']);
