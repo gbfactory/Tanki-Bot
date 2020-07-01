@@ -2,14 +2,6 @@
  * Tanki Bot.
  * 
  * Bot garage where you can see your currently equipped combo and commands to navigate in other garage sections.
- * 
- * >garage          : done
- * >garage turrets  : work (to be tested when shop is active)
- * >garage hulls    : work (to be tested when shop is active)
- * >garage skins    : done
- * >garage supplies : done
- * >garage paints   : done
- * >garage special  : done
  *  
  * @author gbfactory
  * @since  11.01.2020

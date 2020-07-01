@@ -1,3 +1,12 @@
+/**
+ * Tanki Bot
+ * 
+ * Profile command that allows a user to check his own profile with bot stats (bot exp, bot crystals, ...)
+ * 
+ * @author gbfactory
+ * @since ?
+ */
+
 const Discord = require("discord.js");
 
 let lv = require("../storage/levels.json");

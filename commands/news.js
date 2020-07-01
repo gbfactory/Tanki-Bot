@@ -1,64 +1,72 @@
-const Discord = require("discord.js");
-const snekfetch = require("snekfetch");
-const api = 'https://tankionline.com/en/wp-json/wp/v2/';
+/**
+ * Tanki Bot
+ * 
+ * Get the latest news from tanki en wordpress
+ * 
+ * @author gbfactory
+ * @since 08/06/2020
+ * 
+ */
 
-module.exports.run = async (client, message, args) => {
+const Discord = require('discord.js');
+const snekfetch = require('snekfetch');
 
-  snekfetch.get(api + 'posts/').then(data1 => {
+const api = 'https://tankionline.com/en/wp-json/wp/v2/posts/';
 
-    id1 = data1.body[0].id;
-    date1 = data1.body[0].date;
-    link1 = data1.body[0].link;
-    title1 = data1.body[0].title.rendered;
-    desc1 = (((data1.body[0].excerpt.rendered).replace("<p>", "")).replace("[&hellip;]</p>\n", "")).replace(/&nbsp;/g, "");
+module.exports.run = async(client, message, args, tools) => {
 
-    // TODO: add week day name
-    // TODO: remove 0 in days from 1 to 9
-
-    // there is a better way to do the format date function but this code works
-    function formatDate (date1) {
-      // months and days names
-      var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-      // day
-      var day = date1.slice(8, 10);
-
-      // month
-      var month = date1.slice(5, 7);
-      if (month != 10 && month != 11 && month != 12) {
-        var monthFix = date1.slice(6, 7);
-      } else {
-        var monthFix = date1.slice(5, 7);
-      }
-
-      // year
-      var year = date1.slice(0, 4);
-
-      //return
-      return day + ' ' + monthNames[monthFix - 1] + ' ' + year;
+    function stripHtml(data) {
+        return data.replace(/<[^>]*>?/gm, '');
     }
-    
-    snekfetch.get(api + 'posts/' + id1).then(images => {
 
-      img1id = images.body._links['wp:featuredmedia'][0].href;
-  
-      snekfetch.get(img1id).then(imagesUrl => {
+    snekfetch.get(api).then(data => {
 
-        img1 = imagesUrl.body.guid.rendered;
+        let res = data.body;
 
-        let newsEmbed = new Discord.RichEmbed()
-        .setTitle("Tanki Online News")
-        .setURL(link1)
-        .setImage(img1)
-        .setFooter(formatDate(date1))
-        .addField(title1, desc1 + "[...]");
 
-        message.channel.send({embed:newsEmbed});
+            let count = parseInt(args[0]);
 
-      })
-      
+            if (count > 10) {
+                count = 0;
+            }
+
+            snekfetch.get(res[0]['_links']['wp:featuredmedia'][0]['href']).then(dataImg => {
+
+                let embed = new Discord.RichEmbed()
+                    .setAuthor('Tanki Online News')
+                    
+                    .setTitle(':one: ' + res[0]['title']['rendered'])
+                    .setURL(res[0]['link'])
+                    .setDescription(stripHtml(res[0]['excerpt']['rendered']))
+
+                    .setColor('#fff')
+                    .setTimestamp()
+
+                    let numbers = [':one:', ':two:', ':three:', ':four:', ':five:', ':six:', ':seven:', ':eight:', ':nine:', ':keycap_ten:'];
+
+                    for (let index = 1; index < count; index++) {
+                        if (index == 1 || count == 2) {
+                            embed.addField(numbers[index] + res[index]['title']['rendered'], stripHtml(res[index]['excerpt']['rendered']))
+                        } else {
+                            embed.addField(numbers[index] + res[index]['title']['rendered'], 'Read more: ' + res[index]['guid']['rendered'])
+                        }
+                    }
+
+                    if (count > 0) {
+                        embed.setThumbnail(dataImg.body['source_url']);
+                    } else {
+                        embed.setImage(dataImg.body['source_url']);
+                    }
+
+                message.channel.send({embed:embed})
+
+            })
+
+
+
+
+
+
     })
-
-  })
 
 }

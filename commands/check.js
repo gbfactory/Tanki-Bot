@@ -15,34 +15,24 @@ const api = 'https://ratings.tankionline.com/api/eu/profile/?user=';
 
 module.exports.run = async(client, message, args, tools) => {
 
+    // Args
     var nickname = args[0];
-
     var category = args[1];
-
     var item = args[2];
 
+    // Check for a nickname
     if (!nickname) {
-        let noNickname = new Discord.RichEmbed()
-        .setAuthor('You have to specify a nickname >check (nickname) (category) (item)')
-        .setColor('#f54242');
-
-        return message.channel.send({embed:noNickname});
+        return message.channel.send('You have to specify a nickname **>check (nickname) (category) (item)**')
     }
     
+    // Check for a category
     if (!category) {
-        let noNickname = new Discord.RichEmbed()
-        .setAuthor('You have to specify a category (turret | hull | paint | drone | module)')
-        .setColor('#f54242');
-
-        return message.channel.send({embed:noNickname});
+        return message.channel.send('You have to specify a category **(turret | hull | paint | drone | module)**');
     }
 
+    // Check for an item
     if (!item) {
-        let noNickname = new Discord.RichEmbed()
-        .setAuthor('You have to specify an item! (Hornet, Ricochet, Traceur)')
-        .setColor('#f54242');
-
-        return message.channel.send({embed:noNickname});
+        return message.channel.send('You have to specify an item! **(Hornet, Ricochet, Traceur)**');
     }
 
     snekfetch.get(api + nickname).then(r => {
@@ -241,7 +231,7 @@ module.exports.run = async(client, message, args, tools) => {
 
             // Module image
             let moduleBackground = foundItem['imageUrl'].replace('.tnk', '.png');
-            let moduleForeground = './output/' + fileName + '.png';
+            let moduleForeground = './storage/protections/' + fileName + '.png';
             // let moduleForeground = 'https://ratings.tankionline.com/assets/images/sprite_resists.606121704.png';
 
             Promise.all([
@@ -249,9 +239,9 @@ module.exports.run = async(client, message, args, tools) => {
                 Jimp.read(moduleForeground)
             ]).then(function (results) {
                 results[0].composite(results[1], 35, 30)
-                        .write('./output/protection.png')
+                        .write('./storage/protections/protection.png')
 
-                const attachment = new Discord.Attachment('./output/protection.png', 'protection.png');
+                const attachment = new Discord.Attachment('./storage/protections/protection.png', 'protection.png');
 
                 var embed = new Discord.RichEmbed()
                     .setAuthor('Tanki Bot')
@@ -263,7 +253,6 @@ module.exports.run = async(client, message, args, tools) => {
                     .addField('<:armorIcon:661186313189326848> Protection', protectionName, true)
                     .addField('<:xp:661186205458628608> Score Earned', foundItem['scoreEarned'], true)
                     .addField('🕐 Time Played', foundItem['timePlayed'], true)
-                    // .setThumbnail('./output/protection.jpg')
                     .attachFile(attachment)
                     .setThumbnail('attachment://protection.png');
 

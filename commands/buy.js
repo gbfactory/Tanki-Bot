@@ -1,5 +1,5 @@
 /**
- * Tanki Bot. ECONOMY.
+ * Tanki Bot
  * 
  * Command from buying items from the bot own shop.
  * 
@@ -8,6 +8,7 @@
 */
 
 const Discord = require("discord.js");
+
 let color = require('../storage/colors.json');
 let emoji = require('../storage/emoji.json');
 
@@ -20,15 +21,31 @@ module.exports.run = async (client, message, args, con) => {
 
         var rowsUsers = rows;
 
+        // Check if the user is registered in the db
         if (rows.length < 1) {
             let rgNo  = new Discord.RichEmbed()
                 .setAuthor("Tanki Bot")
                 .setDescription("❗️ You aren't registered! \nUse `>register (username)` to create a profile")
                 .setColor(color.red);
             message.channel.send({embed:rgNo});
+
             return;
         }
 
+        // Check for no args
+        if (!args[0]) {
+            let gethelp = new Discord.RichEmbed()
+                .setAuthor("Tanki Bot")
+                .setTitle("💰 Shop")
+                .setThumbnail("https://i.imgur.com/ZOclxPD.png")
+                .addField("📁 Usage", "📌 `>shop`: list of available items \n📌 `>buy (item)`: buy a specific item")
+                .setColor(color.darkBlue)
+            message.channel.send({embed:gethelp});
+
+            return;
+        }
+
+        // Buy container (only a number is required)
         if (!isNaN(args[0]) && args[0] > 0) {
 
             var quantity = args[0];
@@ -57,7 +74,9 @@ module.exports.run = async (client, message, args, con) => {
                     .setColor(color.red)
                 message.channel.send({embed:noMoney});
             }
-        } else if (args[0].toUpperCase() === "RENAME" && args[1].toUpperCase() === "PASS") {
+
+        // Buy rename pass (check for string "rename pass")
+        } else if (args[0].toLowerCase() === "rename" && args[1].toLowerCase() === "pass") {
 
             if (rowsUsers[0].tankoins >= 1000) {
 
@@ -82,15 +101,7 @@ module.exports.run = async (client, message, args, con) => {
                 message.channel.send({embed:noMoney});
             }
 
-        } else {
-            let gethelp = new Discord.RichEmbed()
-                .setAuthor("Tanki Bot")
-                .setTitle("💰 Shop")
-                .setThumbnail("https://i.imgur.com/ZOclxPD.png")
-                .addField("📁 Usage", "📌 `>shop`: list of available items \n📌 `>buy (item)`: buy a specific item")
-                .setColor(color.darkBlue)
-            message.channel.send({embed:gethelp});
-        } 
+        }
 
     });
 

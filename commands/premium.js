@@ -1,8 +1,7 @@
 /**
  * Tanki Bot
- * Command: premium
- * Category: economy
- * Usage: premium use
+ * 
+ * Premium command that handle all the premium-related things
  * 
  * @author gbfactory
  * @since 06.03.2020

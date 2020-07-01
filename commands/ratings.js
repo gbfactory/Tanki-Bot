@@ -1,7 +1,7 @@
 /**
- * Tanki Bot.
+ * Tanki Bot
  * 
- * RATINGS: check players' general statistics
+ * Command to check stats of a given user from tanki ratings.
  * 
  * @author gbfactory
  * @since  08.08.2017

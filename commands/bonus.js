@@ -1,7 +1,7 @@
 /**
- * Tanki Bot. ECONOMY.
+ * Tanki Bot
  * 
- * Daily and weeyly bonus that can be claimed from users.
+ * Allow users to claim bonues (ex: weekly, daily)
  * 
  * @author gbfactory
  * @since  11.01.2020
@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args, con) => {
 
     var authorId = message.author.id;
 
-    // TODO: utilizzare una funzione unica e non due copiaincollate da stackoverflow, ma sono stanco e questo funziona (17/01/2020)
+    // TODO: #1 Use one function instead of two for time conversion
     function msToTime(duration) {
         var milliseconds = parseInt((duration % 1000) / 100),
         seconds = Math.floor((duration / 1000) % 60),

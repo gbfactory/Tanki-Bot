@@ -1,5 +1,5 @@
 /**
- * Tanki Bot. ECONOMY.
+ * Tanki Bot
  * 
  * Drop gold boxes in the discord chat.
  * 

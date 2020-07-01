@@ -1,3 +1,12 @@
+/**
+ * Tanki Bot
+ * 
+ * Command to check the bot's leaderboard (ex: top 10 players by crystals)
+ * 
+ * @author gbfactory
+ * @since ?
+ */
+
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args, con) => {

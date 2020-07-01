@@ -1,8 +1,7 @@
 /**
  * Tanki Bot
- * Command: open
- * Category: economy
- * Usage: open container, open daily, open weekly
+ * 
+ * Command to open containers and other boxes.
  * 
  * @author gbfactory
  * @since 11.01.2020
@@ -274,8 +273,9 @@ module.exports.run = async(client, message, args, con) => {
                 }*/
 
                 let itemEmbed = new Discord.RichEmbed()
-                    .setTitle("Tanki Online Container")
-                    .setDescription(`**You found ${aan} ${rarity} item: **${quantity} ${name}`)
+                    .setAuthor('Tanki Bot')
+                    .setTitle('You opened a Container!')
+                    .setDescription(`You found ${aan} ${rarity} item: **${quantity} ${name}**`)
                     .setThumbnail(image)
                     .setColor(color)
                     .setFooter(` ${message.author.username} | +${exp}xp`, message.author.avatarURL);
@@ -308,7 +308,8 @@ module.exports.run = async(client, message, args, con) => {
                 }
 
                 let dailyFound = new Discord.RichEmbed()
-                    .setTitle("Daily Box")
+                    .setAuthor('Tanki Bot')
+                    .setTitle('You opened a Daily Box')
                     .setDescription(`You found "${daily[random].name}"`)
                     .setThumbnail(daily[random].image)
                     .setColor("#e8fc03")
@@ -344,7 +345,8 @@ module.exports.run = async(client, message, args, con) => {
                 addTankoins(tankoins);
                 
                 let weeklyFound = new Discord.RichEmbed()
-                    .setTitle("Weekly Box")
+                    .setAuthor('Tanki Bot')
+                    .setTitle('You opened a Weekly Box')
                     .setDescription(`You got: \n+${repair} <:Repair_symbol:671631352797331458> Repair Kit \n+${armor} <:DA_symbol:671631353040863262> Double Armor \n+${damage} <:DD_symbol:671631352717639697> Double Damage \n+${nitro} <:Speed_symbol:671631352982011905> Speed Boost \n+${mine} <:Mine_symbol:671631352982011924> Mines \n+${battery} <:Icon_battery_supply:671631352994725898> Batteries \n+${crystals} <:crys:660257474317910026> Crystals \n+${tankoins} <:tankoin:660948390263128124> Tankoins`)
                     .setThumbnail("https://i.imgur.com/SXQ3u8n.png")
                     .setColor("#e8fc03")

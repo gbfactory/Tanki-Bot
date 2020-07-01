@@ -1,3 +1,12 @@
+/**
+ * Tanki Bot
+ * 
+ * Check all the things the bot can do
+ * 
+ * @author gbfactory
+ * @since ?
+ */
+
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {

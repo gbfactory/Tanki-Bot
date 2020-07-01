@@ -1,7 +1,7 @@
 /**
- * Tanki Bot. TANKI. RATINGS.
+ * Tanki Bot
  * 
- * RATINGS: check players' statistics in each gamemode
+ * Command to check gamemodes stats of a given user from tanki ratings.
  * 
  * @author gbfactory
  * @since  10.08.2017
