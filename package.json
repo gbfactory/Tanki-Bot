@@ -1,19 +1,20 @@
 {
-  "name": "TankiBot",
-  "version": "21.02.2020",
-  "description": "A Tanki Online bot with game's function from API and custom economy.",
+  "name": "tanki-bot",
+  "version": "1.0.0",
+  "description": "Play Tanki Online directly from your Discord server: open containers, check players ratings and much mure!",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "author": "gbfactory(https://gbfactory.net)",
-  "license": "MIT",
+  "license": "GNU General Public License v3.0",
   "bugs": {
     "url": "https://discord.gg/cH8Tvbn"
   },
   "homepage": "https://tanki.gbfactory.net",
   "dependencies": {
     "discord.js": "^11.5.1",
+    "jimp": "^0.14.0",
     "mysql": "^2.18.1"
   }
 }
