@@ -1,7 +1,7 @@
 /**
  * Tanki Bot
  * 
- * TODO: Allows players to send gifts to other players
+ * Allows players to send gifts to other players
  * 
  * @author gbfactory
  * @since 25.03.2020
@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args, con) => {
 
     let authorId = message.author.id;
 
-    con.query(`SELECT id, username, crystals FROM users WHERE id = ${authorId}`, (err, rows) => {
+    con.query(`SELECT id, username, crys FROM users WHERE id = ${authorId}`, (err, rows) => {
         if (err) throw err;
 
         // check registrazione
@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args, con) => {
             var giftedId = message.mentions.users.first().id;
         }
         
-        con.query(`SELECT id, username, crystals FROM users WHERE id = ${giftedId}`, (err, rows) => {
+        con.query(`SELECT id, username, crys FROM users WHERE id = ${giftedId}`, (err, rows) => {
             if (err) throw err;
 
             // check registrazione destinatario
@@ -44,34 +44,37 @@ module.exports.run = async (client, message, args, con) => {
             var giftedDb = rows[0];
 
             // check cristalli
-            if (!args[1] || isNaN(args[0]) || args[0] <= 0) {
-                message.channel.send("Insert a valid numbers of crystals to dante.");
+            if (!args[1] || isNaN(args[1]) || args[1] <= 0) {
+                message.channel.send("You must input a valid amout of crystals!");
                 return;
             } else {
                 var crys = parseInt(args[1]);
             }
 
             // check crys
-            if (authorDb.crystals < crys) {
-                message.channel.send("You don't have enought crystals to donate").
+            if (authorDb.crys < crys) {
+                message.channel.send("You don't have enough crystals!");
                 return;
             }
 
-            
+            // fine controlli
+            // ==============
+
+            var cryAuthor = authorDb.crys;
+            var cryGifted = giftedDb.crys;
+
+            // remove crystals from author
+            con.query(`UPDATE users SET crys = ${cryAuthor - crys} WHERE id = '${authorId}'`);
+
+            // add crystals to user
+            con.query(`UPDATE users SET crys = ${cryGifted + crys} WHERE id = '${giftedId}'`);
+
+            // end message
+            message.channel.send(`🎁 <@${authorId}> has sent ${crys} crystals to <@${giftedId}>!`);
 
 
         })
 
     })
-
-    if (!args[0]) {
-        let err = new Discord.RichEmbed()
-            .setAuthor("You didn't mention a user!")
-            .setColor("#f54242")
-        message.channel.send({embed:err});
-        return;
-    }
-
-    
 
 }
