@@ -51,7 +51,7 @@ module.exports.run = async(client, message, args, tools) => {
         // test servers status
         snekfetch.get(status_test).then(data => {
 
-            if (data.statusCode == 200) {
+            if (data.body) {
                 
                 var data_json = JSON.parse(data.body);
 
