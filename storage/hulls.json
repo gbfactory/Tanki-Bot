@@ -1,0 +1,254 @@
+{
+    "wasp": {
+        "level": [
+            {
+                "name": "Wasp Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/df/Hull_wasp_m0.png/200px-Hull_wasp_m0.png",
+                "rank": 0,
+                "price": 100,
+                "minDamage": 1000,
+                "maxDamage": null
+            },
+            {
+                "name": "Wasp Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/8/88/Hull_wasp_m1.png/200px-Hull_wasp_m1.png",
+                "rank": 10,
+                "price": 13100,
+                "minDamage": 1264,
+                "maxDamage": null
+            },
+            {
+                "name": "Wasp Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/5/57/Hull_wasp_m2.png/200px-Hull_wasp_m2.png",
+                "rank": 22,
+                "price": 102700,
+                "minDamage": 1617,
+                "maxDamage": null
+            },
+            {
+                "name": "Wasp Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/c/c8/Hull_wasp_m3.png/200px-Hull_wasp_m3.png",
+                "rank": 27,
+                "price": 203100,
+                "minDamage": 1764,
+                "maxDamage": null
+            }
+        ]
+    },
+    "hornet": {
+        "level": [
+            {
+                "name": "Hornet Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/7/77/Hull_hornet_m0.png/200px-Hull_hornet_m0.png",
+                "rank": 4,
+                "price": 400,
+                "minDamage": 1000,
+                "maxDamage": null
+            },
+            {
+                "name": "Hornet Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/4/4b/Hull_hornet_m1.png/200px-Hull_hornet_m1.png",
+                "rank": 12,
+                "price": 23100,
+                "minDamage": 1323,
+                "maxDamage": null
+            },
+            {
+                "name": "Hornet Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/7/79/Hull_hornet_m2.png/200px-Hull_hornet_m2.png",
+                "rank": 17,
+                "price": 70500,
+                "minDamage": 1470,
+                "maxDamage": null
+            },
+            {
+                "name": "Hornet Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/5/5b/Hull_hornet_m3.png/200px-Hull_hornet_m3.png",
+                "rank": 27,
+                "price": 225050,
+                "minDamage": 1764,
+                "maxDamage": null
+            }
+        ]
+    },
+    "hunter": {
+        "level": [
+            {
+                "name": "Hunter Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/7/79/Hull_hunter_m0.png/200px-Hull_hunter_m0.png",
+                "rank": 0,
+                "price": 0,
+                "minDamage": 1000,
+                "maxDamage": null
+            },
+            {
+                "name": "Hunter Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/d4/Hull_hunter_m1.png/200px-Hull_hunter_m1.png",
+                "rank": 14,
+                "price": 29900,
+                "minDamage": 1264,
+                "maxDamage": null
+            },
+            {
+                "name": "Hunter Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/0/06/Hull_hunter_m2.png/200px-Hull_hunter_m2.png",
+                "rank": 19,
+                "price": 94100,
+                "minDamage": 1617,
+                "maxDamage": null
+            },
+            {
+                "name": "Hunter Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/f7/Hull_hunter_m3.png/200px-Hull_hunter_m3.png",
+                "rank": 27,
+                "price": 200000,
+                "minDamage": 2647,
+                "maxDamage": null
+            }
+        ]
+    },
+    "viking": {
+        "level": [
+            {
+                "name": "Viking Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/fc/Hull_vicing_m0.png/200px-Hull_vicing_m0.png",
+                "rank": 4,
+                "price": 600,
+                "minDamage": 1500,
+                "maxDamage": null
+            },
+            {
+                "name": "Viking Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/4/42/Hull_vicing_m1.png/200px-Hull_vicing_m1.png",
+                "rank": 11,
+                "price": 19300,
+                "minDamage": 1941,
+                "maxDamage": null
+            },
+            {
+                "name": "Viking Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/f/fc/Hull_vicing_m2.png/200px-Hull_vicing_m2.png",
+                "rank": 21,
+                "price": 99900,
+                "minDamage": 2382,
+                "maxDamage": null
+            },
+            {
+                "name": "Viking Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/de/Hull_vicing_m3.png/200px-Hull_vicing_m3.png",
+                "rank": 27,
+                "price": 204200,
+                "minDamage": 2647,
+                "maxDamage": null
+            }
+        ]
+    },
+    "dictator": {
+        "level": [
+            {
+                "name": "Dictator Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/b/be/Hull_dictator_m0.png/200px-Hull_dictator_m0.png",
+                "rank": 2,
+                "price": 300,
+                "minDamage": 1500,
+                "maxDamage": null
+            },
+            {
+                "name": "Dictator Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/5/56/Hull_dictator_m1.png/200px-Hull_dictator_m1.png",
+                "rank": 13,
+                "price": 26700,
+                "minDamage": 2029,
+                "maxDamage": null
+            },
+            {
+                "name": "Dictator Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/c/cd/Hull_dictator_m2.png/200px-Hull_dictator_m2.png",
+                "rank": 18,
+                "price": 81800,
+                "minDamage": 2250,
+                "maxDamage": null
+            },
+            {
+                "name": "Dictator Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/d7/Hull_dictator_m3.png/200px-Hull_dictator_m3.png",
+                "rank": 27,
+                "price": 210300,
+                "minDamage": 2647,
+                "maxDamage": null
+            }
+        ]
+    },
+    "titan": {
+        "level": [
+            {
+                "name": "Titan Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/2/21/Hull_titan_m0.png/200px-Hull_titan_m0.png",
+                "rank": 2,
+                "price": 200,
+                "minDamage": 2000,
+                "maxDamage": null
+            },
+            {
+                "name": "Titan Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/2/26/Hull_titan_m1.png/200px-Hull_titan_m1.png",
+                "rank": 8,
+                "price": 6000,
+                "minDamage": 2411,
+                "maxDamage": null
+            },
+            {
+                "name": "Titan Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/d/de/Hull_titan_m2.png/200px-Hull_titan_m2.png",
+                "rank": 22,
+                "price": 92900,
+                "minDamage": 3235,
+                "maxDamage": null
+            },
+            {
+                "name": "Titan Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/5/56/Hull_titan_m3.png/200px-Hull_titan_m3.png",
+                "rank": 27,
+                "price": 220000,
+                "minDamage": 3529,
+                "maxDamage": null
+            }
+        ]
+    },
+    "mammoth": {
+        "level": [
+            {
+                "name": "Mammoth Mk0",
+                "image": "https://en.tankiwiki.com/images/en/thumb/3/3c/Hull_mammoth_m0.png/200px-Hull_mammoth_m0.png",
+                "rank": 3,
+                "price": 500,
+                "minDamage": 2000,
+                "maxDamage": null
+            },
+            {
+                "name": "Mammoth Mk1",
+                "image": "https://en.tankiwiki.com/images/en/thumb/a/ac/Hull_mammoth_m1.png/200px-Hull_mammoth_m1.png",
+                "rank": 7,
+                "price": 3200,
+                "minDamage": 2352,
+                "maxDamage": null
+            },
+            {
+                "name": "Mammoth Mk2",
+                "image": "https://en.tankiwiki.com/images/en/thumb/6/6d/Hull_mammoth_m2.png/200px-Hull_mammoth_m2.png",
+                "rank": 20,
+                "price": 76700,
+                "minDamage": 3117,
+                "maxDamage": null
+            },
+            {
+                "name": "Mammoth Mk3",
+                "image": "https://en.tankiwiki.com/images/en/thumb/9/9c/Hull_mammoth_m3.png/200px-Hull_mammoth_m3.png",
+                "rank": 27,
+                "price": 228700,
+                "minDamage": 3529,
+                "maxDamage": null
+            }
+        ]
+    }
+}
