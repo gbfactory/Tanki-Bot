@@ -35,6 +35,11 @@ module.exports.run = async(client, message, args, tools) => {
         return message.channel.send('You have to specify an item! **(Hornet, Ricochet, Traceur)**');
     }
 
+    // Check if the item has spaces
+    if (item.includes('_')) {
+        item = item.replace('_', ' ');
+    }
+
     snekfetch.get(api + nickname).then(r => {
 
         if (r.body.responseType === 'NOT_FOUND') {
