@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args, con) => {
                     posPointer = "";
                 }
 
-                topCrys.addField(` ${i + 1} - ${rows[i].username} ${posPointer}`, `💎 ${rows[i].crys}`, true)
+                topCrys.addField(` ${i + 1} - ${rows[i].username} ${posPointer}`, `💎 ${rows[i].crys.toLocaleString()}`, true)
             }
 
             message.channel.send({embed:topCrys});
@@ -70,7 +70,7 @@ module.exports.run = async (client, message, args, con) => {
                     posPointer = "";
                 }
 
-                topExp.addField(` ${i + 1} - ${rows[i].username} ${posPointer}`, `<:xp:661186205458628608>  ${rows[i].xp}`, true)
+                topExp.addField(` ${i + 1} - ${rows[i].username} ${posPointer}`, `<:xp:661186205458628608>  ${rows[i].xp.toLocaleString()}`, true)
             }
 
             message.channel.send({embed:topExp});
@@ -102,7 +102,7 @@ module.exports.run = async (client, message, args, con) => {
                     posPointer = "";
                 }
 
-                topExp.addField(` ${i + 1} - ${rows[i].username} ${posPointer}`, `<:tankoin:660948390263128124>  ${rows[i].tankoins}`, true)
+                topExp.addField(` ${i + 1} - ${rows[i].username} ${posPointer}`, `<:tankoin:660948390263128124>  ${rows[i].tankoins.toLocaleString()}`, true)
             }
 
             message.channel.send({embed:topExp});
