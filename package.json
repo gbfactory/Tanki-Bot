@@ -16,5 +16,8 @@
     "discord.js": "^11.5.1",
     "jimp": "^0.14.0",
     "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
