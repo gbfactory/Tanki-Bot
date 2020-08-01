@@ -25,28 +25,28 @@
             "type": "armor",
             "rarity": "common",
             "name": "Double Armor",
-            "quantity": 100,
+            "quantity": 125,
             "image": "https://en.tankiwiki.com/images/en/thumb/5/55/Inventory_double_armor.png/160px-Inventory_double_armor.png"
         },
         {
             "type": "damage",
             "rarity": "common",
             "name": "Double Damage",
-            "quantity": 100,
+            "quantity": 125,
             "image": "https://en.tankiwiki.com/images/en/thumb/b/be/Inventory_double_power.png/160px-Inventory_double_power.png"
         },
         {
             "type": "speed",
             "rarity": "common",
             "name": "Speed Boost",
-            "quantity": 100,
+            "quantity": 125,
             "image": "https://en.tankiwiki.com/images/en/thumb/1/12/Inventory_nitro.png/160px-Inventory_nitro.png"
         },
         {
             "type": "mine",
             "rarity": "common",
             "name": "Mine",
-            "quantity": 100,
+            "quantity": 125,
             "image": "https://en.tankiwiki.com/images/en/e/eb/Inventory_mine.png"
         },
         {
@@ -69,7 +69,7 @@
             "type": "crystals",
             "rarity": "uncommon",
             "name": "Crystals",
-            "quantity": 8000,
+            "quantity": 5000,
             "image": "https://i.imgur.com/NhFb2N8.png"
         },
         {
@@ -83,7 +83,7 @@
             "type": "repair",
             "rarity": "uncommon",
             "name": "Repair Kits",
-            "quantity": 150,
+            "quantity": 125,
             "image": "https://en.tankiwiki.com/images/en/thumb/b/b5/Inventory_first_aid.png/160px-Inventory_first_aid.png"
         },
         {
@@ -97,7 +97,7 @@
             "type": "sups",
             "rarity": "uncommon",
             "name": "Supplies",
-            "quantity": 125,
+            "quantity": 100,
             "image": "https://i.imgur.com/4DnrEqA.png"
         },
         {
@@ -118,7 +118,7 @@
             "type": "tankoins",
             "rarity": "uncommon",
             "name": "Tankoins",
-            "quantity": 10,
+            "quantity": 8,
             "image": "https://i.imgur.com/fpM3gEX.png"
         }
     ],
@@ -141,7 +141,7 @@
             "type": "tankoins",
             "rarity": "rare",
             "name": "Tankoins",
-            "quantity": 80,
+            "quantity": 50,
             "image": "https://i.imgur.com/bX3mqAP.png"
         },
         {
@@ -149,13 +149,6 @@
             "rarity": "rare",
             "name": "Tankoins",
             "quantity": 100,
-            "image": "https://i.imgur.com/bX3mqAP.png"
-        },
-        {
-            "type": "tankoins",
-            "rarity": "rare",
-            "name": "Tankoins",
-            "quantity": 150,
             "image": "https://i.imgur.com/bX3mqAP.png"
         },
         {
@@ -920,6 +913,142 @@
             "name": "Japan",
             "quantity": 1,
             "image": "https://en.tankiwiki.com/images/en/f/fc/Japan.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hulls",
+            "rarity": "rare",
+            "name": "Heat Resistance",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/97/Fire_Protection.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hulls",
+            "rarity": "rare",
+            "name": "Cold Resistance",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0b/Freeze_Protection.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Firebird",
+            "rarity": "rare",
+            "name": "High-pressure pump",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0b/Freeze_Protection.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Freeze",
+            "rarity": "rare",
+            "name": "High-pressure pump",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d2/Alteration_freeze_high_pressure_pump.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Isida",
+            "rarity": "rare",
+            "name": "Broadband radiators",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/33/Alteration_isida_broadband_radiators.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hammer",
+            "rarity": "rare",
+            "name": "Slugger",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a5/Alteration_hammer_slugger.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Twins",
+            "rarity": "rare",
+            "name": "Stable plasma",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a9/Alteration_twins_stabilized_plasma.png"
+        },
+        {
+            "type": "augment",
+            "equip": "turret",
+            "rarity": "rare",
+            "name": "Destibilized plasma",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f5/Alteration_ricochet_destabilized_plasma.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Smoky",
+            "rarity": "rare",
+            "name": "Assault rounds",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/b3/Alteration_smoky_assault_rounds.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Smoky",
+            "rarity": "rare",
+            "name": "High-precision aiming system",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/cb/Alteration_smoky_high_precision_aiming_system.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Striker",
+            "rarity": "rare",
+            "name": "Remote rocket explosives",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/ad/Alteration_striker_remote_rocket_explosives.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Vulcan",
+            "rarity": "rare",
+            "name": "Shooting speed regulator",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/54/Alteration_vulcan_shooting_speed_regulator.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Thunder",
+            "rarity": "rare",
+            "name": "Small caliber charging machine",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8a/Alteration_thunder_small_caliber_charging_machine.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Railgun",
+            "rarity": "rare",
+            "name": "Round stabilization",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/89/Alteration_railgun_round_stabilization.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Railgun",
+            "rarity": "rare",
+            "name": "Reinforced aiming transmission",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a8/Alteration_railgun_reinforced_aiming_transmission.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Magnum",
+            "rarity": "rare",
+            "name": "Reinforced gun carriage",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/79/Alteration_magnum_reinforced_gun_carriage.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Shaft",
+            "rarity": "rare",
+            "name": "Short-band emitter",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/55/Alteration_shaft_short_band_emitter.png"
         }
     ],
     "epic": [
@@ -936,13 +1065,6 @@
             "name": "Crystals",
             "quantity": 100000,
             "image": "https://i.imgur.com/gkp8Ren.png"
-        },
-        {
-            "type": "tankoins",
-            "rarity": "epic",
-            "name": "Tankoins",
-            "quantity": 150,
-            "image": "https://i.imgur.com/iSeMDSV.png"
         },
         {
             "type": "tankoins",
@@ -1398,6 +1520,814 @@
             "name": "Thunderball",
             "quantity": 1,
             "image": "https://en.tankiwiki.com/images/en/1/1b/Paint_thunderball.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Firebird",
+            "rarity": "epic",
+            "name": "Crimson",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fa/Shot_effect_Firebird_Crimson.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Firebird",
+            "rarity": "epic",
+            "name": "Magma",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/3b/Shot_effect_Firebird_Magma.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Firebird",
+            "rarity": "epic",
+            "name": "Black",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/9e/Shot_effect_Firebird_Black.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Firebird",
+            "rarity": "epic",
+            "name": "Pink",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/35/Shot_effect_Firebird_Pink.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Freeze",
+            "rarity": "epic",
+            "name": "Dark Moon",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d4/Shot_effect_Freeze_DarkMoon.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Freeze",
+            "rarity": "epic",
+            "name": "Toxic",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/3e/Shot_effect_Freeze_Toxic.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Freeze",
+            "rarity": "epic",
+            "name": "Cold",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/3c/Shot_effect_Freeze_Cold.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Freeze",
+            "rarity": "epic",
+            "name": "Snow",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/ff/Shot_effect_Freeze_Snow.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Isida",
+            "rarity": "epic",
+            "name": "Sun",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/11/Shot_effect_Isida_Sun.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Isida",
+            "rarity": "epic",
+            "name": "Fire",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/be/Shot_effect_Isida_Fire.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "Aqua",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/00/Shot_effect_Hammer_Aqua.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "Void",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/63/Shot_effect_Hammer_Void.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "Magma",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/97/Shot_effect_Hammer_Magma.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "Toxic",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/3e/Shot_effect_Hammer_Toxic.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "Eclipse",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/7a/Shot_effect_Hammer_Eclipse.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "Blood",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/5e/Shot_effect_Hammer_Blood.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "Blue",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a8/Shot_effect_Hammer_Blue.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Twins",
+            "rarity": "epic",
+            "name": "Sky",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/79/Shot_effect_Twins_Sky.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Twins",
+            "rarity": "epic",
+            "name": "Gold",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/60/Shot_effect_Twins_Gold.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Twins",
+            "rarity": "epic",
+            "name": "Dark Moon",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0e/Shot_effect_Twins_DarkMoon.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Twins",
+            "rarity": "epic",
+            "name": "Violet",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/71/Shot_effect_Twins_Violet.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Twins",
+            "rarity": "epic",
+            "name": "Coral",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/14/Shot_effect_Twins_Coral.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Twins",
+            "rarity": "epic",
+            "name": "Electric",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/30/Shot_effect_Twins_Electric.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Gold",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/4b/Shot_effect_Ricochet_Gold.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Smoke",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/90/Shot_effect_Ricochet_Smoke.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Crimson",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/59/Shot_effect_Ricochet_Crimson.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Magma",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/5a/Shot_effect_Ricochet_Magma.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Toxic",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e4/Shot_effect_Ricochet_Toxic.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Violet",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/b6/Shot_effect_Ricochet_Violet.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Aqua",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/4e/Shot_effect_Ricochet_Aqua.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Electric",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e3/Shot_effect_Ricochet_Electric.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Striker",
+            "rarity": "epic",
+            "name": "Toxic",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f9/Shot_effect_Striker_Toxic.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Striker",
+            "rarity": "epic",
+            "name": "Crimson",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e1/Shot_effect_Striker_Crimson.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Striker",
+            "rarity": "epic",
+            "name": "Blue",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/08/Shot_effect_Striker_Blue.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Striker",
+            "rarity": "epic",
+            "name": "Violet",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/55/Shot_effect_Striker_Violet.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Vulcan",
+            "rarity": "epic",
+            "name": "Mysterious Red",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/4f/Shot_effect_Vulcan_Mysterious_Red.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Gold",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/9c/Shot_effect_Railgun_Gold.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Blue",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a7/Shot_effect_Railgun_Blue.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Green",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/33/Shot_effect_Railgun_Green.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Blood",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/27/Shot_effect_Railgun_Blood.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Snow",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/21/Shot_effect_Railgun_Snow.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Violet",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/19/Shot_effect_Railgun_Violet.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Darkness",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/57/Shot_effect_Railgun_Darkness.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Magnum",
+            "rarity": "epic",
+            "name": "Crimson",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/02/Shot_effect_Magnum_Crimson.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Magnum",
+            "rarity": "epic",
+            "name": "Violet",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8c/Shot_effect_Magnum_Violet.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Magnum",
+            "rarity": "epic",
+            "name": "Blue",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/08/Shot_effect_Magnum_Blue.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Magnum",
+            "rarity": "epic",
+            "name": "Eclipse",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/87/Shot_effect_Magnum_Eclipse.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Magnum",
+            "rarity": "epic",
+            "name": "Toxic",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/79/Shot_effect_Magnum_Toxic.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Gauss",
+            "rarity": "epic",
+            "name": "VioleNt",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/8e/Shot_effect_Gauss_VioleNt.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Eclipse",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/6d/Shot_effect_Shaft_Eclipse.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Noon",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/76/Shot_effect_Shaft_Noon.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Green",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/7c/Shot_effect_Shaft_Green.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Aqua",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/ba/Shot_effect_Shaft_Aqua.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Blue",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/3f/Shot_effect_Shaft_Blue.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Blood",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/05/Shot_effect_Shaft_Blood.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Violet",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/66/Shot_effect_Shaft_Violet.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Void",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/80/Shot_effect_Shaft_Void.png"
+        },
+        {
+            "type": "effect",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Magma",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/89/Shot_effect_Shaft_Magma.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hulls",
+            "rarity": "epic",
+            "name": "Head Immunity",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/7e/Fire_Immunity.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hulls",
+            "rarity": "epic",
+            "name": "Cold Immunity",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f5/Freeze_Immunity.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hulls",
+            "rarity": "epic",
+            "name": "EMP Immunity",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/91/EMP_Protection.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hulls",
+            "rarity": "epic",
+            "name": "Stun Immunity",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/48/Stun_Immunity.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hulls",
+            "rarity": "epic",
+            "name": "Lightweight Construction",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/10/Less_Mass.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hulls",
+            "rarity": "epic",
+            "name": "Heavyweight Construction",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/cc/More_Mass.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Firebird",
+            "rarity": "epic",
+            "name": "Compact fuel tanks",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a3/Alteration_firebird_compact_fuel_tanks.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Firebird",
+            "rarity": "epic",
+            "name": "Incendiary mix",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fc/Alteration_firebird_incendiary_mix.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Freeze",
+            "rarity": "epic",
+            "name": "Corrosive mix",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/d/d6/Alteration_freeze_corrosive_mix.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Freeze",
+            "rarity": "epic",
+            "name": "Shock freeze",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/89/Alteration_freeze_shock_freeze.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Isida",
+            "rarity": "epic",
+            "name": "Support nanobots",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e4/Alteration_isida_support_nanobots.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Isida",
+            "rarity": "epic",
+            "name": "Nanomass reactor",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e2/Alteration_isida_nanomass_reactor.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "Dragon's Breath",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/48/Alteration_hammer_dragon_breath.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "High-capacity ammo clip",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f0/Alteration_hammer_high_capacity_ammo_clip.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "Duplet",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/9e/Alteration_hammer_duplet.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Hammer",
+            "rarity": "epic",
+            "name": "Adaptive reload",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/68/Alteration_hammer_adaptive_reload.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Twins",
+            "rarity": "epic",
+            "name": "Plasma accelerators",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/6/6a/Alteration_twins_plasma_accelerators.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Twins",
+            "rarity": "epic",
+            "name": "Heavy plasmagun",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/9/96/Alteration_twins_heavy_plasmagun.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Minus-field stabilization",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/37/Alteration_ricochet_minus_field_stabilization.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Plasma-torch",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/80/Alteration_ricochet_plasma_torch.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Ricochet",
+            "rarity": "epic",
+            "name": "Berserk",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/46/Alteration_ricochet_berserk.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Smoky",
+            "rarity": "epic",
+            "name": "Supercumulative rounds",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/28/Alteration_smoky_supercumulative_rounds.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Smoky",
+            "rarity": "epic",
+            "name": "Incendiary rounds",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/24/Alteration_smoky_incendiary_rounds.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Smoky",
+            "rarity": "epic",
+            "name": "Cryo rounds",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0f/Alteration_smoky_cryo_rounds.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Smoky",
+            "rarity": "epic",
+            "name": "Autocannon",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/1/10/Alteration_smoky_autocannon.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Striker",
+            "rarity": "epic",
+            "name": "Missile launcher Hunter",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/e/e6/Alteration_striker_missile_launcher_hunter.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Striker",
+            "rarity": "epic",
+            "name": "Missile launcher Cyclone",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/8/85/Alteration_striker_missile_launcher_cyclone.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Striker",
+            "rarity": "epic",
+            "name": "Missile launcher Uranium",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0c/Alteration_striker_missile_launcher_uranium.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Vulcan",
+            "rarity": "epic",
+            "name": "Reinforced aiming transmission",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f5/Alteration_vulcan_reinforced_aiming_transmission.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Vulcan",
+            "rarity": "epic",
+            "name": "Incendiary band",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f5/Alteration_vulcan_reinforced_aiming_transmission.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Thunder",
+            "rarity": "epic",
+            "name": "Subcaliber rounds",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/c/cb/Alteration_thunder_subcaliber_rounds.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Thunder",
+            "rarity": "epic",
+            "name": "Sledgehammer rounds",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/7/73/Alteration_thunder_sledgehammer_rounds.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Round destabilization",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f5/Alteration_railgun_round_destabilization.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Electromagnetic accelerator Scout",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/0/0d/Alteration_railgun_electromagnetic_accelerator_scout.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Large caliber rounds",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/4/44/Alteration_railgun_large_caliber_rounds.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Death Herald compulsor",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/31/Alteration_railgun_death_herald_compulsator.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Railgun",
+            "rarity": "epic",
+            "name": "Hyperspace rounds",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/b/b5/Alteration_railgun_hyperspace_rounds.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Magnum",
+            "rarity": "epic",
+            "name": "Automated gunpowder loading mechanism",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a0/Alteration_magnum_automated_gunpowder_loading_mechanism.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Magnum",
+            "rarity": "epic",
+            "name": "Mortar",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/a/a1/Alteration_magnum_mortar.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Heavy capacitors",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/5/50/Alteration_shaft_heavy_capacitors.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Light capacitors",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/2/23/Alteration_shaft_light_capacitors.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Shaft",
+            "rarity": "epic",
+            "name": "Rapid-fire mode",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/3/39/Alteration_shaft_rapid_fire_mode.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Turrets",
+            "rarity": "epic",
+            "name": "Adrenaline",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fd/Adrenaline_augment.png"
         }
     ],
     "legendary": [
@@ -2142,6 +3072,22 @@
             "name": "Loving Camo",
             "quantity": 1,
             "image": "https://en.tankiwiki.com/images/en/4/48/Paint_Loving_Camo.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Vulcan",
+            "rarity": "epic",
+            "name": "Rubberized rounds",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/f4/Alteration_vulcan_rubberized_rounds.png"
+        },
+        {
+            "type": "augment",
+            "equip": "Gauss",
+            "rarity": "epic",
+            "name": "Electromagnetic salvo",
+            "quantity": 1,
+            "image": "https://en.tankiwiki.com/images/en/f/fa/Alteration_gauss_electromagnetic_salvo.png"
         }
     ],
     "exotic": [
