@@ -48,44 +48,41 @@ client.on('message', async message => {
 
     // LEVELING SYSTEM
     // commands don't give xp!
-    if (!message.content.startsWith(prefix)) {
-        var authorId = message.author.id;
-        var authorName = message.author.username;
-    
-        var xpMsg = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
-    
-        con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
-            if (err) throw err;
-    
-            if (rows.length > 0) {
-    
-                // exp 
-                let xp = rows[0].xp;
-                con.query(`UPDATE users SET xp = ${xp + xpMsg} WHERE id = '${authorId}'`);
-            
-                // ranks
-                let lvl = rows[0].level;
-    
-                if (lvl < 30) {
-                    if (lv[lvl + 1].exp <= xp) {
-                        let crys = rows[0].crys;
-                        let addCrys = lv[lvl + 1].crystals;
-                        
-                        con.query(`UPDATE users SET level = ${lvl + 1} WHERE id = '${authorId}'`);
-                        con.query(`UPDATE users SET crys = ${crys + addCrys} WHERE id = '${authorId}'`);
-            
-                        let lvupEmbed = new Discord.RichEmbed()
-                            .setColor("#ffc300")
-                            .setThumbnail(lv[lvl + 1].image)
-                            .addField("✨ Rank up! ✨", `🎉 Congratulations **${authorName}**! \nNow you are **${lv[lvl + 1].name}** \n+${lv[lvl + 1].crystals} 💎`)
-            
-                        message.channel.send({embed:lvupEmbed});
-                    }
+    var authorId = message.author.id;
+    var authorName = message.author.username;
+
+    var xpMsg = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+
+    con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
+        if (err) throw err;
+
+        if (rows.length > 0) {
+
+            // exp 
+            let xp = rows[0].xp;
+            con.query(`UPDATE users SET xp = ${xp + xpMsg} WHERE id = '${authorId}'`);
+        
+            // ranks
+            let lvl = rows[0].level;
+
+            if (lvl < 30) {
+                if (lv[lvl + 1].exp <= xp) {
+                    let crys = rows[0].crys;
+                    let addCrys = lv[lvl + 1].crystals;
+                    
+                    con.query(`UPDATE users SET level = ${lvl + 1} WHERE id = '${authorId}'`);
+                    con.query(`UPDATE users SET crys = ${crys + addCrys} WHERE id = '${authorId}'`);
+        
+                    let lvupEmbed = new Discord.RichEmbed()
+                        .setColor("#ffc300")
+                        .setThumbnail(lv[lvl + 1].image)
+                        .addField("✨ Rank up! ✨", `🎉 Congratulations **${authorName}**! \nNow you are **${lv[lvl + 1].name}** \n+${lv[lvl + 1].crystals} 💎`)
+        
+                    message.channel.send({embed:lvupEmbed});
                 }
             }
-    
-        });
-    }
+        }
+    });
 
     // Vars
     let msg = message.content.toUpperCase();
