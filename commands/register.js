@@ -86,7 +86,7 @@ module.exports.run = async (client, message, args, con) => {
                     con.query(`INSERT INTO users (id, username, nick, xp, level, crys, tankoins, wins, losses, equipTurret, equipHull, timeDaily, timeWeekly, timePremium) VALUES ('${authorId}', '${userNick}', '', 0, 0, 1500, 0, 0, 0, 'smoky', 'hunter', '${newDate}', '${newDate}', '${newDate}')`, (err) => {
                         if (err) throw err;
                     });
-                    con.query(`INSERT INTO items (id, containers, weeklybox, dailybox, coinbox, repair, armor, damage, nitro, mine, battery, gold, rare, epic, legendary, skinTurrets, skinHulls) VALUES ('${authorId}', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)`, (err) => {
+                    con.query(`INSERT INTO items (id, containers, weeklybox, dailybox, coinbox, repair, armor, damage, nitro, mine, battery, gold, rare, epic, legendary, skinTurrets, skinHulls, effects, augment) VALUES ('${authorId}', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)`, (err) => {
                         if (err) throw err;
                     });
                     con.query(`INSERT INTO garage (id, firebird, freeze, isida, hammer, twins, ricochet, smoky, striker, vulcan, thunder, railgun, magnum, gauss, shaft, wasp, hornet, viking, hunter, dictator, titan, mammoth) VALUES ('${authorId}', 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0)`, (err) => {
