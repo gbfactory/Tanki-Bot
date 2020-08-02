@@ -131,6 +131,18 @@ module.exports.run = async(client, message, args, con) => {
                 con.query(`UPDATE items SET skinHulls = ${prev + num} WHERE id = '${authorId}'`);
             }
 
+            // Add Augment
+            function addAugmnet(num) {
+                let prev = rows[0].augment;
+                con.query(`UPDATE items SET augment = ${prev + num} WHERE id = '${authorId}'`);
+            }
+
+            // Add Effect
+            function addEffect(num) {
+                let prev = rows[0].effects;
+                con.query(`UPDATE items SET effects = ${prev + num} WHERE id = '${authorId}'`);
+            }
+
             // Add Premium Time
             function addPremium(time) {
 
@@ -290,7 +302,17 @@ module.exports.run = async(client, message, args, con) => {
                         addHull(quantity);
                         quantity = "";
                         break;
-                        
+
+                    case 'augment':
+                        addAugmnet(quantity);
+                        quantity = 'Augment for ' + equip + ':';
+                        break;
+                    
+                    case 'effect':
+                        addEffect(quantity);
+                        quantity = 'Effect for ' + equip + ':';
+                        break;
+
                     case 'premium':
                         addPremium(quantity);
                         quantity = quantity + " Days of";
