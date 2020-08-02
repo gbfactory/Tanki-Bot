@@ -10,7 +10,6 @@
 const Discord = require("discord.js");
 
 let lv = require("../storage/levels.json");
-let eq = require("../storage/equip.json");
 
 module.exports.run = async (client, message, args, con) => {
 
