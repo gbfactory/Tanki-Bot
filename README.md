@@ -1,6 +1,15 @@
-# Tanki Bot
+<center>
+	<a href="https://tankibot.gbfactory.net/">
+		<img src="https://i.imgur.com/sWbQcl6.png" title="Tanki Bot Logo" alt="Tanki Bot">
+	</a>
+</center>
 
-**Tanki Bot** is a Discord bot made for Tanki Online players. With this bot you can check all your Tanki statistics right from the Discord chat. If you want to have fun you can use the built-in economy system, where you have to level up, gain crystals and open containers to find turrets, hulls and paints!
+# Tanki Bot
+[![Status: Online](https://i.imgur.com/kP9sa2u.png)](https://tankibot.gbfactory.net/) [![Discord](https://img.shields.io/discord/467412783290515456.svg?label=support&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/cH8Tvbn) ![Depfu](https://img.shields.io/depfu/gbfactory/Tanki-Bot?logo=npm) [![CodeFactor](https://www.codefactor.io/repository/github/gbfactory/tanki-bot/badge)](https://www.codefactor.io/repository/github/gbfactory/tanki-bot) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+**Tanki Bot**  is a Discord bot made for Tanki Online players. With this bot you can check all your Tanki statistics right from the Discord chat. If you want to have fun you can use the built-in economy system, where you have to level up, gain crystals and open containers to find turrets, hulls and paints!
+
+![https://i.imgur.com/u89l94J.gif](https://i.imgur.com/u89l94J.gif)
 
 >Tanki Bot is used in the official Tanki Online Discord server!
 
