@@ -8,13 +8,13 @@
  */
 
 const Discord = require("discord.js");
+const config = require('../config.json');
 
 module.exports.run = async (client, message, args) => {
 
     // Channel settings
-    // TODO: Move to config.json
-    let cmdChannel = '664486215327940618';
-    let ansChannel = '739152478377082951';
+    let cmdChannel = config['suggestion']['cmdChannel'];
+    let ansChannel = config['suggestion']['ansChannel'];
     
     // Allow command only in selected channel
     if (message.channel.id != cmdChannel) {
