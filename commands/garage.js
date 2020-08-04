@@ -11,7 +11,8 @@
 const Discord = require("discord.js");
 
 let lv = require("../storage/levels.json");
-let eq = require("../storage/equip.json");
+let turrets = require('../storage/turrets.json');
+let hulls = require('../storage/hulls.json');
 
 module.exports.run = async (client, message, args, con) => {
 
@@ -47,13 +48,13 @@ module.exports.run = async (client, message, args, con) => {
             let hLevel = rows[0][dHull];
 
             // nome equip dal file db
-            let tName = eq[dTurret]["level"][tLevel]["name"];
-            let hName = eq[dHull]["level"][hLevel]["name"];
+            let tName = turrets[dTurret]["level"][tLevel]["name"];
+            let hName = hulls[dHull]["level"][hLevel]["name"];
             
             // danno e difesa dal db equip
-            let minDamage = eq[dTurret]["level"][tLevel]["minDamage"];
-            let maxDamage = eq[dTurret]["level"][tLevel]["maxDamage"];
-            let protection = eq[dHull]["level"][hLevel]["minDamage"];
+            let minDamage = turrets[dTurret]["level"][tLevel]["minDamage"];
+            let maxDamage = turrets[dTurret]["level"][tLevel]["maxDamage"];
+            let protection = hulls[dHull]["level"][hLevel]["minDamage"];
 
             // garage main screen
             if (!args[0]) {
@@ -132,8 +133,8 @@ module.exports.run = async (client, message, args, con) => {
                     let tLevel = rows[0][name];
                     
                     if (tLevel > 0) {   // se il lvl è minore di 0 nel json va a prendere un numero negativo. nel json gli mk1 sono all'indice 0 dell'array
-                        let tMinDamage = eq[dTurret]["level"][tLevel - 1]["minDamage"];
-                        let tMaxDamage = eq[dTurret]["level"][tLevel - 1]["maxDamage"];
+                        let tMinDamage = turrets[dTurret]["level"][tLevel - 1]["minDamage"];
+                        let tMaxDamage = turrets[dTurret]["level"][tLevel - 1]["maxDamage"];
 
                         garageTurrets.addField(`${icon} ${tName} Mk${tLevel}`, `<:burstDamageIcon:661186313176875031> ${tMinDamage}/${tMaxDamage}`, true)
                     }
@@ -182,7 +183,7 @@ module.exports.run = async (client, message, args, con) => {
                         let hLevel = rows[0][name];
     
                         if (hLevel > 0) {
-                            let tMinDamage = eq[dHull]["level"][hLevel - 1]["minDamage"];
+                            let tMinDamage = hulls[dHull]["level"][hLevel - 1]["minDamage"];
     
                             garageHulls.addField(`${icon} ${hName} Mk${hLevel}`, `<:armorIcon:661186313189326848> ${tMinDamage}`, true)
                         }
