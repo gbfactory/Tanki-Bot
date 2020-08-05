@@ -88,9 +88,9 @@ client.on('message', async message => {
 
 	const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-    console.log(`[CMD] ${message.author.username} (${message.author.id}) used the command ${command.name}`);
-
 	if (!command) return;
+    
+    console.log(`[CMD] ${message.author.username} (${message.author.id}) used the command ${command.name}`);
 
 	if (command.args && !args.length) {
         const errEmbed = new Discord.RichEmbed()
@@ -114,7 +114,7 @@ client.on('message', async message => {
 	const timestamps = cooldowns.get(command.name);
 	const cooldownAmount = (command.cooldown || 3) * 1000;
 
-	if (timestamps.has(message.author.id)) {
+	if (timestamps.has(message.author.id) && message.author.id != '397387465024864257') {
 		const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
 
 		if (now < expirationTime) {
