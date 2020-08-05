@@ -10,18 +10,36 @@
 // Dependencies
 const Discord = require('discord.js');
 const mysql = require("mysql");
+const fs = require('fs');
 
-// New discord client
-const client = new Discord.Client();
+// Json files
+const lv = require("./storage/levels.json");
+const config = require('./config.json');
 
 // Bot prefix
 const prefix = '>';
 
-// Json files
-let lv = require("./storage/levels.json");
-let config = require('./config.json');
+// New discord client
+const client = new Discord.Client();
 
-// Mysql connection to db
+// Commands Collection
+client.commands = new Discord.Collection();
+
+const commandsDirs = fs.readdirSync('./commands');
+
+for (const dir of commandsDirs) {
+    const commandFiles = fs.readdirSync(`./commands/${dir}`).filter(file => file.endsWith('.js'));
+
+    for (const file of commandFiles) {
+        const command = require(`./commands/${dir}/${file}`);
+        client.commands.set(command.name, command);
+    }
+}
+
+// Cooldowns
+const cooldowns = new Discord.Collection();
+
+// Enviroment
 let env;
 if (config['dev']) {
     env = 'development';
@@ -31,6 +49,7 @@ if (config['dev']) {
 
 console.log('[Tanki Bot] Starting in "' + env + '".');
 
+// Database Connection
 var con = mysql.createConnection({
     host: config[env]['database']['host'],
     user: config[env]['database']['user'],
@@ -43,11 +62,98 @@ con.connect(err => {
     console.log("[Tanki Bot] Connected to the database!");
 })
 
-// On message event
+// Startup
+client.on('ready', async () => {
+    console.log('[Tanki Bot] Started!');
+    client.user.setActivity("Tanki Online", {
+        type: "PLAYING"
+    });
+});
+
+// Message
 client.on('message', async message => {
 
-    // LEVELING SYSTEM
-    // commands don't give xp!
+    // ====================
+    // Command Handler (https://discordjs.guide/command-handling/)
+    // ====================
+    
+    if (!message.content.startsWith(prefix)) return;    // Check for prefix
+
+    if (message.author.bot) return;                     // Check that author is not a bot
+
+    if (message.channel.type !== 'text') return;        // Check that the message is not in DMs
+
+	const args = message.content.slice(prefix.length).trim().split(/ +/);
+	const commandName = args.shift().toLowerCase();
+
+	const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+    console.log(`[CMD] ${message.author.username} (${message.author.id}) used the command ${command.name}`);
+
+	if (!command) return;
+
+	if (command.args && !args.length) {
+        const errEmbed = new Discord.RichEmbed()
+            .setAuthor(`❌ Wrong usage of the command ${command.name}!`)
+            .setColor('#f54242')
+            
+		if (command.usage) {
+			errEmbed.addField(`Correct usage`, command.usage);
+		} else {
+            errEmbed.addField(`Correct usage`, `\`>${command.name}\``)
+        }
+
+		return message.channel.send({ embed:errEmbed });
+	}
+
+	if (!cooldowns.has(command.name)) {
+		cooldowns.set(command.name, new Discord.Collection());
+	}
+
+	const now = Date.now();
+	const timestamps = cooldowns.get(command.name);
+	const cooldownAmount = (command.cooldown || 3) * 1000;
+
+	if (timestamps.has(message.author.id)) {
+		const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
+
+		if (now < expirationTime) {
+            const timeLeft = (expirationTime - now) / 1000;
+            
+            const timeEmbed = new Discord.RichEmbed()
+                .setAuthor(`Wait ${timeLeft.toFixed(1)} seconds to use this command again!`)
+                .setColor('#f54242');
+
+            message.delete(1000);
+
+            return message.channel.send({ embed:timeEmbed }).then(msg => {
+                msg.delete(1000);
+            });
+		}
+	}
+
+	timestamps.set(message.author.id, now);
+	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
+
+	try {
+		command.execute(client, message, args, con);
+	} catch (error) {
+        console.error(error);
+        
+        const msgError = new Discord.RichEmbed()
+            .setAuthor(`There was an error while executing this command. Try again later. In the meantime try contacting the bot developer. Thanks.`)
+            .setColor('#f54242');
+
+		message.channel.send({ embed:msgError }).then(msg => {
+            msg.delete(10000);
+        })
+    }
+    
+    
+    // =====================
+    // Leveling System
+    // =====================
+
     var authorId = message.author.id;
     var authorName = message.author.username;
 
@@ -84,40 +190,6 @@ client.on('message', async message => {
         }
     });
 
-    // Vars
-    let msg = message.content.toUpperCase();
-    let sender = message.author;
-    let args = message.content.slice(prefix.length).trim().split(' ');
-    let cmd = args.shift().toLowerCase();
-
-    // Check if the author is a bot
-    if (message.author.bot) return;
-
-    // Check if the message doesn't start with the prefix
-    if (!message.content.startsWith(prefix)) return;
-
-    // Check if the message is from dm
-    if (message.channel.type !== 'text') return;
-
-    // Command handler
-    try {
-        let commandFile = require(`./commands/${cmd}.js`);
-        commandFile.run(client, message, args, con);
-    } catch (e) {
-        //console.log(e.message);
-        console.log(`[Command Handler] ${message.author.tag} used a non existing cmd (${cmd})`);
-    } finally {
-        console.log(`[Command Handler] ${message.author.tag} used ${cmd}`);
-    }
-
-});
-
-// Bot on start
-client.on('ready', async () => {
-    console.log('[Tanki Bot] Started!');
-    client.user.setActivity("Tanki Online", {
-        type: "PLAYING"
-    });
 });
 
 // Token
