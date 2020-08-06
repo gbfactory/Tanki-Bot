@@ -12,7 +12,7 @@ const Discord = require("discord.js");
 module.exports = {
     name: 'sell',
     description: 'Sell your items like paints, supplies or skins to get some crystals!',
-    usage: '`>sell all` - Sell all your items \n`>sell supplies` - Sell only your supplies \n`>sell paints` - Sell only your paints \n`>sell skins` - Sell only your skins',
+    usage: '`>sell all` - Sell all your items \n`>sell supplies` - Sell only your supplies \n`>sell paints` - Sell only your paints \n`>sell skins` - Sell only your skins \n`>sell effects` - Sell onyl shot effects \n`>sell augments` - Sell only augments',
     args: true,
     cooldown: 3,
     execute(client, message, args, con) {
@@ -71,8 +71,10 @@ module.exports = {
                         legendary = rows[0].legendary;
                         turrets = rows[0].skinTurrets;
                         hulls = rows[0].skinHulls;
+                        augments = rows[0].augment;
+                        effects = rows[0].effects;
 
-                        price = (repair * 50) + (armor * 25) + (damage * 25) + (nitro * 25) + (mine * 25) + (battery * 60) + (rare * random(2000, 4000)) + (epic * random(4000, 8000)) + (legendary * random(8000, 16000)) + (turrets * 100000) + (hulls * 100000);
+                        price = (repair * 50) + (armor * 25) + (damage * 25) + (nitro * 25) + (mine * 25) + (battery * 60) + (rare * random(2000, 4000)) + (epic * random(4000, 8000)) + (legendary * random(8000, 16000)) + (turrets * 100000) + (hulls * 100000) + (augments * 150000) + (effects + 50000);
 
                         newPrice = rowsUsers[0].crys + price;
 
@@ -155,7 +157,7 @@ module.exports = {
                      case 'effects':
                         effects = rows[0].effects;
 
-                        price = (effects * 150000);
+                        price = (effects * 50000);
 
                         newPrice = rowsUsers[0].crys + price;
 
