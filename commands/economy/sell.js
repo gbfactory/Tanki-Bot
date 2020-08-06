@@ -56,7 +56,7 @@ module.exports = {
 
                 let price, newPrice;
 
-                let repair, armor, damage, nitro, mine, battery, rare, epic, legendary, turrets, hulls;
+                let repair, armor, damage, nitro, mine, battery, rare, epic, legendary, turrets, hulls, augments, effects;
 
                 switch (args[0]) {
                     case 'all':
@@ -134,6 +134,36 @@ module.exports = {
                         con.query(`UPDATE items SET skinTurrets = 0, skinHulls = 0 WHERE id = ${authorId}`);
     
                         message.channel.send({ embed: embedGenerator('skins', price) });
+
+                        break;
+                    
+                    case 'augments':
+                        augments = rows[0].augment;
+
+                        price = (augments * 150000);
+
+                        newPrice = rowsUsers[0].crys + price;
+
+                        con.query(`UPDATE users SET crys = ${newPrice} WHERE id = ${authorId}`);
+    
+                        con.query(`UPDATE items SET augment = 0 WHERE id = ${authorId}`);
+    
+                        message.channel.send({ embed: embedGenerator('augments', price) });
+
+                        break;
+
+                     case 'effects':
+                        effects = rows[0].effects;
+
+                        price = (effects * 150000);
+
+                        newPrice = rowsUsers[0].crys + price;
+
+                        con.query(`UPDATE users SET crys = ${newPrice} WHERE id = ${authorId}`);
+    
+                        con.query(`UPDATE items SET effects = 0 WHERE id = ${authorId}`);
+    
+                        message.channel.send({ embed: embedGenerator('effects', price) });
 
                         break;
 
