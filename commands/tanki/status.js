@@ -22,75 +22,59 @@ module.exports = {
     cooldown: 3,
     execute(client, message, args, con) {
 
-        if (!args[0]) {
+        switch (args[0]) {
+            // Test Server Status
+            case 'test':
+                snekfetch.get(status_test).then(data => {
+                    if (data.body) {
+                        let data_json = JSON.parse(data.body);
 
-            // main status
-            snekfetch.get(status_main).then(data => {
+                        let online = 0;
 
-                if (data.body) {
+                        for (var i = 0; i < Object.keys(data_json).length; i++) {
+                            online += data_json[i].UserCount;
+                        }
 
-                    var data_json = JSON.parse(data.body)
+                        let statusTest = new Discord.RichEmbed()
+                            .setAuthor('Tanki Bot')
+                            .setTitle('Test Server Status')
+                            .setThumbnail('https://i.imgur.com/NN3Imra.png')
+                            .addField('Online', online)
+                            .setColor('#e8154a')
+                            .setTimestamp();
 
-                    var online = Object.values(data_json.nodes).reduce((total, obj) => (total + obj.online), 0);
-                    var inbattles = Object.values(data_json.nodes).reduce((total, obj) => (total + obj.inbattles), 0);
-
-                    let embed_main = new Discord.RichEmbed()
-                        .setAuthor('Tanki Bot')
-                        .setTitle('Server Status')
-                        .setThumbnail('https://i.imgur.com/NN3Imra.png')
-                        .addField('Online', online)
-                        .addField('In Battles', inbattles)
-                        .addField('Idle', online - inbattles)
-                        .setTimestamp()
-
-                    message.channel.send({ embed: embed_main })
-
-                } else {
-                    message.channel.send('Error. Try again later.')
-                }
-
-
-            })
-
-        } else if (args[0] == 'test') {
-
-            // test servers status
-            snekfetch.get(status_test).then(data => {
-
-                if (data.body) {
-
-                    var data_json = JSON.parse(data.body);
-
-                    var online = 0;
-
-                    for (var i = 0; i < Object.keys(data_json).length; i++) {
-                        online += data_json[i].UserCount;
+                        message.channel.send({ embed: statusTest });
+                    } else {
+                        message.channel.send('Error. Try again later.');
                     }
+                })
+                break;
+        
+            // Main Server Status
+            default:
+                snekfetch.get(status_main).then(data => {
+                    if (data.body) {
+                        let data_json = JSON.parse(data.body);
 
-                    let embed_test = new Discord.RichEmbed()
-                        .setAuthor('Tanki Bot')
-                        .setTitle('Test Server Status')
-                        .setThumbnail('https://i.imgur.com/NN3Imra.png')
-                        .addField('Online', online)
-                        .setTimestamp()
+                        let online = Object.values(data_json.nodes).reduce((total, obj) => (total + obj.online), 0);
+                        let inbattles = Object.values(data_json.nodes).reduce((total, obj) => (total + obj.inbattles), 0);
 
-                    message.channel.send({ embed: embed_test })
+                        let statusMain = new Discord.RichEmbed()
+                            .setAuthor('Tanki Bot')
+                            .setTitle('Server Status')
+                            .setThumbnail('https://i.imgur.com/NN3Imra.png')
+                            .addField('Online', online, true)
+                            .addField('In Battles', inbattles, true)
+                            .addField('Idle', online - inbattles, true)
+                            .setColor('#00940f')
+                            .setTimestamp();
 
-                } else {
-                    message.channel.send('Error. Try again later.')
-                }
-
-            })
-
-        } else {
-            let help_embed = new Discord.RichEmbed()
-                .setAuthor('Tanki Bot')
-                .setTitle('Status')
-                .setThumbnail('https://i.imgur.com/NN3Imra.png')
-                .addField('Check main servers status', '>status')
-                .addField('Check test servers status', '>status test')
-
-            message.channel.send({ embed: help_embed })
+                        message.channel.send({ embed: statusMain })
+                    } else {
+                        message.channel.send('Error. Try again later.')
+                    }
+                })
+                break;
         }
 
     },
