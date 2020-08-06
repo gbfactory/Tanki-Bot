@@ -9,6 +9,7 @@
 
 const Discord = require('discord.js');
 const snekfetch = require('snekfetch');
+const ms = require('ms');
 
 let lv = require('../../storage/levels.json');
 
@@ -99,7 +100,7 @@ module.exports = {
                 gameTime += gameTimeArray[i].timePlayed;
             }
 
-            gameTime = (gameTime / (1000 * 60 * 60)).toFixed(0);
+            gameTime = ms(gameTime, { long: true });
 
 
             // EMBED

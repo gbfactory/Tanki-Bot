@@ -8,6 +8,7 @@
  */
 
 const Discord = require("discord.js");
+const ms = require('ms');
 
 module.exports = {
     name: 'premium',
@@ -17,25 +18,6 @@ module.exports = {
     execute(client, message, args, con) {
 
         var authorId = message.author.id;
-
-        function dhm(t) {
-            var cd = 24 * 60 * 60 * 1000,
-                ch = 60 * 60 * 1000,
-                d = Math.floor(t / cd),
-                h = Math.floor((t - d * cd) / ch),
-                m = Math.round((t - d * cd - h * ch) / 60000),
-                pad = function (n) { return n < 10 ? '0' + n : n; };
-            if (m === 60) {
-                h++;
-                m = 0;
-            }
-            if (h === 24) {
-                d++;
-                h = 0;
-            }
-
-            return d + " days " + h + " hours " + m + " minutes";
-        }
 
         con.query(`SELECT id, username, timePremium FROM users WHERE id = '${authorId}'`, (err, rows) => {
             if (err) throw err;
@@ -59,11 +41,9 @@ module.exports = {
                     .setTimestamp()
                     .setThumbnail('https://i.imgur.com/eExZbbo.png')
                     .setColor('#ffc619')
-                    .addField('Premium Account Active', 'Expires in ' + dhm(premiumDate - date));
+                    .addField('Premium Account Active', 'Expires in ' + ms(premiumDate - date, { long: true }));
 
                 message.channel.send({ embed: premiumEmbed });
-
-                //message.channel.send("hai il premium - scade tra ");
 
             } else {
 

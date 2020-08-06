@@ -11,6 +11,7 @@
 const Discord = require('discord.js');
 const mysql = require("mysql");
 const fs = require('fs');
+const ms = require('ms');
 
 // Json files
 const lv = require("./storage/levels.json");
@@ -90,7 +91,7 @@ client.on('message', async message => {
 
 	if (!command) return;
     
-    console.log(`[CMD] ${message.author.username} (${message.author.id}) used the command ${command.name}`);
+    console.log(`[CMD] ${message.author.username} (${message.author.id}) used the command ${command.name} ${args.join(' ')}`);
 
 	if (command.args && !args.length) {
         const errEmbed = new Discord.RichEmbed()
@@ -118,10 +119,10 @@ client.on('message', async message => {
 		const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
 
 		if (now < expirationTime) {
-            const timeLeft = (expirationTime - now) / 1000;
+            const timeLeft = ms(expirationTime - now, { long: true });
             
             const timeEmbed = new Discord.RichEmbed()
-                .setAuthor(`Wait ${timeLeft.toFixed(1)} seconds to use this command again!`)
+                .setAuthor(`Wait ${timeLeft} to use this command again!`)
                 .setColor('#f54242');
 
             message.delete(1000);

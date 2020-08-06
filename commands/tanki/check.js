@@ -10,6 +10,7 @@
 const Discord = require('discord.js');
 const snekfetch = require('snekfetch');
 const Jimp = require('jimp');
+const ms = require('ms');
 
 const api = 'https://ratings.tankionline.com/api/eu/profile/?user=';
 
@@ -20,11 +21,6 @@ module.exports = {
     args: true,
     cooldown: 3,
     execute(client, message, args, con) {
-
-        // Time formatting
-        function niceTime(time) {
-            return (time / (1000 * 60 * 60)).toFixed(0) + ' Hours';
-        }
 
         // Args
         var nickname = args[0];
@@ -103,7 +99,7 @@ module.exports = {
                     .setColor('#29ad1d')
                     .setTimestamp()
                     .addField('<:xp:661186205458628608> Score Earned', foundItem['scoreEarned'], true)
-                    .addField('🕐 Time Played', niceTime(foundItem['timePlayed']), true)
+                    .addField('🕐 Time Played', ms(foundItem['timePlayed'], { long: true }), true)
                     .setThumbnail(foundItem['imageUrl'].replace('.tnk', '.png'))
 
                 message.channel.send({ embed: embed });
@@ -133,7 +129,7 @@ module.exports = {
                     .setColor('#29ad1d')
                     .setTimestamp()
                     .addField('<:xp:661186205458628608> Score Earned', foundItem['scoreEarned'], true)
-                    .addField('🕐 Time Played', niceTime(foundItem['timePlayed']), true)
+                    .addField('🕐 Time Played', ms(foundItem['timePlayed'], { long: true }), true)
                     .setThumbnail(foundItem['imageUrl'].replace('.tnk', '.png'))
 
                 message.channel.send({ embed: embed });
@@ -163,7 +159,7 @@ module.exports = {
                     .setColor('#29ad1d')
                     .setTimestamp()
                     .addField('<:xp:661186205458628608> Score Earned', foundItem['scoreEarned'], true)
-                    .addField('🕐 Time Played', niceTime(foundItem['timePlayed']), true)
+                    .addField('🕐 Time Played', ms(foundItem['timePlayed'], { long: true }), true)
                     .setThumbnail(foundItem['imageUrl'].replace('.tnk', '.png'))
 
                 message.channel.send({ embed: embed });
@@ -263,7 +259,7 @@ module.exports = {
                         .setTimestamp()
                         .addField('<:armorIcon:661186313189326848> Protection', protectionName, true)
                         .addField('<:xp:661186205458628608> Score Earned', foundItem['scoreEarned'], true)
-                        .addField('🕐 Time Played', niceTime(foundItem['timePlayed']), true)
+                        .addField('🕐 Time Played', ms(foundItem['timePlayed'], { long: true }), true)
                         .attachFile(attachment)
                         .setThumbnail('attachment://protection.png');
 
@@ -298,7 +294,7 @@ module.exports = {
                     .setColor('#29ad1d')
                     .setTimestamp()
                     .addField('<:xp:661186205458628608> Score Earned', foundItem['scoreEarned'], true)
-                    .addField('🕐 Time Played', niceTime(foundItem['timePlayed']), true)
+                    .addField('🕐 Time Played', ms(foundItem['timePlayed'], { long: true }), true)
                     .setThumbnail(foundItem['imageUrl'].replace('.tnk', '.png'))
 
                 message.channel.send({ embed: embed });

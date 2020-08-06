@@ -9,6 +9,7 @@
 
 const Discord = require("discord.js");
 const snekfetch = require("snekfetch");
+const ms = require('ms');
 
 const api = "https://ratings.tankionline.com/get_stat/profile/?user=";
 
@@ -55,15 +56,15 @@ module.exports = {
             var eSGE = (r.body.response.modesPlayed[8].scoreEarned).toLocaleString('en'); //sge
 
             //tempo giocato
-            var tDM = (r.body.response.modesPlayed[0].timePlayed / (1000 * 60 * 60)).toFixed(0); //dm
-            var tTDM = (r.body.response.modesPlayed[1].timePlayed / (1000 * 60 * 60)).toFixed(0); //tdm
-            var tCTF = (r.body.response.modesPlayed[2].timePlayed / (1000 * 60 * 60)).toFixed(0); //ctf
-            var tCP = (r.body.response.modesPlayed[3].timePlayed / (1000 * 60 * 60)).toFixed(0); //cp
-            var tAS = (r.body.response.modesPlayed[4].timePlayed / (1000 * 60 * 60)).toFixed(0); //as
-            var tRGB = (r.body.response.modesPlayed[5].timePlayed / (1000 * 60 * 60)).toFixed(0); //rgb
-            var tSJGR = (r.body.response.modesPlayed[6].timePlayed / (1000 * 60 * 60)).toFixed(0); //sjgr
-            var tJGR = (r.body.response.modesPlayed[7].timePlayed / (1000 * 60 * 60)).toFixed(0); //jgr
-            var tSGE = (r.body.response.modesPlayed[8].timePlayed / (1000 * 60 * 60)).toFixed(0); //sge
+            var tDM = ms(r.body.response.modesPlayed[0].timePlayed, { long: true }) //dm
+            var tTDM = ms(r.body.response.modesPlayed[1].timePlayed, { long: true }) //tdm
+            var tCTF = ms(r.body.response.modesPlayed[2].timePlayed, { long: true }) //ctf
+            var tCP = ms(r.body.response.modesPlayed[3].timePlayed, { long: true }) //cp
+            var tAS = ms(r.body.response.modesPlayed[4].timePlayed, { long: true }) //as
+            var tRGB = ms(r.body.response.modesPlayed[5].timePlayed, { long: true }) //rgb
+            var tSJGR = ms(r.body.response.modesPlayed[6].timePlayed, { long: true }) //sjgr
+            var tJGR = ms(r.body.response.modesPlayed[7].timePlayed, { long: true }) //jgr
+            var tSGE = ms(r.body.response.modesPlayed[8].timePlayed, { long: true }) //sge
 
             var DM = "<:tstar:660257945350701066> **Score**: " + eDM + "\n" + "🕓 **Time**: " + (tDM).toLocaleString('en');
             var TDM = "<:tstar:660257945350701066> **Score**: " + eTDM + "\n" + "🕓 **Time**: " + (tTDM).toLocaleString('en');

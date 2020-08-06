@@ -8,6 +8,8 @@
 */
 
 const Discord = require("discord.js");
+const ms = require('ms');
+
 let lv = require("../../storage/levels.json");
 
 module.exports = {
@@ -20,39 +22,6 @@ module.exports = {
     execute(client, message, args, con) {
 
         var authorId = message.author.id;
-
-        // TODO: #1 Use one function instead of two for time conversion
-        function msToTime(duration) {
-            var milliseconds = parseInt((duration % 1000) / 100),
-                seconds = Math.floor((duration / 1000) % 60),
-                minutes = Math.floor((duration / (1000 * 60)) % 60),
-                hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
-
-            hours = (hours < 10) ? "0" + hours : hours;
-            minutes = (minutes < 10) ? "0" + minutes : minutes;
-            seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-            return hours + " hours " + minutes + " minutes and " + seconds + " seconds";
-        }
-
-        function dhm(t) {
-            var cd = 24 * 60 * 60 * 1000,
-                ch = 60 * 60 * 1000,
-                d = Math.floor(t / cd),
-                h = Math.floor((t - d * cd) / ch),
-                m = Math.round((t - d * cd - h * ch) / 60000),
-                pad = function (n) { return n < 10 ? '0' + n : n; };
-            if (m === 60) {
-                h++;
-                m = 0;
-            }
-            if (h === 24) {
-                d++;
-                h = 0;
-            }
-
-            return d + " days " + h + " hours " + m + " minutes";
-        }
 
         con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
             if (err) throw err;
@@ -90,7 +59,7 @@ module.exports = {
                     let waitMins = dailyTime - Date.now();
                     let dailyNo = new Discord.RichEmbed()
                         .setColor("#00c3ff")
-                        .setAuthor("❌ You have to wait " + msToTime(waitMins))
+                        .setAuthor("❌ You have to wait " + ms(waitMins, { long: true }))
                     message.channel.send({ embed: dailyNo });
                 }
 
@@ -120,7 +89,7 @@ module.exports = {
                     let waitMins = weeklyTime - Date.now();
                     let weeklyNo = new Discord.RichEmbed()
                         .setColor("#00c3ff")
-                        .setAuthor("❌ You have to wait " + dhm(waitMins));
+                        .setAuthor("❌ You have to wait " + ms(waitMins, { long: true }));
                     message.channel.send({ embed: weeklyNo });
                 }
             }
