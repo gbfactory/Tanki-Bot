@@ -12,7 +12,7 @@ const Discord = require("discord.js");
 module.exports = {
     name: 'sell',
     description: 'Sell your items like paints, supplies or skins to get some crystals!',
-    usage: '`>sell all` - Sell all your items \n`>sell supplies` - Sell only your supplies \n`>sell paints` - Sell only your paints \n`>sell skins` - Sell only your skins \n`>sell effects` - Sell onyl shot effects \n`>sell augments` - Sell only augments',
+    usage: '`>sell all` - Sell all your items \n`>sell supplies` - Sell only your supplies \n`>sell paints` - Sell only your paints \n`>sell skins` - Sell only your skins \n`>sell effects` - Sell only shot effects \n`>sell augments` - Sell only augments',
     args: true,
     cooldown: 3,
     execute(client, message, args, con) {
