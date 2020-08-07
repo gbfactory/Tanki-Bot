@@ -18,17 +18,16 @@ module.exports = {
         let embed = new Discord.RichEmbed()
             .setAuthor('TankiBot')
             .setColor('#982b82')
-            .setThumbnail('https://i.imgur.com/NN3Imra.png')
-            .setTitle("📜 Info")
-            .addField('📌 Ping', client.ping)
-            .addField('📌 Developer', 'gb_factory#5365')
-            .addField('📌 Support Server', 'https://discord.gg/cH8Tvbn')
-            .addField('📌 Bot website', 'https://tankibot.gbfactory.net/')
-            .setFooter('Coded with 💖 and discord.js by gb_factory#5365', 'https://i.imgur.com/7MpAZZh.png')
-            .setTimestamp();
+            .setThumbnail('https://i.imgur.com/pQAtVhk.png')
+            .setTitle("Info about the bot")
 
-        message.channel.send({ embed: embed });
-        return;
+            .addField('<:developer:741331374484619366> Developer', 'gb_factory#5365')
+            .addField('<:earlysupporter:741331772939436123> Support', 'https://discord.gg/cH8Tvbn')
+            .addField('<:website:741333212550398002> Website (Coming soon)', 'https://tankibot.gbfactory.net/')
+
+            .setFooter('Coded with 💖 and discord.js by gb_factory#5365', 'https://i.imgur.com/7MpAZZh.png')
+
+        return message.channel.send({ embed: embed });
 
     },
 };
