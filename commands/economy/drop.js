@@ -53,7 +53,7 @@ module.exports = {
 
                 message.channel.send({ embed: dropEmbed }).then(() => {
 
-                    message.channel.awaitMessages(response => response.content === 'goldbox', { max: 1, time: 20000, errors: ['time'] }).then(collected => {
+                    message.channel.awaitMessages(response => response.content.toLowerCase() === 'goldbox', { max: 1, time: 20000, errors: ['time'] }).then(collected => {
 
                         var takenId = collected.first().author.id;
 
