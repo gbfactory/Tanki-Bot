@@ -42,7 +42,8 @@ module.exports = {
             if (!isNaN(args[0]) && args[0] > 0) {
 
                 var quantity = args[0];
-                var prezzo = quantity * 5000;
+                // var prezzo = quantity * 5000;
+                var prezzo = quantity * 3000;
 
                 if (rowsUsers[0].crys >= prezzo) {
 

@@ -51,7 +51,8 @@ module.exports = {
                     .setAuthor("Tanki Bot")
                     .setTitle("<:MenuShop:661186115310583808> Shop - Containers")
                     .setDescription("Buy containers with `>buy <quantity>`")
-                    .addField("<:MenuContainers:661186115147137056> 1 Container", "5000 💎", true)
+                    // .addField("<:MenuContainers:661186115147137056> 1 Container", "5000 💎", true)
+                    .addField("<:MenuContainers:661186115147137056> 1 Container", "~~5000~~ <:discount:663389407893782539> 3000 💎", true)
                     .addField("<:MenuContainers:661186115147137056> How to buy", "`>buy <quantity>`", true)
                     .addField("<:MenuContainers:661186115147137056> How to open", "`>open c`", true)
                 message.channel.send({ embed: shopContainers });

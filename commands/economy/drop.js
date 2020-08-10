@@ -47,8 +47,10 @@ module.exports = {
                 let dropEmbed = new Discord.RichEmbed()
                     .setColor('#ebcc34')
                     .setTitle('A Gold Box has just dropped')
-                    .setDescription('<a:golddropping:520985638317588480> Take it by writing `goldbox` in the chat')
-                    .setThumbnail('https://en.tankiwiki.com/images/en/thumb/1/10/Gold.png/150px-Gold.png')
+                    // .setDescription('<a:golddropping:520985638317588480> Take it by writing `goldbox` in the chat')
+                    .setDescription('<:BDGoldBox:742393348765253642> Take it by writing `goldbox` in the chat')
+                    // .setThumbnail('https://en.tankiwiki.com/images/en/thumb/1/10/Gold.png/150px-Gold.png')
+                    .setThumbnail('https://i.imgur.com/J3paWgn.png')
                     .setFooter(`Dropped by ${dropper}`)
 
                 message.channel.send({ embed: dropEmbed }).then(() => {
@@ -60,7 +62,8 @@ module.exports = {
                         let dropTaken = new Discord.RichEmbed()
                             .setColor('#ebcc34')
                             .setAuthor(`${collected.first().author.username} has taken the Gold Box!`)
-                            .setThumbnail('https://i.imgur.com/7heALnz.png')
+                            // .setThumbnail('https://i.imgur.com/7heALnz.png')
+                            .setThumbnail('https://i.imgur.com/V3bxMqW.png')
                             .setFooter(`Dropped by ${dropper}`)
                         message.channel.send({ embed: dropTaken });
 
@@ -69,7 +72,8 @@ module.exports = {
                         con.query(`SELECT id, crys FROM users WHERE id = '${takenId}'`, (err, rows) => {
                             if (err) throw err;
 
-                            con.query(`UPDATE users SET crys = ${rows[0].crys + 1000} WHERE id = '${takenId}'`);
+                            // con.query(`UPDATE users SET crys = ${rows[0].crys + 1000} WHERE id = '${takenId}'`);
+                            con.query(`UPDATE users SET crys = ${rows[0].crys + 2000} WHERE id = '${takenId}'`);
 
                         });
 
