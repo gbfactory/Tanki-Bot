@@ -1989,7 +1989,7 @@
             "type": "augment",
             "equip": "Hulls",
             "rarity": "epic",
-            "name": "Head Immunity",
+            "name": "Heat Immunity",
             "quantity": 1,
             "image": "https://en.tankiwiki.com/images/en/7/7e/Fire_Immunity.png"
         },
@@ -2223,7 +2223,7 @@
             "rarity": "epic",
             "name": "Incendiary band",
             "quantity": 1,
-            "image": "https://en.tankiwiki.com/images/en/f/f5/Alteration_vulcan_reinforced_aiming_transmission.png"
+            "image": "https://en.tankiwiki.com/images/en/6/67/Alteration_vulcan_incendiary_band.png"
         },
         {
             "type": "augment",
