@@ -49,6 +49,7 @@ module.exports = {
             let kills = res.kills;
             let deaths = res.deaths;
             let kd = (kills / deaths).toFixed(2);
+                kd = isNaN(kd) ? 0 : kd;
 
             // Exp
             let score = res.score;
