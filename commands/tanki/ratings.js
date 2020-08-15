@@ -11,7 +11,7 @@ const Discord = require('discord.js');
 const snekfetch = require('snekfetch');
 const ms = require('ms');
 
-let lv = require('../../storage/levels.json');
+const lv = require('../../storage/levels.json');
 
 const api = 'https://ratings.tankionline.com/api/eu/profile/?user=';
 
@@ -23,10 +23,8 @@ module.exports = {
     args: true,
     cooldown: 3,
     execute(client, message, args, con) {
-
-        var nickname = args[0];
         
-        snekfetch.get(api + nickname).then(r => {
+        snekfetch.get(api + args[0]).then(r => {
 
             if (r.body.responseType === 'NOT_FOUND') {
                 let noUser = new Discord.RichEmbed()
@@ -34,6 +32,7 @@ module.exports = {
                     .setColor('#f54242');
 
                 return message.channel.send({ embed: noUser });
+
             } else if (!r.body.responseType) {
                 let noApi = new Discord.RichEmbed()
                     .setAuthor('Tanki Online API unavailable. Try again later.')
@@ -41,60 +40,58 @@ module.exports = {
                 return message.channel.send({ embed: noApi });
             }
 
-            var res = r.body.response;
+            const res = r.body.response;
 
             // Name
-            var name = res.name;
+            let name = res.name;
 
             // Stats
-            var kills = res.kills;
-            var deaths = res.deaths;
-            var kd = (kills / deaths).toFixed(2);
+            let kills = res.kills;
+            let deaths = res.deaths;
+            let kd = (kills / deaths).toFixed(2);
 
             // Exp
-            var score = res.score;
-            var scoreBase = res.scoreBase;
-            var scoreNext = res.scoreNext;
-            var scoreLeft = scoreNext - score;
+            let score = res.score;
+            let scoreBase = res.scoreBase;
+            let scoreNext = res.scoreNext;
+            let scoreLeft = scoreNext - score;
 
             // Gain
-            var caughtGolds = res.caughtGolds;
-            var earnedCrystals = res.earnedCrystals;
-            var gearScore = res.gearScore;
+            let caughtGolds = res.caughtGolds;
+            let earnedCrystals = res.earnedCrystals;
+            let gearScore = res.gearScore;
 
             // Premium (not working anymore: always on false)
-            var hasPremium = res.hasPremium; // boolean
+            let hasPremium = res.hasPremium; // boolean
 
             // Rank
+            let rank, rankName;
+
             if (res.rank > 30) {
-                var rank = 30;
-                var rankName = "Legend " + (res.rank - 30)
+                rank = 30;
+                rankName = "Legend " + (res.rank - 30)
             } else {
-                var rank = res.rank - 1;
-                var rankName = lv[rank].name;
+                rank = res.rank - 1;
+                rankName = lv[rank].name;
             }
 
-            var rankEmoji = lv[rank].icon;
+            let rankEmoji = lv[rank].icon;
 
-            if (hasPremium) {
-                var rankImg = lv[rank].premium;
-            } else {
-                var rankImg = lv[rank].image;
-            }
+            let rankImg = hasPremium ? lv[rank].premium : lv[rank].image;
 
-            var premiumBanner = hasPremium ? '<:pbanner:720011348217430157> ' : '';
+            let premiumBanner = hasPremium ? '<:pbanner:720011348217430157> ' : '';
 
             // Supplies usage
-            var suppliesArray = res.suppliesUsage;
-            var suppliesUsage = 0;
+            let suppliesArray = res.suppliesUsage;
+            let suppliesUsage = 0;
 
             for (let i = 0; i < suppliesArray.length; i++) {
                 suppliesUsage += suppliesArray[i]['usages'];
             }
 
-            // Hour count
-            var gameTimeArray = res.modesPlayed;
-            var gameTime = 0;
+            // Game time
+            let gameTimeArray = res.modesPlayed;
+            let gameTime = 0;
 
             for (let i = 0; i < gameTimeArray.length; i++) {
                 gameTime += gameTimeArray[i].timePlayed;
