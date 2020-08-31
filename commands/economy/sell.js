@@ -74,13 +74,27 @@ module.exports = {
                         augments = rows[0].augment;
                         effects = rows[0].effects;
 
-                        price = (repair * 50) + (armor * 25) + (damage * 25) + (nitro * 25) + (mine * 25) + (battery * 60) + (rare * random(2000, 4000)) + (epic * random(4000, 8000)) + (legendary * random(8000, 16000)) + (turrets * 100000) + (hulls * 100000) + (augments * 150000) + (effects + 50000);
+                        price = (repair * 50) + (armor * 25) + (damage * 25) + (nitro * 25) + (mine * 25) + (battery * 60) + (rare * random(2000, 4000)) + (epic * random(4000, 8000)) + (legendary * random(8000, 16000)) + (turrets * 100000) + (hulls * 100000) + (augments * 150000) + (effects * 50000);
 
-                        newPrice = rowsUsers[0].crys + price;
+                        newPrice = rowsUsers[  0].crys + price;
 
                         con.query(`UPDATE users SET crys = ${newPrice} WHERE id = ${authorId}`);
 
-                        con.query(`UPDATE items SET repair = 0, armor = 0, damage = 0, nitro = 0, mine = 0, battery = 0, rare = 0, epic = 0, legendary = 0, skinTurrets = 0, skinHulls = 0 WHERE id = ${authorId}`);
+                        con.query(`UPDATE items SET 
+                        repair = 0, 
+                        armor = 0, 
+                        damage = 0, 
+                        nitro = 0, 
+                        mine = 0, 
+                        battery = 0, 
+                        rare = 0, 
+                        epic = 0, 
+                        legendary = 0, 
+                        skinTurrets = 0, 
+                        skinHulls = 0, 
+                        augment = 0, 
+                        effects = 0
+                        WHERE id = ${authorId}`);
 
                         message.channel.send({ embed: embedGenerator('all', price) });
                         
