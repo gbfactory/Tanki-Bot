@@ -22,6 +22,7 @@ module.exports = {
     execute(client, message, args, con) {
 
         let authorId = message.author.id;
+        let boxType = args[0].toLowerCase();
 
         // Select from the "users" table
         con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
@@ -164,7 +165,7 @@ module.exports = {
                 }
 
                 // Open regular Container
-                if (args[0] == "container" || args[0] == "c") {
+                if (boxType == "container" || boxType == "c") {
 
                     // Check if the user has containers
                     if (rows[0].containers < 1) {
@@ -358,7 +359,7 @@ module.exports = {
                     return;
 
                     // Open Daily Box
-                } else if (args[0] == "daily" || args[0] == "d") {
+                } else if (boxType == "daily" || boxType == "d") {
 
                     // Check if the user has a Daily Box
                     if (rows[0].dailybox < 1) {
@@ -408,7 +409,7 @@ module.exports = {
                     return;
 
                     // Open Weekly Box
-                } else if (args[0] == "weekly" || args[0] == "w") {
+                } else if (boxType == "weekly" || boxType == "w") {
 
                     // Check
                     if (rows[0].weeklybox < 1) {
