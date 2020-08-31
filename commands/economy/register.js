@@ -33,37 +33,24 @@ module.exports = {
 
                 let userNick = args[0];
 
-                if (userNick.length > 20) {
+                // Check if the nickname is valid
+                if (!userNick[0].match(/^(?=[a-zA-Z0-9-_]{3,20}$)(?!.*[_-]{2})[^_-].*[^_-]$/i)) {
                     let regIllegal = new Discord.RichEmbed()
-                        .setAuthor("You have a maximun of 20 characters!")
+                        .setAuthor('Invalid nickname!')
+                        .setDescription('Your nickname can contain only letters, numbers and symbols (_, -). It must be between 3 and 20 characters.')
                         .setColor("#f54242");
                     message.channel.send({ embed: regIllegal });
-                    return;
+                    return;   
                 }
-
-                if (userNick.length < 3) {
-                    let short = new Discord.RichEmbed()
-                        .setAuthor("Your tanki nickname can't be shorter that 3 characters")
-                        .setColor("#f54242")
-                    message.channel.send({ embed: short });
-                    return;
-                }
-
-                if (!userNick.match(/^([0-9]|[a-z])+([0-9a-z]+)$/i)) {
-                    let regIllegal = new Discord.RichEmbed()
-                        .setAuthor("Your nickname must be alpanumerical!")
-                        .setColor("#f54242");
-                    message.channel.send({ embed: regIllegal });
-                    return;
-
-                }
-
+                
+                // Registration
                 let regNum = new Discord.RichEmbed()
                     .setAuthor(`Welcome ${message.member.user.username}! \nWrite ${rNum} to continue, or cancel to exit.`)
                     .setColor("#87d704");
                 message.channel.send({ embed: regNum });
 
                 const filter = m => m.author.id === message.author.id;
+                
                 message.channel.awaitMessages(filter, {
                     max: 1,
                     time: 10000,
@@ -103,6 +90,7 @@ module.exports = {
                         message.channel.send({ embed: rgNumErr });
                         return;
                     }
+                    
                 }).catch(err => {
                     let redTime = new Discord.RichEmbed()
                         .setAuthor("Too much time has passed!")
