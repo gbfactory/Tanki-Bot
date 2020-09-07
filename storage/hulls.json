@@ -184,6 +184,67 @@
       }
     ]
   },
+  "ares": {
+    "emoji": "<:Ares_icon_small:751127695307309137>",
+    "level": [
+      {
+        "name": "Ares Mk1",
+        "image": "https://en.tankiwiki.com/images/en/thumb/0/05/Ares.png/200px-Ares.png",
+        "rank": 0,
+        "price": 100,
+        "minDamage": 2000,
+        "maxDamage": null
+      },
+      {
+        "name": "Ares Mk2",
+        "image": "https://en.tankiwiki.com/images/en/thumb/0/05/Ares.png/200px-Ares.png",
+        "rank": 5,
+        "price": 1000,
+        "minDamage": 2294,
+        "maxDamage": null
+      },
+      {
+        "name": "Ares Mk3",
+        "image": "https://en.tankiwiki.com/images/en/thumb/0/05/Ares.png/200px-Ares.png",
+        "rank": 10,
+        "price": 12000,
+        "minDamage": 2588,
+        "maxDamage": null
+      },
+      {
+        "name": "Ares Mk4",
+        "image": "https://en.tankiwiki.com/images/en/thumb/0/05/Ares.png/200px-Ares.png",
+        "rank": 14,
+        "price": 29000,
+        "minDamage": 2823,
+        "maxDamage": null
+      },
+      {
+        "name": "Ares Mk5",
+        "image": "https://en.tankiwiki.com/images/en/thumb/0/05/Ares.png/200px-Ares.png",
+        "rank": 19,
+        "price": 61000,
+        "minDamage": 3117,
+        "maxDamage": null
+      },
+      {
+        "name": "Ares Mk6",
+        "image": "https://en.tankiwiki.com/images/en/thumb/0/05/Ares.png/200px-Ares.png",
+        "rank": 87000,
+        "price": 100,
+        "minDamage": 3294,
+        "maxDamage": null
+      },
+      {
+        "name": "Ares Mk7",
+        "image": "https://en.tankiwiki.com/images/en/thumb/0/05/Ares.png/200px-Ares.png",
+        "rank": 26,
+        "price": 130000,
+        "minDamage": 3529,
+        "maxDamage": null
+      }
+    ]
+  },
   "titan": {
     "emoji": "<:Titan:605414771361316885>",
     "level": [
