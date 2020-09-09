@@ -23,6 +23,7 @@ module.exports = {
 
             .addField('<:developer:741331374484619366> Developer', 'gb_factory#5365')
             .addField('<:earlysupporter:741331772939436123> Support', 'https://discord.gg/cH8Tvbn')
+            .addField('GitHub', 'https://github.com/gbfactory/Tanki-Bot/')
 
             .setFooter('Coded with 💖 and discord.js by gb_factory#5365', 'https://i.imgur.com/7MpAZZh.png')
 
