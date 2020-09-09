@@ -113,7 +113,7 @@ module.exports = {
                 .addField(`Name`, `<:elmetto:660442439441448981> ${name}`, true)
                 .addField(`Rank`, `${premiumBanner} ${rankEmoji} ${rankName}`, true)
                 .addField(`<:xp:661186205458628608> Score`, `${scoreBase.toLocaleString()} 🔸 ${score.toLocaleString()} (-${scoreLeft.toLocaleString()}) 🔸 ${scoreNext.toLocaleString()}`)
-                .addField(`Info`, `💎 Crystals: ${earnedCrystals.toLocaleString()} \n<:gold:660257810797428776> Gold Boxes ${caughtGolds.toLocaleString()} \n🕐 Game Time: ${gameTime} \n<:sups:660260925546168404> Supplies: ${suppliesUsage.toLocaleString()}`, true)
+                .addField(`Info`, `💎 Crystals earned: ${earnedCrystals.toLocaleString()} \n<:gold:660257810797428776> Gold Boxes caught: ${caughtGolds.toLocaleString()} \n🕐 Time played: ${gameTime} \n<:sups:660260925546168404> Supplies used: ${suppliesUsage.toLocaleString()}`, true)
                 .addField(`Stats`, `<:Clan_destroyed:660950530096496661> Kills: ${kills.toLocaleString()} \n<:Clan_death:660950530071461890> Deaths: ${deaths.toLocaleString()} \n<:Clan_kd:660950530293497866> K/D: ${kd} \n⚙️ GearScore: ${gearScore}`, true)
 
             message.channel.send({ embed: ratings });
