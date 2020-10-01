@@ -24,7 +24,7 @@ const embedInfo = (msg, img) => {
   let embed = new Discord.RichEmbed();
   embed.setColor('#00c3ff');
   if (msg)
-    embed.setDescription('❌ ' + msg);
+    embed.setDescription(msg);
   if (img)
     embed.setThumbnail(img);
   return embed;
