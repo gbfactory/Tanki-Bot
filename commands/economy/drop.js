@@ -15,7 +15,7 @@ module.exports = {
     aliases: ['goldbox', 'gb'],
     usage: '`>drop` - Drop a Gold Box worth 1000 crystals \n`goldbox` - Keyword to catch the Gold',
     cooldown: 30,
-    execute(client, message, args, con) {
+    execute(client, message, args, con, functions) {
 
         let authorId = message.author.id;
         console.log(authorId);
@@ -24,32 +24,27 @@ module.exports = {
             if (err) throw err;
 
             if (rows.length < 1) {
-                let rgNo = new Discord.RichEmbed()
-                    .setAuthor("You aren't registered! Use >register (username) to create a profile.")
-                    .setColor("#f54242");
-                message.channel.send({ embed: rgNo });
-                return;
+                return message.channel.send({ embed: functions.embedRegister() });
             }
 
             con.query(`SELECT id, gold FROM items WHERE id = '${authorId}'`, (err, rows) => {
                 if (err) throw err;
 
                 if (rows[0].gold < 1) {
-                    let boxNo = new Discord.RichEmbed()
-                        .setAuthor("You don't have gold boxes! Find them in containers")
-                        .setColor("#f54242");
-                    message.channel.send({ embed: boxNo });
+                    message.channel.send({ embed: functions.embedSuccess(
+                        "You don't have any Gold Box! Find them by opening a container!"
+                    ) });
                     return;
                 }
 
                 var dropper = message.author.username;
 
                 let dropEmbed = new Discord.RichEmbed()
-                    .setColor('#ebcc34')
                     .setTitle('A Gold Box has just dropped')
                     .setDescription('<a:golddropping:520985638317588480> Take it by writing `goldbox` in the chat')
                     .setThumbnail('https://i.imgur.com/fvBuGb3.png')
                     .setFooter(`Dropped by ${dropper}`)
+                    .setColor('#ebcc34')
 
                 message.channel.send({ embed: dropEmbed }).then(() => {
 
@@ -76,9 +71,9 @@ module.exports = {
                     }).catch(collected => {
 
                         let dropNot = new Discord.RichEmbed()
-                            .setColor('#ebcc34')
-                            .setTitle('The Gold Box has not been taken')
+                            .setTitle('The Gold Box has not been taken!')
                             .setFooter(`Dropped by ${dropper}`)
+                            .setColor('#ebcc34')
 
                         message.channel.send({ embed: dropNot });
                     });

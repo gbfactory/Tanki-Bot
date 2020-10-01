@@ -14,27 +14,22 @@ module.exports = {
     description: 'Set your real Tanki nickname so people can see who you are in the game.',
     usage: '`>nickname` Check your nickname \n`>nickname [nickname]` Set your nickname',
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args, con, functions) {
 
         let authorId = message.author.id;
-        let userNick = args[0];
 
         con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
             if (err) throw err;
 
             if (rows.length < 1) {
-                let rgNo = new Discord.RichEmbed()
-                    .setAuthor("You aren't registered! Use >register (username) to create a profile.")
-                    .setColor("#f54242");
-                message.channel.send({ embed: rgNo });
-                return;
+                return message.channel.send({ embed: functions.embedRegister() });
             }
 
-            // Check your actual nickname
-            if (!userNick) {
+            let newNick = args[0];
+            let oldNick = rows[0].nick ? rows[0].nick : 'Not set';
 
-                let oldNick = rows[0].nick ? rows[0].nick : 'Not set';
-                
+            // Check your actual nickname
+            if (!newNick) {
                 let checkEmbed = new Discord.RichEmbed()
                     .setAuthor('Tanki Bot')
                     .setTitle('Nickname')
@@ -42,29 +37,31 @@ module.exports = {
                     .addField('Your Nickname', oldNick)
                     .addField('Update your Nickname', '`>nickname [new nickname]`')
                     .setThumbnail('https://i.imgur.com/t9aW1ri.png')
+                    .setColor('#00eeff')
                 
                 return message.channel.send({ embed:checkEmbed });
-
             }
 
-            // Check if the nickname is valid
-            if (!userNick.match(/^(?=[a-zA-Z0-9-_]{3,20}$)(?!.*[_-]{2})[^_-].*[^_-]$/i)) {
-                let regIllegal = new Discord.RichEmbed()
-                    .setAuthor('Invalid nickname!')
-                    .setDescription('Your nickname can contain only letters, numbers and symbols (_, -). It must be between 3 and 20 characters.')
-                    .setColor("#f54242");
-                message.channel.send({ embed: regIllegal });
-                return;   
+            // Check new nick characters
+            if (!newNick.match(/^(?=[a-zA-Z0-9-_]{3,20}$)(?!.*[_-]{2})[^_-].*[^_-]$/i)) {
+                return message.channel.send({ embed: functions.embedFail(
+                    "Your nickname contains invalid characters!"
+                ) });
+            }
+
+            // Check if the nickname is differnet
+            if (newNick === oldNick) {
+                return message.channel.send({ embed: functions.embedFail(
+                    "Your nickname must be different from the old one!"
+                ) })
             }
 
             // Update the nickname
-            con.query(`UPDATE users SET nick = ? WHERE id = '${authorId}'`, userNick);
+            con.query(`UPDATE users SET nick = ? WHERE id = '${authorId}'`, newNick);
 
-            let set = new Discord.RichEmbed()
-                .setColor("#00ffff")
-                .setAuthor("You set your nickname to " + userNick)
-            message.channel.send({ embed: set });
-            return;
+            return message.channel.send({ embed: functions.embedSuccess(
+                `You new nickname is **${newNick}**!`
+            ) });
 
         })
 

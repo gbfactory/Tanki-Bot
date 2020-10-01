@@ -15,25 +15,25 @@ module.exports = {
     usage: '`>gift [@user] [crystals]`',
     args: true,
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args, con, functions) {
 
         let authorId = message.author.id;
 
         con.query(`SELECT id, username, crys FROM users WHERE id = ${authorId}`, (err, rows) => {
             if (err) throw err;
 
-            // check registrazione
+            // Check if a user is registered
             if (rows.length < 1) {
-                message.channel.send("You are not registered!")
-                return;
+                return message.channel.send({ embed: functions.embedRegister() });
             }
 
             var authorDb = rows[0];
 
-            // check menzione utente
+            // Check if a user is mentioned
             if (!message.mentions.members.first()) {
-                message.channel.send("You didn't mentioned a user.");
-                return;
+                return message.channel.send({ embed: functions.embedFail(
+                    "You didn't mentioned a user."
+                ) });
             } else {
                 var giftedId = message.mentions.users.first().id;
             }
@@ -41,31 +41,32 @@ module.exports = {
             con.query(`SELECT id, username, crys FROM users WHERE id = ${giftedId}`, (err, rows) => {
                 if (err) throw err;
 
-                // check registrazione destinatario
+                // Check if the mentioned user is registered
                 if (rows.length < 1) {
-                    message.channel.send("The other user is not registered!");
-                    return;
+                    return message.channel.send({ embed: functions.embedFail(
+                        "The other user is not registered!"
+                    ) });
                 }
 
                 var giftedDb = rows[0];
 
-                // check cristalli
+                // Check crystals
                 if (!args[1] || isNaN(args[1]) || args[1] <= 0) {
-                    message.channel.send("You must input a valid amout of crystals!");
-                    return;
+                    return message.channel.send({ embed: functions.embedFail(
+                        "You must input a valid amout of crystals!"
+                    )} );
                 } else {
                     var crys = parseInt(args[1]);
                 }
 
-                // check crys
+                // Check user crystals
                 if (authorDb.crys < crys) {
-                    message.channel.send("You don't have enough crystals!");
-                    return;
+                    return message.channel.send({ embed: functions.embedFail(
+                        "You don't have enough crystals!"
+                    ) });
                 }
 
-                // fine controlli
-                // ==============
-
+                // Moving crys from one user to the other and success msg.
                 var cryAuthor = authorDb.crys;
                 var cryGifted = giftedDb.crys;
 
@@ -76,7 +77,9 @@ module.exports = {
                 con.query(`UPDATE users SET crys = ${cryGifted + crys} WHERE id = '${giftedId}'`);
 
                 // end message
-                message.channel.send(`🎁 <@${authorId}> has sent ${crys} crystals to <@${giftedId}>!`);
+                message.channel.send({ embed: functions.embedSuccess(
+                    `**<@${authorId}>** has sent **${crys}** 💎 to **<@${giftedId}>**!`
+                ) });
 
 
             })

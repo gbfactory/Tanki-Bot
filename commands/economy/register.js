@@ -15,7 +15,7 @@ module.exports = {
     usage: '`>register [nickname]` - Register with your nickname.',
     args: true,
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args, con, functions) {
 
         var rNum = Math.floor(1000 + Math.random() * 9000);
 
@@ -24,35 +24,31 @@ module.exports = {
         con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
             if (err) throw err;
             if (rows.length > 0) {
-                let regAlready = new Discord.RichEmbed()
-                    .setAuthor("You are already registered!")
-                    .setColor("#f54242");
-                message.channel.send({ embed: regAlready });
-                return;
+                return message.channel.send({ embed: functions.embedFail(
+                    'You are already registered!'
+                ) });
             } else {
 
                 let userNick = args[0];
 
                 // Advise the user to remove brackets
-                if (userNick.includes('(') || userNick.includes(')')) {
-                  message.channel.send("Your nickname does not need to include the brackets! \nExample: `>register TankiBot`");
+                if (userNick.includes('(') || userNick.includes(')') || userNick.includes('[') || userNick.includes(']')) {
+                    return message.channel.send({ embed: functions.embedInfo(
+                        "⚠ Your nickname does not need to include the brackets! \nExample: `>register TankiBot`"
+                    ) });
                 }
 
                 // Check if the nickname is valid
                 if (!userNick.match(/^(?=[a-zA-Z0-9-_]{3,20}$)(?!.*[_-]{2})[^_-].*[^_-]$/i)) {
-                    let regIllegal = new Discord.RichEmbed()
-                        .setAuthor('Invalid nickname!')
-                        .setDescription('Your nickname can contain only letters, numbers and symbols (_, -). It must be between 3 and 20 characters.')
-                        .setColor("#f54242");
-                    message.channel.send({ embed: regIllegal });
-                    return;   
+                    return message.channel.send({ embed: functions.embedFail(
+                        'Your nickname contains illegal characters!'
+                    ) });
                 }
                 
                 // Registration
-                let regNum = new Discord.RichEmbed()
-                    .setAuthor(`Welcome ${message.member.user.username}! \nWrite ${rNum} to continue, or cancel to exit.`)
-                    .setColor("#87d704");
-                message.channel.send({ embed: regNum });
+                message.channel.send({ embed: functions.embedInfo(
+                    `👋 Welcome **${message.member.user.username}**! \nYou are registering with the nickname **${userNick}**. \nWrite **${rNum}** to continue, or **cancel** to exit.`
+                ) });
 
                 const filter = m => m.author.id === message.author.id;
                 
@@ -62,11 +58,9 @@ module.exports = {
                     errors: ['time'],
                 }).then(collected => {
                     if ((collected.first().content).toLowerCase() == "cancel") {
-                        let regCancel = new Discord.RichEmbed()
-                            .setAuthor("You cancelled the registration!")
-                            .setColor("#f54242");
-                        message.channel.send({ embed: regCancel });
-                        return;
+                        return message.channel.send({ embed: functions.embedFail(
+                            "You cancelled the registration!"
+                        ) });
                     }
 
                     if (collected.first().content == rNum) {
@@ -83,25 +77,20 @@ module.exports = {
                             if (err) throw err;
                         });
 
-                        let rgEnd = new Discord.RichEmbed()
-                            .setAuthor(`You registered with the nickname ${userNick}`)
-                            .setColor("#1bd9e3")
-                        message.channel.send({ embed: rgEnd });
+                        return message.channel.send({ embed: functions.embedSuccess(
+                            `You registered with the nickname **${userNick}**!`
+                        ) });
 
                     } else {
-                        let rgNumErr = new Discord.RichEmbed()
-                            .setAuthor("Wrong code!")
-                            .setColor("#1bd9e3")
-                        message.channel.send({ embed: rgNumErr });
-                        return;
+                        return message.channel.send({ embed: functions.embedFail(
+                            "Wrong code. Try again!"
+                        ) });
                     }
                     
                 }).catch(err => {
-                    let redTime = new Discord.RichEmbed()
-                        .setAuthor("Too much time has passed!")
-                        .setColor("#f54242");
-                    message.channel.send({ embed: redTime });
-                    return;
+                    return message.channel.send({ embed: functions.embedFail(
+                        "Too much time has passed!"
+                    ) });
                 });
 
             }

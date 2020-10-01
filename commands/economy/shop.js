@@ -15,7 +15,7 @@ module.exports = {
     aliases: ['store'],
     usage: '`>shop` - Main screen \n`>shop turrets` - Buy turrets (🚧) \n`>shop hulls` - Buy hulls (🚧) \n`>shop containers` - Buy Containers \n`>shop special` - Buy special items',
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args, con, functions) {
 
         let authorId = message.author.id;
 
@@ -23,11 +23,7 @@ module.exports = {
             if (err) throw err;
 
             if (rows.length < 1) {
-                let rgNo = new Discord.RichEmbed()
-                    .setAuthor("You aren't registered! Use >register (username) to create a profile.")
-                    .setColor("#f54242");
-                message.channel.send({ embed: rgNo });
-                return;
+                return message.channel.send({ embed: functions.embedRegister() });
             }
 
             if (!args[0]) {

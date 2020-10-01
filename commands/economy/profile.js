@@ -17,35 +17,27 @@ module.exports = {
     aliases: ['me'],
     usage: '`>profile` - Check your profile \n`>profile [@user]` - Check another user profile',
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args, con, functions) {
 
         if (!args[0]) {
             var authorId = message.author.id;
         } else if (message.mentions.members.first()) {
             var authorId = message.mentions.users.first().id;
         } else {
-            let err = new Discord.RichEmbed()
-                .setAuthor("You didn't mention an user!")
-                .setColor("#f54242");
-            message.channel.send({ embed: err });
-            return;
+            return message.channel.send({ embed: functions.embedFail(
+                "You didn't mention an user!"
+            ) });
         }
 
         con.query(`SELECT * FROM users WHERE id = '${authorId}'`, (err, rows) => {
             if (err) throw err;
 
             if (rows.length < 1 && !args[0]) {
-                let rgNo = new Discord.RichEmbed()
-                    .setAuthor("You aren't registered! Use >register (username) to create a profile.")
-                    .setColor("#f54242");
-                message.channel.send({ embed: rgNo });
-                return;
+                return message.channel.send({ embed: functions.embedRegister() });
             } else if (rows.length < 1 && message.mentions.members.first()) {
-                let rgNo = new Discord.RichEmbed()
-                    .setAuthor("This user isn't registered!")
-                    .setColor("#f54242");
-                message.channel.send({ embed: rgNo });
-                return;
+                return message.channel.send({ embed: functions.embedFail(
+                    "The mentioned user is not registered!"
+                ) });
             }
 
             let profile = new Discord.RichEmbed();

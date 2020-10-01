@@ -7,7 +7,6 @@
  * @since  11.01.2020
 */
 
-
 const Discord = require("discord.js");
 
 let lv = require("../../storage/levels.json");
@@ -20,7 +19,7 @@ module.exports = {
     aliases: ['inventory', 'inv'],
     usage: '`>garage` - Main Garage screen \n`>garage turrets` - Your turrets \n`>garage hulls` - Your hulls \n`>garage supplies` - Your supplies \n`>garage paints` - Your paints \n`>garage special` - Your special items \n`>garage skins` - Your skins',
     cooldown: 2,
-    execute(client, message, args, con) {
+    execute(client, message, args, con, functions) {
 
         var authorId = message.author.id;
 
@@ -30,10 +29,7 @@ module.exports = {
             var nickname = rowsUsers[0].username;
 
             if (rows.length < 1) {
-                let rgNo = new Discord.RichEmbed()
-                    .setAuthor("You aren't registered! Use >register (username) to create a profile.")
-                    .setColor("#f54242");
-                message.channel.send({ embed: rgNo });
+                message.channel.send({ embed: functions.embedRegister() });
                 return;
             };
 
