@@ -11,6 +11,7 @@ const Discord = require('discord.js');
 const mysql = require("mysql");
 const fs = require('fs');
 const config = require('./config.json');
+const functions = require('./utils/functions');
 
 // Enviroment
 let env = config['dev'] ? 'development' : 'production';
@@ -57,7 +58,7 @@ for (const file of eventsFiles) {
     const event = require(`./events/${file}`);
     const name = file.split('.')[0];
 
-    client.on(name, event.bind(null, client, con, cooldowns));
+    client.on(name, event.bind(null, client, con, cooldowns, functions));
 }
 
 // Token

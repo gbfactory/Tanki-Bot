@@ -3,7 +3,7 @@ const config = require('../config.json');
 const lv = require("../storage/levels.json");
 const ms = require('ms');
 
-module.exports = (client, con, cooldowns, message) => {
+module.exports = (client, con, cooldowns, functions, message) => {
 
     // ============================================================
     // Command Handler (https://discordjs.guide/command-handling/)
@@ -68,7 +68,7 @@ module.exports = (client, con, cooldowns, message) => {
     setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
     try {
-        command.execute(client, message, args, con);
+        command.execute(client, message, args, con, functions);
     } catch (error) {
         console.error(error);
         
