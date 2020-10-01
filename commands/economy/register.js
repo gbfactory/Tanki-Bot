@@ -33,6 +33,11 @@ module.exports = {
 
                 let userNick = args[0];
 
+                // Advise the user to remove brackets
+                if (userNick.includes('(') || userNick.includes(')')) {
+                  message.channel.send("Your nickname does not need to include the brackets! \nExample: `>register TankiBot`");
+                }
+
                 // Check if the nickname is valid
                 if (!userNick.match(/^(?=[a-zA-Z0-9-_]{3,20}$)(?!.*[_-]{2})[^_-].*[^_-]$/i)) {
                     let regIllegal = new Discord.RichEmbed()
