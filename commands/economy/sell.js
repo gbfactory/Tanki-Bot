@@ -174,7 +174,7 @@ module.exports = {
 
                         con.query(`UPDATE users SET crys = ${newPrice} WHERE id = ${authorId}`);
     
-                        con.query(`UPDATE items SET augment = 0 WHERE id = ${authorId}`);
+                        con.query(`UPDATE items SET augments = 0 WHERE id = ${authorId}`);
     
                         return message.channel.send({ embed: functions.embedSuccess(
                             `You sold all your augments for **${price}** 💎`
