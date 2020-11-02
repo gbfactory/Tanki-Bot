@@ -47,7 +47,7 @@ module.exports = {
                 
                 // Registration
                 message.channel.send({ embed: functions.embedInfo(
-                    `👋 Welcome **${message.member.user.username}**! \nYou are registering with the nickname **${userNick}**. \nWrite **${rNum}** to continue, or **cancel** to exit.`
+                    `👋 Welcome **${message.author.username}**! \nYou are registering with the nickname **${userNick}**. \nWrite **${rNum}** to continue, or **cancel** to exit.`
                 ) });
 
                 const filter = m => m.author.id === message.author.id;
@@ -67,13 +67,78 @@ module.exports = {
 
                         let newDate = Date.now();
 
-                        con.query(`INSERT INTO users (id, username, nick, xp, level, crys, tankoins, wins, losses, equipTurret, equipHull, timeDaily, timeWeekly, timePremium) VALUES ('${authorId}', '${userNick}', '', 0, 0, 1500, 0, 0, 0, 'smoky', 'hunter', '${newDate}', '${newDate}', '${newDate}')`, (err) => {
+                        const users = {
+                            "id": authorId,
+                            "username": userNick,
+                            "nick": "",
+                            "xp": 0,
+                            "level": 0,
+                            "crys": 1500,
+                            "tankoins": 0,
+                            "wins": 0,
+                            "losses": 0,
+                            "equipTurret": "smoky",
+                            "equipHull": "hunter",
+                            "timeDaily": newDate,
+                            "timeWeekly": newDate,
+                            "timePremium": newDate,
+                        }
+
+                        const items = {
+                            "id": authorId,
+                            "containers": 0,
+                            "weeklybox": 0,
+                            "dailybox": 0,
+                            "coinbox": 0,
+                            "ultrabox": 0,
+                            "repair": 0,
+                            "armor": 0,
+                            "damage": 0,
+                            "nitro": 0,
+                            "mine": 0,
+                            "battery": 0,
+                            "gold": 0,
+                            "rare": 0,
+                            "epic": 0,
+                            "legendary": 0,
+                            "skinTurrets": 0,
+                            "skinHulls": 0,
+                            "effects": 0,
+                            "augments": 0,
+                        }
+
+                        const garage = {
+                            "id": authorId,
+                            "firebird": 0,
+                            "freeze": 0,
+                            "isida": 0,
+                            "hammer": 0,
+                            "twins": 0,
+                            "ricochet": 0,
+                            "smoky": 0,
+                            "striker": 0,
+                            "vulcan": 0,
+                            "thunder": 0,
+                            "railgun": 0,
+                            "magnum": 0,
+                            "gauss": 0,
+                            "shaft": 0,
+                            "wasp": 0,
+                            "hornet": 0,
+                            "viking": 0,
+                            "hunter": 0,
+                            "dictator": 0,
+                            "titan": 0,
+                            "mammoth": 0,
+                        }
+
+                        con.query(`INSERT INTO users SET ?`, users, (err) => {
                             if (err) throw err;
                         });
-                        con.query(`INSERT INTO items (id, containers, weeklybox, dailybox, coinbox, repair, armor, damage, nitro, mine, battery, gold, rare, epic, legendary, skinTurrets, skinHulls, effects, augment) VALUES ('${authorId}', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)`, (err) => {
+                        con.query(`INSERT INTO items SET ?`, items, (err) => {
                             if (err) throw err;
                         });
-                        con.query(`INSERT INTO garage (id, firebird, freeze, isida, hammer, twins, ricochet, smoky, striker, vulcan, thunder, railgun, magnum, gauss, shaft, wasp, hornet, viking, hunter, dictator, titan, mammoth) VALUES ('${authorId}', 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0)`, (err) => {
+                        con.query(`INSERT INTO garage SET ?`, garage, (err) => {
                             if (err) throw err;
                         });
 
