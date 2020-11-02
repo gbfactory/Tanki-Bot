@@ -140,8 +140,8 @@ module.exports = {
 
                 // Add Augment
                 function addAugmnet(num) {
-                    let prev = rows[0].augment;
-                    con.query(`UPDATE items SET augment = ${prev + num} WHERE id = '${authorId}'`);
+                    let prev = rows[0].augments;
+                    con.query(`UPDATE items SET augments = ${prev + num} WHERE id = '${authorId}'`);
                 }
 
                 // Add Effect
