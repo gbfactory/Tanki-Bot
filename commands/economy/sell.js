@@ -80,7 +80,7 @@ module.exports = {
                         legendary = 0, 
                         skinTurrets = 0, 
                         skinHulls = 0, 
-                        augment = 0, 
+                        augments = 0,
                         effects = 0
                         WHERE id = ${authorId}`);
 
