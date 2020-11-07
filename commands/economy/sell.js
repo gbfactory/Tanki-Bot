@@ -53,7 +53,7 @@ module.exports = {
                         legendary = rows[0].legendary;
                         turrets = rows[0].skinTurrets;
                         hulls = rows[0].skinHulls;
-                        augments = rows[0].augment;
+                        augments = rows[0].augments;
                         effects = rows[0].effects;
 
                         price = (repair * 50) + (armor * 25) + (damage * 25) + (nitro * 25) + (mine * 25) + (battery * 60) + (rare * random(2000, 4000)) + (epic * random(4000, 8000)) + (legendary * random(8000, 16000)) + (turrets * 100000) + (hulls * 100000) + (augments * 150000) + (effects * 50000);
@@ -160,7 +160,7 @@ module.exports = {
                         ) });
                     
                     case 'augments':
-                        augments = rows[0].augment;
+                        augments = rows[0].augments;
 
                         price = (augments * 150000);
 
