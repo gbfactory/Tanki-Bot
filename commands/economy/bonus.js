@@ -15,7 +15,7 @@ let lv = require("../../storage/levels.json");
 module.exports = {
     name: 'bonus',
     description: 'Get a daily or weekly bonus of crystals and supplies.',
-    aliases: ['prize'],
+    aliases: ['prize', 'b'],
     usage: '`>bonus daily` - Get daily bonus \n`>bonus weekly` - Get weekly bonus',
     args: true,
     cooldown: 3,
@@ -30,7 +30,7 @@ module.exports = {
                 return message.channel.send({ embed: functions.embedRegister() });
             }
 
-            if (args[0] == "daily") {
+            if (args[0] == "daily" || args[0] == "d") {
                 var dailyTime = rows[0].timeDaily;
 
                 if (dailyTime <= Date.now()) {
@@ -56,7 +56,7 @@ module.exports = {
                     ) });
                 }
 
-            } else if (args[0] == "weekly") {
+            } else if (args[0] == "weekly" || args[0] == "w") {
                 var weeklyTime = rows[0].timeWeekly;
 
                 if (weeklyTime <= Date.now()) {
