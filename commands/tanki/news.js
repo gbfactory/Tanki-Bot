@@ -16,7 +16,7 @@ module.exports = {
     name: 'news',
     description: 'Get the latest news from the Tanki Website.',
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message) {
         fetch(api)
             .then(res => res.json())
             .then(json => {

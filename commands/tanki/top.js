@@ -18,7 +18,7 @@ module.exports = {
     usage: '`>top crystals` - Who earned most crystals \n`>top efficiency` - Who is most efficient \n`>top golds` - Who caught most golds \n`>top score` - Who earned more score',
     args: true,
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args) {
         const leaderboard = args[0];
 
         switch (leaderboard) {

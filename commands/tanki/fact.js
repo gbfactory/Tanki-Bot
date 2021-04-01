@@ -14,7 +14,7 @@ module.exports = {
     name: 'fact',
     description: 'Get a random fact about Tanki.',
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message) {
         const l = Object.keys(json).length;
         const r = Math.floor(Math.random() * l);
 

@@ -13,7 +13,7 @@ module.exports = {
     name: 'about',
     description: 'Get informations about the Bot.',
     cooldown: 1,
-    execute(client, message, args, con) {
+    execute(client, message) {
 
         let embed = new Discord.MessageEmbed()
             .setAuthor('TankiBot')

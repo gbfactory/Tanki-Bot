@@ -17,7 +17,7 @@ module.exports = {
     description: 'Check the weekly ratings of a player.',
     usage: '`>weekly [username]`',
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args) {
         const nickname = args[0];
 
         if (!nickname) {

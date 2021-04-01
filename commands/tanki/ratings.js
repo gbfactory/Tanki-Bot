@@ -22,7 +22,7 @@ module.exports = {
     usage: '`>ratings [nickname]`',
     args: true,
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args) {
         const nickname = args[0];
 
         fetch(`${api}${nickname}`)

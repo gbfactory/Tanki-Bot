@@ -7,8 +7,6 @@
  * @since  12.04.2019
 */
 
-const Discord = require("discord.js");
-
 module.exports = {
     name: 'register',
     description: 'Register your account in the Bot Database and unlock all the commands and features of Tanki Bot.',
@@ -152,7 +150,7 @@ module.exports = {
                         ) });
                     }
                     
-                }).catch(err => {
+                }).catch(() => {
                     return message.channel.send({ embed: functions.embedFail(
                         "Too much time has passed!"
                     ) });

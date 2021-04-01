@@ -68,8 +68,7 @@ module.exports = {
 
                         });
 
-                    }).catch(collected => {
-
+                    }).catch(() => {
                         let dropNot = new Discord.MessageEmbed()
                             .setTitle('The Gold Box has not been taken!')
                             .setFooter(`Dropped by ${dropper}`)

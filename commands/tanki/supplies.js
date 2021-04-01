@@ -18,7 +18,7 @@ module.exports = {
     aliases: ['sup'],
     usage: '`>supplies [nickname]`',
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args) {
         const nickname = args[0];
 
         if (!nickname) {

@@ -15,8 +15,7 @@ module.exports = {
     aliases: ['commands'],
     usage: '`>help` - List of all commands \n`>help [command]` - Info about a command',
     cooldown: 1,
-    execute(client, message, args, con) {
-        const data = [];
+    execute(client, message, args) {
         const { commands } = message.client;
 
         if (!args.length) {

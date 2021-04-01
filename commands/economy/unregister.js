@@ -62,7 +62,7 @@ module.exports = {
                         "Wrong code. Try again!"
                     ) });
                 }
-            }).catch(err => {
+            }).catch(() => {
                 return message.channel.send({ embed: functions.embedFail(
                     "Too much time has passed!"
                 ) });

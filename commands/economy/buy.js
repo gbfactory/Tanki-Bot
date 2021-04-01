@@ -7,8 +7,6 @@
  * @since  06.01.2020
 */
 
-const Discord = require("discord.js");
-
 module.exports = {
     name: 'buy',
     description: 'Buy new items and equipment from the shop.',

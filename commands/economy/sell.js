@@ -7,8 +7,6 @@
  * @since 04.03.2020
  */
 
-const Discord = require("discord.js");
-
 module.exports = {
     name: 'sell',
     description: 'Sell your items like paints, supplies or skins to get some crystals!',

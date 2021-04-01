@@ -17,7 +17,7 @@ module.exports = {
     usage: '`>suggest [your suggestion]`',
     args: true,
     cooldown: 10,
-    execute(client, message, args, con) {
+    execute(client, message, args) {
 
         // Channel settings
         let cmdChannel = config['suggestion']['cmdChannel'];

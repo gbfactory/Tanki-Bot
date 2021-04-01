@@ -7,8 +7,6 @@
  * @since 25.03.2020
  */
 
-const Discord = require('discord.js');
-
 module.exports = {
     name: 'gift',
     description: 'Send crystals as a gift to another user.',

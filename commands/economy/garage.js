@@ -9,7 +9,6 @@
 
 const Discord = require("discord.js");
 
-let lv = require("../../storage/levels.json");
 let turrets = require('../../storage/turrets.json');
 let hulls = require('../../storage/hulls.json');
 
@@ -31,7 +30,7 @@ module.exports = {
             if (rows.length < 1) {
                 message.channel.send({ embed: functions.embedRegister() });
                 return;
-            };
+            }
 
             // nome equip dalla tabella users
             let dTurret = rows[0].equipTurret;
@@ -40,10 +39,10 @@ module.exports = {
             // table garage
             con.query(`SELECT * FROM garage WHERE id = '${authorId}'`, (err, rows) => {
                 if (err) throw err;
-                var rowsGarage = rows;
+                // var rowsGarage = rows;
 
-                //let tName = dTurret.charAt(0).toUpperCase() + dTurret.substring(1) +RIMOSSO " Mk"RIMOSSO + rows[0][dTurret];
-                //let hName = dHull.charAt(0).toUpperCase() + dHull.substring(1) +RIMOSSO " Mk"RIMOSSO + rows[0][dHull];
+                // let tName = dTurret.charAt(0).toUpperCase() + dTurret.substring(1) +RIMOSSO " Mk"RIMOSSO + rows[0][dTurret];
+                // let hName = dHull.charAt(0).toUpperCase() + dHull.substring(1) +RIMOSSO " Mk"RIMOSSO + rows[0][dHull];
 
                 // livello equip dalla tabella garage
                 let tLevel = rows[0][dTurret];

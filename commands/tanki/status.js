@@ -20,7 +20,7 @@ module.exports = {
     aliases: ['server', 'load'],
     usage: '`>status` - Check main servers load \n`>status test` - Check test servers load',
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args) {
 
         switch (args[0]) {
             // Test Server Status

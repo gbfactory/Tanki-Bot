@@ -20,7 +20,7 @@ module.exports = {
     usage: '`>check [nickname] [item category] [item name]` \nValid categories are: `turret`, `hull`, `paint`, `drone`, `module` \nWhite spaces must be replaced with underscores.',
     args: true,
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args) {
         // Args
         const nickname = args[0];
         const category = args[1];

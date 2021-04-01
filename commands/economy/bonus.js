@@ -7,7 +7,6 @@
  * @since  11.01.2020
 */
 
-const Discord = require("discord.js");
 const ms = require('ms');
 
 let lv = require("../../storage/levels.json");
@@ -19,7 +18,7 @@ module.exports = {
     usage: '`>bonus daily` - Get daily bonus \n`>bonus weekly` - Get weekly bonus',
     args: true,
     cooldown: 3,
-    execute(client, message, args, con,functions) {
+    execute(client, message, args, con, functions) {
 
         var authorId = message.author.id;
 
