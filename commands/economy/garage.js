@@ -42,8 +42,8 @@ module.exports = {
                 if (err) throw err;
                 var rowsGarage = rows;
 
-                //let tName = dTurret.charAt(0).toUpperCase() + dTurret.substring(1) + " Mk" + rows[0][dTurret];
-                //let hName = dHull.charAt(0).toUpperCase() + dHull.substring(1) + " Mk" + rows[0][dHull];
+                //let tName = dTurret.charAt(0).toUpperCase() + dTurret.substring(1) +RIMOSSO " Mk"RIMOSSO + rows[0][dTurret];
+                //let hName = dHull.charAt(0).toUpperCase() + dHull.substring(1) +RIMOSSO " Mk"RIMOSSO + rows[0][dHull];
 
                 // livello equip dalla tabella garage
                 let tLevel = rows[0][dTurret];
@@ -60,7 +60,7 @@ module.exports = {
 
                 // garage main screen
                 if (!args[0]) {
-                    let garageMain = new Discord.RichEmbed()
+                    let garageMain = new Discord.MessageEmbed()
                         .setColor("#87d704")
                         .setThumbnail("https://i.imgur.com/znIW6uG.png")
                         .setAuthor("TankiBot")
@@ -73,7 +73,7 @@ module.exports = {
 
 
                 } else if (args[0] == "turrets") {
-                    let garageTurrets = new Discord.RichEmbed();
+                    let garageTurrets = new Discord.MessageEmbed();
                     garageTurrets.setColor("#87d704")
                     garageTurrets.setThumbnail("https://i.imgur.com/znIW6uG.png")
                     garageTurrets.setAuthor("TankiBot")
@@ -145,7 +145,7 @@ module.exports = {
 
                 } else if (args[0] == "hulls") {
 
-                    let garageHulls = new Discord.RichEmbed();
+                    let garageHulls = new Discord.MessageEmbed();
                     garageHulls.setColor("#87d704")
                     garageHulls.setThumbnail("https://i.imgur.com/znIW6uG.png")
                     garageHulls.setAuthor("TankiBot")
@@ -206,7 +206,7 @@ module.exports = {
                         let battery = rows[0].battery;
                         let gold = rows[0].gold;
 
-                        let garageSups = new Discord.RichEmbed()
+                        let garageSups = new Discord.MessageEmbed()
                             .setColor("#87d704")
                             .setThumbnail("https://i.imgur.com/znIW6uG.png")
                             .setAuthor("TankiBot")
@@ -228,7 +228,7 @@ module.exports = {
                         let paintEpic = rows[0].epic;
                         let paintLegend = rows[0].legendary;
 
-                        let garagePaints = new Discord.RichEmbed()
+                        let garagePaints = new Discord.MessageEmbed()
                             .setColor("#87d704")
                             .setThumbnail("https://i.imgur.com/znIW6uG.png")
                             .setAuthor("TankiBot")
@@ -254,7 +254,7 @@ module.exports = {
                         // passes
                         let pRename = rows[0].coinbox;
 
-                        let garageSkins = new Discord.RichEmbed()
+                        let garageSkins = new Discord.MessageEmbed()
                             .setColor("#87d704")
                             .setThumbnail("https://i.imgur.com/znIW6uG.png")
                             .setAuthor("TankiBot")
@@ -273,7 +273,7 @@ module.exports = {
                         let turrs = rows[0].skinTurrets;
                         let hulls = rows[0].skinHulls;
 
-                        let garageSkins = new Discord.RichEmbed()
+                        let garageSkins = new Discord.MessageEmbed()
                             .setColor("#87d704")
                             .setThumbnail("https://i.imgur.com/znIW6uG.png")
                             .setAuthor("TankiBot")
@@ -284,7 +284,7 @@ module.exports = {
                         message.channel.send({ embed: garageSkins });
                     });
                 } else {
-                    let noArgs = new Discord.RichEmbed()
+                    let noArgs = new Discord.MessageEmbed()
                         .setAuthor("Use >garage to see all the different categories")
                         .setColor("#f54242");
                     message.channel.send({ embed: noArgs });

@@ -8,7 +8,7 @@
  */
 
 const Discord = require("discord.js");
-const snekfetch = require('snekfetch');
+const fetch = require('node-fetch');
 
 const status_main = 'https://tankionline.com/s/status.js';
 const status_test = 'https://test.tankionline.com/public_test';
@@ -25,55 +25,55 @@ module.exports = {
         switch (args[0]) {
             // Test Server Status
             case 'test':
-                snekfetch.get(status_test).then(data => {
-                    if (data.body) {
-                        let data_json = JSON.parse(data.body);
+                fetch(status_test)
+                    .then(res => res.json())
+                    .then(json => {
+                        if (json) {
+                            let online = 0;
 
-                        let online = 0;
+                            for (var i = 0; i < Object.keys(json).length; i++) {
+                                online += json[i].UserCount;
+                            }
 
-                        for (var i = 0; i < Object.keys(data_json).length; i++) {
-                            online += data_json[i].UserCount;
+                            let statusTest = new Discord.MessageEmbed()
+                                .setAuthor('Tanki Bot')
+                                .setTitle('Test Server Status')
+                                .setThumbnail('https://i.imgur.com/NN3Imra.png')
+                                .addField('Online', online)
+                                .setColor('#e8154a')
+                                .setTimestamp();
+
+                            message.channel.send({ embed: statusTest });
+                        } else {
+                            message.channel.send('Error. Try again later.');
                         }
-
-                        let statusTest = new Discord.RichEmbed()
-                            .setAuthor('Tanki Bot')
-                            .setTitle('Test Server Status')
-                            .setThumbnail('https://i.imgur.com/NN3Imra.png')
-                            .addField('Online', online)
-                            .setColor('#e8154a')
-                            .setTimestamp();
-
-                        message.channel.send({ embed: statusTest });
-                    } else {
-                        message.channel.send('Error. Try again later.');
-                    }
-                })
+                    })
                 break;
-        
+
             // Main Server Status
             default:
-                snekfetch.get(status_main).then(data => {
-                    if (data.body) {
-                        let data_json = JSON.parse(data.body);
+                fetch(status_main)
+                    .then(res => res.json())
+                    .then(json => {
+                        if (json) {
+                            let online = Object.values(json.nodes).reduce((total, obj) => (total + obj.online), 0);
+                            let inbattles = Object.values(json.nodes).reduce((total, obj) => (total + obj.inbattles), 0);
 
-                        let online = Object.values(data_json.nodes).reduce((total, obj) => (total + obj.online), 0);
-                        let inbattles = Object.values(data_json.nodes).reduce((total, obj) => (total + obj.inbattles), 0);
+                            let statusMain = new Discord.MessageEmbed()
+                                .setAuthor('Tanki Bot')
+                                .setTitle('Server Status')
+                                .setThumbnail('https://i.imgur.com/NN3Imra.png')
+                                .addField('Online', online, true)
+                                .addField('In Battles', inbattles, true)
+                                .addField('Idle', online - inbattles, true)
+                                .setColor('#00940f')
+                                .setTimestamp();
 
-                        let statusMain = new Discord.RichEmbed()
-                            .setAuthor('Tanki Bot')
-                            .setTitle('Server Status')
-                            .setThumbnail('https://i.imgur.com/NN3Imra.png')
-                            .addField('Online', online, true)
-                            .addField('In Battles', inbattles, true)
-                            .addField('Idle', online - inbattles, true)
-                            .setColor('#00940f')
-                            .setTimestamp();
-
-                        message.channel.send({ embed: statusMain })
-                    } else {
-                        message.channel.send('Error. Try again later.')
-                    }
-                })
+                            message.channel.send({ embed: statusMain })
+                        } else {
+                            message.channel.send('Error. Try again later.')
+                        }
+                    })
                 break;
         }
 

@@ -55,7 +55,7 @@ module.exports = {
                     ) });
                 }
 
-                // Buy rename pass (check for string "rename pass")
+            // Buy rename pass (check for string "rename pass")
             } else if (args[0].toLowerCase() === "rename" && args[1].toLowerCase() === "pass") {
 
                 if (rowsUsers[0].tankoins >= 1000) {

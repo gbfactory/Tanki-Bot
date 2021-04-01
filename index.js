@@ -16,7 +16,7 @@ const functions = require('./utils/functions');
 // Enviroment
 let env = config['dev'] ? 'development' : 'production';
 
-console.log('[Tanki Bot] Starting in "' + env + '".');
+console.log(`[Tanki Bot] Starting in ${env}`);
 
 // Database Connection
 var con = mysql.createConnection({

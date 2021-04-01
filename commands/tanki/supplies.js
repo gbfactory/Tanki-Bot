@@ -8,7 +8,7 @@
 */
 
 const Discord = require("discord.js");
-const snekfetch = require("snekfetch");
+const fetch = require('node-fetch');
 
 const api = "https://ratings.tankionline.com/get_stat/profile/?user=";
 
@@ -19,60 +19,59 @@ module.exports = {
     usage: '`>supplies [nickname]`',
     cooldown: 3,
     execute(client, message, args, con) {
-
-        var nickname = args[0];
-
-        var nickname = args[0];
+        const nickname = args[0];
 
         if (!nickname) {
-            let noNickname = new Discord.RichEmbed()
+            let noNickname = new Discord.MessageEmbed()
                 .setAuthor('You have to specify a nickname >ratings (nickname)')
                 .setColor('#f54242');
 
             return message.channel.send({ embed: noNickname });
         }
 
-        snekfetch.get(api + nickname).then(r => {
+        fetch(`${api}${nickname}`)
+            .then(res => res.json())
+            .then(json => {
 
-            if (r.body.responseType === 'NOT_FOUND') {
-                let noUser = new Discord.RichEmbed()
-                    .setAuthor('Player not found!')
-                    .setColor('#f54242');
+                if (json.responseType === 'NOT_FOUND') {
+                    let noUser = new Discord.MessageEmbed()
+                        .setAuthor('Player not found!')
+                        .setColor('#f54242');
 
-                return message.channel.send({ embed: noUser });
-            } else if (!r.body.responseType) {
-                let noApi = new Discord.RichEmbed()
-                    .setAuthor('Tanki Online API unavailable. Try again later.')
-                    .setColor('#f54242');
-                return message.channel.send({ embed: noApi });
-            }
+                    return message.channel.send({ embed: noUser });
+                } else if (!json.responseType) {
+                    let noApi = new Discord.MessageEmbed()
+                        .setAuthor('Tanki Online API unavailable. Try again later.')
+                        .setColor('#f54242');
+                    return message.channel.send({ embed: noApi });
+                }
 
-            var res = r.body.response;
+                var res = json.response;
 
-            var name = res.name;
+                var name = res.name;
 
-            var suppliesArray = res.suppliesUsage;
-            var suppliesUsage = 0;
+                var suppliesArray = res.suppliesUsage;
+                var suppliesUsage = 0;
 
-            //embed
-            let supplies = new Discord.RichEmbed()
-                .setAuthor('Tanki Bot')
-                .setTitle(`Ratings - Profile`)
-                .setDescription(`Profile of ${name}`)
-                .setColor("#00ff19")
-                .setTimestamp()
-                .setThumbnail("https://i.imgur.com/KSN7NV8.png")
+                //embed
+                let supplies = new Discord.MessageEmbed()
+                    .setAuthor('Tanki Bot')
+                    .setTitle(`Ratings - Profile`)
+                    .setDescription(`Profile of ${name}`)
+                    .setColor("#00ff19")
+                    .setTimestamp()
+                    .setThumbnail("https://i.imgur.com/KSN7NV8.png")
 
-            for (var i = 0; i < suppliesArray.length; i++) {
-                supplies.addField(suppliesArray[i]['name'], suppliesArray[i]['usages'], true)
-                suppliesUsage += suppliesArray[i]['usages'];
-            }
+                for (var i = 0; i < suppliesArray.length; i++) {
+                    supplies.addField(suppliesArray[i]['name'], suppliesArray[i]['usages'], true)
+                    suppliesUsage += suppliesArray[i]['usages'];
+                }
 
-            supplies.addField("<:sups:660260925546168404> **Total Supplies Used**", suppliesUsage, true);
+                supplies.addField("<:sups:660260925546168404> **Total Supplies Used**", suppliesUsage, true);
 
-            message.channel.send({ embed: supplies });
+                message.channel.send({ embed: supplies });
 
-        })
+            })
 
     },
 };

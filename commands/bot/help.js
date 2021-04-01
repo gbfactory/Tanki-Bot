@@ -20,7 +20,7 @@ module.exports = {
         const { commands } = message.client;
 
         if (!args.length) {
-            const helpEmbed = new Discord.RichEmbed()
+            const helpEmbed = new Discord.MessageEmbed()
                 .setAuthor('Tanki Bot')
                 .setTitle('Help')
                 .setThumbnail('https://i.imgur.com/Kmf068z.png')
@@ -37,14 +37,14 @@ module.exports = {
         const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
 
         if (!command) {
-            const errEmbed = new Discord.RichEmbed()
+            const errEmbed = new Discord.MessageEmbed()
                 .setAuthor('That command is not valid.')
                 .setColor('#f54242');
             
             return message.channel.send({ embed:errEmbed });
         }
 
-        const cmdEmbed = new Discord.RichEmbed()
+        const cmdEmbed = new Discord.MessageEmbed()
             .setAuthor('Tanki Bot')
             .setTitle(`Help \`${command.name}\``)
             .setThumbnail('https://i.imgur.com/Kmf068z.png')

@@ -31,7 +31,7 @@ module.exports = {
 
             if (date <= premiumDate) {
 
-                let premiumEmbed = new Discord.RichEmbed()
+                let premiumEmbed = new Discord.MessageEmbed()
                     .setAuthor('Tanki Bot')
                     .setTitle('Premium Account')
                     .addField('Premium Account Active', `Expires in **${ms(premiumDate - date, { long: true })}**`)
@@ -43,7 +43,7 @@ module.exports = {
 
             } else {
 
-                let inactivePremium = new Discord.RichEmbed()
+                let inactivePremium = new Discord.MessageEmbed()
                     .setAuthor('Tanki Bot')
                     .setTitle('Premium Account')
                     .addField('Premium Account Not Active', 'Get premium time by opening containers.')

@@ -27,7 +27,7 @@ module.exports = {
                 return message.channel.send({ embed: functions.embedRegister() });
             }
 
-            let regNum = new Discord.RichEmbed()
+            let regNum = new Discord.MessageEmbed()
                 .setAuthor("TankiBot - Unregistration")
                 .addField(`Attention! Unregistering will deleate all your user data from the database, this cannot be undone!`)
                 .setDescription(`If you are sure, write **${rNum}** to unregister, or cancel to exit.`)

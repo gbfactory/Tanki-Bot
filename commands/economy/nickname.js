@@ -30,7 +30,7 @@ module.exports = {
 
             // Check your actual nickname
             if (!newNick) {
-                let checkEmbed = new Discord.RichEmbed()
+                let checkEmbed = new Discord.MessageEmbed()
                     .setAuthor('Tanki Bot')
                     .setTitle('Nickname')
                     .setDescription('Set your Tanki Nickname to check your ratings faster and let other people know who you are.')

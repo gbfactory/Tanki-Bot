@@ -23,7 +23,7 @@ module.exports = {
             if (err) throw err;
 
             if (rows.length < 1) {
-                let rgNo = new Discord.RichEmbed()
+                let rgNo = new Discord.MessageEmbed()
                     .setAuthor("You aren't registered! Use >register (username) to create a profile.")
                     .setColor("#f54242");
                 message.channel.send({ embed: rgNo });
@@ -32,7 +32,7 @@ module.exports = {
 
             // Check if the nickname is valid
             if (!args[0].match(/^(?=[a-zA-Z0-9-_]{3,20}$)(?!.*[_-]{2})[^_-].*[^_-]$/i)) {
-                let regIllegal = new Discord.RichEmbed()
+                let regIllegal = new Discord.MessageEmbed()
                     .setAuthor('Invalid nickname!')
                     .setDescription('Your nickname can contain only letters, numbers and symbols (_, -). It must be between 3 and 20 characters.')
                     .setColor("#f54242");
@@ -43,9 +43,9 @@ module.exports = {
             // Update the nickname
             con.query(`UPDATE users SET nick = ? WHERE id = '${authorId}'`, [args[0]]);
 
-            let set = new Discord.RichEmbed()
+            let set = new Discord.MessageEmbed()
                 .setColor("#00ffff")
-                .setAuthor("You set your nickname to " + args[0])
+                .setAuthor(`You set your nickname to ${args[0]}`)
             message.channel.send({ embed: set });
             return;
 

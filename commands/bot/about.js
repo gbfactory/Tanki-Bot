@@ -15,7 +15,7 @@ module.exports = {
     cooldown: 1,
     execute(client, message, args, con) {
 
-        let embed = new Discord.RichEmbed()
+        let embed = new Discord.MessageEmbed()
             .setAuthor('TankiBot')
             .setColor('#982b82')
             .setThumbnail('https://i.imgur.com/pQAtVhk.png')

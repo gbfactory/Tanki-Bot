@@ -39,7 +39,7 @@ module.exports = {
 
                 var dropper = message.author.username;
 
-                let dropEmbed = new Discord.RichEmbed()
+                let dropEmbed = new Discord.MessageEmbed()
                     .setTitle('A Gold Box has just dropped')
                     .setDescription('<a:golddropping:520985638317588480> Take it by writing `goldbox` in the chat')
                     .setThumbnail('https://i.imgur.com/fvBuGb3.png')
@@ -52,7 +52,7 @@ module.exports = {
 
                         var takenId = collected.first().author.id;
 
-                        let dropTaken = new Discord.RichEmbed()
+                        let dropTaken = new Discord.MessageEmbed()
                             .setColor('#ebcc34')
                             .setAuthor(`${collected.first().author.username} has taken the Gold Box!`)
                             .setThumbnail('https://i.imgur.com/7heALnz.png')
@@ -70,7 +70,7 @@ module.exports = {
 
                     }).catch(collected => {
 
-                        let dropNot = new Discord.RichEmbed()
+                        let dropNot = new Discord.MessageEmbed()
                             .setTitle('The Gold Box has not been taken!')
                             .setFooter(`Dropped by ${dropper}`)
                             .setColor('#ebcc34')

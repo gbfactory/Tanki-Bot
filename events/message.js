@@ -25,7 +25,7 @@ module.exports = (client, con, cooldowns, functions, message) => {
     console.log(`[CMD] ${message.author.username} (${message.author.id}) used the command ${command.name} ${args.join(' ')}`);
 
     if (command.args && !args.length) {
-        const errEmbed = new Discord.RichEmbed()
+        const errEmbed = new Discord.MessageEmbed()
             .setAuthor(`❌ Wrong usage of the command ${command.name}!`)
             .setColor('#f54242')
             
@@ -52,14 +52,14 @@ module.exports = (client, con, cooldowns, functions, message) => {
         if (now < expirationTime) {
             const timeLeft = ms(expirationTime - now, { long: true });
             
-            const timeEmbed = new Discord.RichEmbed()
+            const timeEmbed = new Discord.MessageEmbed()
                 .setAuthor(`Wait ${timeLeft} to use this command again!`)
                 .setColor('#f54242');
 
-            message.delete(1000);
+            message.delete({ timeout: 1000 });
 
             return message.channel.send({ embed:timeEmbed }).then(msg => {
-                msg.delete(1000);
+                msg.delete({ timeout: 1000 });
             });
         }
     }
@@ -72,12 +72,12 @@ module.exports = (client, con, cooldowns, functions, message) => {
     } catch (error) {
         console.error(error);
         
-        const msgError = new Discord.RichEmbed()
+        const msgError = new Discord.MessageEmbed()
             .setAuthor(`There was an error while executing this command. Try again later. In the meantime try contacting the bot developer. Thanks.`)
             .setColor('#f54242');
 
         message.channel.send({ embed:msgError }).then(msg => {
-            msg.delete(10000);
+            msg.delete({ timeout: 1000 });
         })
     }
     
@@ -111,7 +111,7 @@ module.exports = (client, con, cooldowns, functions, message) => {
                     con.query(`UPDATE users SET level = ${lvl + 1} WHERE id = '${authorId}'`);
                     con.query(`UPDATE users SET crys = ${crys + addCrys} WHERE id = '${authorId}'`);
         
-                    let lvupEmbed = new Discord.RichEmbed()
+                    let lvupEmbed = new Discord.MessageEmbed()
                         .setColor("#ffc300")
                         .setThumbnail(lv[lvl + 1].image)
                         .addField("✨ Rank up! ✨", `🎉 Congratulations **${authorName}**! \nNow you are **${lv[lvl + 1].name}** \n+${lv[lvl + 1].crystals} 💎`)

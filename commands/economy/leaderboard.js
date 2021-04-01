@@ -36,7 +36,7 @@ module.exports = {
             con.query(`SELECT id, username, crys FROM users ORDER BY crys DESC`, (err, rows) => {
                 if (err) throw err;
 
-                let topCrys = new Discord.RichEmbed()
+                let topCrys = new Discord.MessageEmbed()
                     .setAuthor("Tanki Bot")
                     .setTitle("Crystals Leaderboard")
 
@@ -53,7 +53,7 @@ module.exports = {
             con.query(`SELECT id, username, xp FROM users ORDER BY xp DESC`, (err, rows) => {
                 if (err) throw err;
 
-                let topExp = new Discord.RichEmbed()
+                let topExp = new Discord.MessageEmbed()
                     .setAuthor("Tanki Bot")
                     .setTitle("Experience Leaderboard")
 
@@ -68,7 +68,7 @@ module.exports = {
             con.query(`SELECT id, username, tankoins FROM users ORDER BY tankoins DESC`, (err, rows) => {
                 if (err) throw err;
 
-                let topExp = new Discord.RichEmbed()
+                let topExp = new Discord.MessageEmbed()
                     .setAuthor("Tanki Bot")
                     .setTitle("Tankoins Leaderboard")
 

@@ -9,9 +9,9 @@
 
 const Discord = require("discord.js");
 
-let container = require('../../storage/container.json');
-let daily = require('../../storage/dailybox.json');
-let weekly = require('../../storage/weeklybox.json');
+const container = require('../../storage/container.json');
+const daily = require('../../storage/dailybox.json');
+const weekly = require('../../storage/weeklybox.json');
 
 module.exports = {
     name: 'open',
@@ -19,7 +19,7 @@ module.exports = {
     usage: '`>open container` - Open a Container \n`>open weekly` - Open a Weekly Box \n`>open daily` - Open a Daily Box',
     args: true,
     cooldown: 3,
-    execute(client, message, args, con) {
+    execute(client, message, args, con, functions) {
 
         let authorId = message.author.id;
         let boxType = args[0].toLowerCase();
@@ -30,12 +30,7 @@ module.exports = {
 
             // Check that the user is registered in the db
             if (rows.length < 1) {
-                let rgNo = new Discord.RichEmbed()
-                    .setAuthor("You aren't registered! Use >register (username) to create a profile.")
-                    .setColor("#f54242");
-
-                message.channel.send({ embed: rgNo });
-                return;
+                return message.channel.send({ embed: functions.embedRegister() });
             }
 
             // Rows from the table "users"
@@ -169,11 +164,9 @@ module.exports = {
 
                     // Check if the user has containers
                     if (rows[0].containers < 1) {
-                        let boxNo = new Discord.RichEmbed()
-                            .setAuthor("You don't have containers! Buy them with >shop")
-                            .setColor("#f54242");
-                        message.channel.send({ embed: boxNo });
-                        return;
+                        return message.channel.send({ embed: functions.embedError(
+                            "You don't have containers! Buy them with >shop"
+                        ) });
                     }
 
                     // Vars
@@ -312,17 +305,17 @@ module.exports = {
 
                         case 'augment':
                             addAugmnet(quantity);
-                            quantity = 'Augment for ' + equip + ':';
+                            quantity = `Augment for ${equip}:`;
                             break;
 
                         case 'effect':
                             addEffect(quantity);
-                            quantity = 'Effect for ' + equip + ':';
+                            quantity = `Effect for ${equip}:`;
                             break;
 
                         case 'premium':
                             addPremium(quantity);
-                            quantity = quantity + " Days of";
+                            quantity = `${quantity} Days of`;
                             break;
 
                         case 'paint':
@@ -347,13 +340,13 @@ module.exports = {
                     }
 
                     // Container embed
-                    let itemEmbed = new Discord.RichEmbed()
+                    let itemEmbed = new Discord.MessageEmbed()
                         .setAuthor('Tanki Bot')
                         .setTitle('You opened a Container!')
                         .setDescription(`You found ${aan} ${rarity} item: **${quantity} ${name}**`)
                         .setThumbnail(image)
                         .setColor(color)
-                        .setFooter(` ${message.author.username} | +${exp}xp`, message.author.avatarURL);
+                        .setFooter(` ${message.author.username} | +${exp}xp`, message.author.avatarURL());
 
                     message.channel.send({ embed: itemEmbed });
                     return;
@@ -363,11 +356,9 @@ module.exports = {
 
                     // Check if the user has a Daily Box
                     if (rows[0].dailybox < 1) {
-                        let boxNo = new Discord.RichEmbed()
-                            .setAuthor("You don't have any Daily Box! Claim one with >bonus daily")
-                            .setColor("#f54242");
-                        message.channel.send({ embed: boxNo });
-                        return;
+                        return message.channel.send({ embed: functions.embedError(
+                            "You don't have any Daily Box! Get one with `>bonus daily`"
+                        ) });
                     }
 
                     // Vars
@@ -397,13 +388,13 @@ module.exports = {
                     }
 
                     // Daily embed
-                    let dailyFound = new Discord.RichEmbed()
+                    let dailyFound = new Discord.MessageEmbed()
                         .setAuthor('Tanki Bot')
                         .setTitle('You opened a Daily Box')
                         .setDescription(`You found "${daily[random].name}"`)
                         .setThumbnail(daily[random].image)
                         .setColor("#e8fc03")
-                        .setFooter(` ${message.author.username}`, message.author.avatarURL);
+                        .setFooter(` ${message.author.username}`, message.author.avatarURL());
 
                     message.channel.send({ embed: dailyFound });
                     return;
@@ -413,11 +404,9 @@ module.exports = {
 
                     // Check
                     if (rows[0].weeklybox < 1) {
-                        let boxNo = new Discord.RichEmbed()
-                            .setAuthor("You don't have any Weekly Box! Claim one with >bonus weekly")
-                            .setColor("#f54242");
-                        message.channel.send({ embed: boxNo });
-                        return;
+                        return message.channel.send({ embed: functions.embedError(
+                            "You don't have any Daily Box! Get one with `>bonus weekly`"
+                        ) });
                     }
 
                     // Get the user rank (the daily box content changes as the user rank changes)
@@ -444,13 +433,13 @@ module.exports = {
                     addTankoins(tankoins);
 
                     // Weekly embed
-                    let weeklyFound = new Discord.RichEmbed()
+                    let weeklyFound = new Discord.MessageEmbed()
                         .setAuthor('Tanki Bot')
                         .setTitle('You opened a Weekly Box')
                         .setDescription(`You got: \n+${repair} <:Repair_symbol:671631352797331458> Repair Kit \n+${armor} <:DA_symbol:671631353040863262> Double Armor \n+${damage} <:DD_symbol:671631352717639697> Double Damage \n+${nitro} <:Speed_symbol:671631352982011905> Speed Boost \n+${mine} <:Mine_symbol:671631352982011924> Mines \n+${battery} <:Icon_battery_supply:671631352994725898> Batteries \n+${crystals} <:crys:660257474317910026> Crystals \n+${tankoins} <:tankoin:660948390263128124> Tankoins`)
                         .setThumbnail("https://i.imgur.com/SXQ3u8n.png")
                         .setColor("#e8fc03")
-                        .setFooter(` ${message.author.username}`, message.author.avatarURL);
+                        .setFooter(` ${message.author.username}`, message.author.avatarURL());
 
                     message.channel.send({ embed: weeklyFound });
                     return;

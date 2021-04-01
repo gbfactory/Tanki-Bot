@@ -25,9 +25,9 @@ module.exports = {
 
         // Allow command only in selected channel
         if (message.channel.id != cmdChannel) {
-            message.delete();
+            message.delete({ timeout: 0 });
             return message.channel.send('You can\'t use this commad here!').then(msg => {
-                msg.delete(1500);
+                msg.delete({ timeout: 1500 });
             });
         }
 
@@ -37,27 +37,27 @@ module.exports = {
 
         // Check if there is a suggestion
         if (!suggestion) {
-            message.delete;
+            message.delete({ timeout: 0 });
             return message.channel.send('You have to make a suggestion!').then(msg => {
-                msg.delete(3000);
+                msg.delete({ timeout: 3000 });
             });
         }
 
         // Delete the suggestion message
-        message.delete();
+        message.delete({ timeout: 0 });
 
         // Send thanks message
         message.channel.send('Thanks for your suggestion!').then(msg => {
-            msg.delete(1000);
+            msg.delete({ timeout: 1000 });
         });
 
         // Create the embed
-        let suggestionEmbed = new Discord.RichEmbed()
+        let suggestionEmbed = new Discord.MessageEmbed()
             .setAuthor('Tanki Bot')
-            .setTitle('Suggestion by ' + author)
+            .setTitle(`Suggestion by ${author}`)
             .setDescription(suggestion)
             .setTimestamp()
-            .setFooter('ID ' + Math.random().toString(36).substr(2, 9))
+            .setFooter(`ID ${Math.random().toString(36).substr(2, 9)}`)
 
         // Send the msg to the configured channel
         client.channels.get(ansChannel).send({ embed: suggestionEmbed }).then(msg => {
@@ -66,7 +66,7 @@ module.exports = {
         });
 
         // Send msg in pm to gb
-        client.fetchUser('397387465024864257', false).then(user => {
+        client.users.fetch('397387465024864257', false).then(user => {
             user.send({ embed: suggestionEmbed });
         })
 

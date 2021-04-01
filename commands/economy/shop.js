@@ -27,7 +27,7 @@ module.exports = {
             }
 
             if (!args[0]) {
-                let shop = new Discord.RichEmbed()
+                let shop = new Discord.MessageEmbed()
                     .setColor("#00ffff")
                     .setAuthor("Tanki Bot")
                     .setTitle("<:MenuShop:661186115310583808> Shop")
@@ -41,7 +41,7 @@ module.exports = {
             } else if (args[0] == "hulls" || args[0] == "h") {
                 message.channel.send("❌ Coming soon...")
             } else if (args[0] == "containers" || args[0] == "c") {
-                let shopContainers = new Discord.RichEmbed()
+                let shopContainers = new Discord.MessageEmbed()
                     .setColor("#00ffff")
                     .setThumbnail('https://i.imgur.com/CtoiatU.png')
                     .setAuthor("Tanki Bot")
@@ -53,7 +53,7 @@ module.exports = {
                 message.channel.send({ embed: shopContainers });
 
             } else if (args[0] == "special") {
-                let shopSpecial = new Discord.RichEmbed()
+                let shopSpecial = new Discord.MessageEmbed()
                     .setColor("#00ffff")
                     .setThumbnail('https://i.imgur.com/CtoiatU.png')
                     .setAuthor("Tanki Bot")

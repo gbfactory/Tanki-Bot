@@ -40,7 +40,7 @@ module.exports = {
                 ) });
             }
 
-            let profile = new Discord.RichEmbed();
+            let profile = new Discord.MessageEmbed();
             profile.setAuthor("Tanki Bot");
             profile.setTitle("<:elmetto:660442439441448981> User Profile");
             profile.setColor("#87d704");
@@ -52,7 +52,7 @@ module.exports = {
                 if (rows[0].nick == "") {
                     tankiNick = "";
                 } else {
-                    tankiNick = "(Tanki Nickname: " + rows[0].nick + ")";
+                    tankiNick = `(Tanki Nickname: ${rows[0].nick})`;
                 }
 
                 let rankImg = lv[rows[0].level].image;
@@ -90,8 +90,8 @@ module.exports = {
                 con.query(`SELECT ${getTurret}, ${getHull} FROM garage WHERE id = ${authorId}`, (err, rows) => {
                     if (err) throw err
 
-                    let turret = getTurret.charAt(0).toUpperCase() + getTurret.slice(1) + " Mk" + rows[0][getTurret];
-                    let hull = getHull.charAt(0).toUpperCase() + getHull.slice(1) + " Mk" + rows[0][getHull];
+                    let turret = `${getTurret.charAt(0).toUpperCase()} ${getTurret.slice(1)} Mk ${rows[0][getTurret]}`;
+                    let hull = `${getHull.charAt(0).toUpperCase()} ${getHull.slice(1)} Mk ${rows[0][getHull]}`
 
                     profile.addField("**Equip**", `${turret} \n${hull}`, true);
 
