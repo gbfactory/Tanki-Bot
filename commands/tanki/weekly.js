@@ -65,9 +65,9 @@ module.exports = {
 
                 // Old Ratings
                 // Position
-                var precPosCry = ((res.previousRating.crystals.position).toLocaleString('en')).replace("-1", "—");
-                var precPosGold = ((res.previousRating.golds.position).toLocaleString('en')).replace("-1", "—");
-                var precPosExp = ((res.previousRating.score.position).toLocaleString('en')).replace("-1", "—");
+                // var precPosCry = ((res.previousRating.crystals.position).toLocaleString('en')).replace("-1", "—");
+                // var precPosGold = ((res.previousRating.golds.position).toLocaleString('en')).replace("-1", "—");
+                // var precPosExp = ((res.previousRating.score.position).toLocaleString('en')).replace("-1", "—");
 
                 // Value
                 var precValCry = ((res.previousRating.crystals.value).toLocaleString('en')).replace("-1", "—");

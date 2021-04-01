@@ -8,7 +8,6 @@
  * 
  */
 
-const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 const api = 'https://tankionline.com/en/wp-json/wp/v2/posts/';

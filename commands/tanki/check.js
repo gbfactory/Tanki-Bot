@@ -24,7 +24,7 @@ module.exports = {
         // Args
         const nickname = args[0];
         const category = args[1];
-        const item = args[2];
+        let item = args[2];
 
         // Check for a category
         if (!category) {
