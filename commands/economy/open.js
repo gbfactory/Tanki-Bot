@@ -164,7 +164,7 @@ module.exports = {
 
                     // Check if the user has containers
                     if (rows[0].containers < 1) {
-                        return message.channel.send({ embed: functions.embedError(
+                        return message.channel.send({ embed: functions.embedFail(
                             "You don't have containers! Buy them with >shop"
                         ) });
                     }
@@ -356,7 +356,7 @@ module.exports = {
 
                     // Check if the user has a Daily Box
                     if (rows[0].dailybox < 1) {
-                        return message.channel.send({ embed: functions.embedError(
+                        return message.channel.send({ embed: functions.embedFail(
                             "You don't have any Daily Box! Get one with `>bonus daily`"
                         ) });
                     }
@@ -404,7 +404,7 @@ module.exports = {
 
                     // Check
                     if (rows[0].weeklybox < 1) {
-                        return message.channel.send({ embed: functions.embedError(
+                        return message.channel.send({ embed: functions.embedFail(
                             "You don't have any Daily Box! Get one with `>bonus weekly`"
                         ) });
                     }
