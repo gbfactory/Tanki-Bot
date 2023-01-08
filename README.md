@@ -5,7 +5,7 @@
 </center>
 
 # Tanki Bot
-[![Status: Online](https://i.imgur.com/kP9sa2u.png)](https://tankibot.gbfactory.net/) [![Discord](https://img.shields.io/discord/467412783290515456.svg?label=support&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/cH8Tvbn) [![CodeFactor](https://www.codefactor.io/repository/github/gbfactory/tanki-bot/badge)](https://www.codefactor.io/repository/github/gbfactory/tanki-bot) [![buddy pipeline](https://app.buddy.works/gbfactory/tanki-bot/pipelines/pipeline/276600/badge.svg?token=dccde99bbc1657c6de173b0f4f9a606cb34c42a80479e07db29850bfd02e0307 "buddy pipeline")](https://app.buddy.works/gbfactory/tanki-bot/pipelines/pipeline/276600) ![Depfu](https://img.shields.io/depfu/gbfactory/Tanki-Bot?logo=npm) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R5HOBLG) [![Discord](https://img.shields.io/discord/467412783290515456.svg?label=support&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/cH8Tvbn) [![CodeFactor](https://www.codefactor.io/repository/github/gbfactory/tanki-bot/badge)](https://www.codefactor.io/repository/github/gbfactory/tanki-bot) ![Depfu](https://img.shields.io/depfu/gbfactory/Tanki-Bot?logo=npm) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 **Tanki Bot**  is a Discord bot made for Tanki Online players. With this bot you can check all your Tanki statistics right from the Discord chat. If you want to have fun you can use the built-in economy system, where you have to level up, gain crystals and open containers to find turrets, hulls and paints!
 
